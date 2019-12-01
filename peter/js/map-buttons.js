@@ -7,7 +7,7 @@ function addMapButtons(mapInfo){
     var zoom_bar = new L.Control.ZoomBar({position: 'topleft'}).addTo(map);
     
     // Add zoom and move history buttons 
-    L.control.navbar().addTo(map);
+    L.control.Navbar().addTo(map);
     
     var swap_provider = new L.Control.SwapProvider({position: 'topleft'}).addTo(map);
 
