@@ -1,0 +1,36 @@
+{
+"mapInfo":{
+	"title":"California and Utah",
+	"bounds":[39.678342,-123.948832,32.286570,-107.315532],
+	"blurb":"",
+	"detail":""
+},
+"stops":[
+ {"title":"Canberra", "loc":[-35.355434, 149.066050], "curvature":0.3, "stop":1.0, "mode":0.0, "note":""},
+ {"title":"Sydney", "loc":[-33.939914, 151.175287], "curvature":0.1, "stop":1.0, "mode":1.0, "note":""},
+ {"title":"Auckland", "loc":[-37.008110, 174.785047], "curvature":0.05, "stop":1.0, "mode":11.0, "note":""},
+ {"title":"Los Angeles", "loc":[33.943476, -118.409313], "curvature":0.3, "stop":2.0, "mode":0.0, "note":""},
+ {"title":"San Juan Capistrano", "loc":[33.500354, -117.662747], "curvature":0.3, "stop":0.0, "mode":0.0, "note":""},
+ {"title":"Los Angeles", "loc":[33.943476, -118.409313], "curvature":-0.3, "stop":3.0, "mode":0.0, "note":""},
+ {"title":"Solvang", "loc":[34.594689, -120.142658], "curvature":-0.3, "stop":0.0, "mode":0.0, "note":""},
+ {"title":"Hearst Castle", "loc":[35.685593, -121.170212], "curvature":-0.3, "stop":0.0, "mode":0.0, "note":""},
+ {"title":"San Jose", "loc":[37.337343, -121.897069], "curvature":0.3, "stop":2.0, "mode":0.0, "note":""},
+ {"title":"Yosemite National Park", "loc":[37.856094, -119.556891], "curvature":0.3, "stop":0.0, "mode":0.0, "note":""},
+ {"title":"Mono Lake", "loc":[37.964443, -119.114692], "curvature":-0.3, "stop":0.0, "mode":0.0, "note":""},
+ {"title":"Death Valley National Park", "loc":[36.516135, -117.095850], "curvature":-0.3, "stop":0.0, "mode":0.0, "note":""},
+ {"title":"Las Vegas", "loc":[36.168798, -115.167749], "curvature":0.3, "stop":0.0, "mode":0.0, "note":""},
+ {"title":"Valley of Fire National Park", "loc":[36.449885, -114.522302], "curvature":0.3, "stop":0.0, "mode":0.0, "note":""},
+ {"title":"Zion National Park", "loc":[37.311076, -113.033655], "curvature":0.3, "stop":0.0, "mode":0.0, "note":""},
+ {"title":"Bryce Canyon National Park", "loc":[37.593461, -112.180975], "curvature":-0.3, "stop":0.0, "mode":0.0, "note":""},
+ {"title":"Kodachrome Basin State Park", "loc":[37.517893, -111.994473], "curvature":-0.3, "stop":0.0, "mode":0.0, "note":""},
+ {"title":"Capital Reef National Park", "loc":[38.382976, -111.275727], "curvature":0.3, "stop":0.0, "mode":0.0, "note":""},
+ {"title":"Arches National Park ??", "loc":[38.737404, -109.600857], "curvature":0.3, "stop":0.0, "mode":0.0, "note":""},
+ {"title":"Monument Valley", "loc":[37.002636, -110.174621], "curvature":0.3, "stop":0.0, "mode":0.0, "note":""},
+ {"title":"Grand Canyon North Rim", "loc":[36.250449, -112.074569], "curvature":0.3, "stop":0.0, "mode":0.0, "note":""},
+ {"title":"Las Vegas", "loc":[36.168798, -115.167749], "curvature":0.3, "stop":1.0, "mode":0.0, "note":""},
+ {"title":"Los Angeles", "loc":[33.943476, -118.409313], "curvature":0.05, "stop":1.0, "mode":11.0, "note":""},
+ {"title":"Auckland", "loc":[-37.008110, 174.785047], "curvature":0.1, "stop":1.0, "mode":1.0, "note":""},
+ {"title":"Sydney", "loc":[-33.939914, 151.175287], "curvature":0.3, "stop":1.0, "mode":1.0, "note":""},
+ {"title":"Canberra", "loc":[-35.355434, 149.066050], "curvature":0.0, "stop":1.0, "mode":0.0, "note":""}
+]
+}

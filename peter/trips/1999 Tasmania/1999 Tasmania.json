@@ -1,0 +1,29 @@
+{
+"mapInfo":{
+	"title":"Tasmania",
+	"bounds":[-40.383796,142.489167,-43.783966,150.822762],
+	"blurb":"",
+	"detail":""
+},
+"stops":[
+ {"title":"Canberra", "loc":[-35.355434, 149.066050], "curvature":0.05, "stop":1.0, "mode":1.0, "note":""},
+ {"title":"Hobart", "loc":[-42.881884, 147.326492], "curvature":0.3, "stop":2.0, "mode":0.0, "note":""},
+ {"title":"Port Arthur", "loc":[-43.176961, 147.842162], "curvature":0.3, "stop":0.0, "mode":0.0, "note":""},
+ {"title":"Hobart", "loc":[-42.881884, 147.326492], "curvature":0.3, "stop":3.0, "mode":0.0, "note":""},
+ {"title":"Hastings Caves", "loc":[-43.415166, 146.873934], "curvature":0.3, "stop":0.0, "mode":0.0, "note":""},
+ {"title":"Hobart", "loc":[-42.881884, 147.326492], "curvature":-0.3, "stop":3.0, "mode":0.0, "note":""},
+ {"title":"Strathgordon", "loc":[-42.768738, 146.048465], "curvature":-0.3, "stop":0.0, "mode":0.0, "note":"Franklin Dam"},
+ {"title":"Lake St. Claire", "loc":[-42.116628, 146.178612], "curvature":0.3, "stop":0.0, "mode":0.0, "note":""},
+ {"title":"Nelson Falls", "loc":[-42.103639, 145.736069], "curvature":0.3, "stop":0.0, "mode":0.0, "note":""},
+ {"title":"Queenstown", "loc":[-42.082219, 145.558543], "curvature":0.3, "stop":0.0, "mode":0.0, "note":""},
+ {"title":"Strahan", "loc":[-42.150471, 145.315471], "curvature":0.3, "stop":0.0, "mode":0.0, "note":""},
+ {"title":"Stanley", "loc":[-40.767995, 145.297611], "curvature":0.3, "stop":0.0, "mode":0.0, "note":""},
+ {"title":"Cradle Mountain", "loc":[-41.582166, 145.929990], "curvature":0.3, "stop":0.0, "mode":0.0, "note":""},
+ {"title":"Mole Creek Caves", "loc":[-41.573654, 146.290513], "curvature":0.3, "stop":0.0, "mode":0.0, "note":""},
+ {"title":"Devonport", "loc":[-41.181688, 146.352298], "curvature":0.3, "stop":0.0, "mode":0.0, "note":""},
+ {"title":"Launceston", "loc":[-41.436483, 147.139194], "curvature":0.3, "stop":0.0, "mode":0.0, "note":""},
+ {"title":"Ross", "loc":[-42.030869, 147.490757], "curvature":0.3, "stop":0.0, "mode":0.0, "note":""},
+ {"title":"Hobart", "loc":[-42.881884, 147.326492], "curvature":0.05, "stop":1.0, "mode":1.0, "note":""},
+ {"title":"Canberra", "loc":[-35.355434, 149.066050], "curvature":0.0, "stop":1.0, "mode":0.0, "note":""}
+]
+}

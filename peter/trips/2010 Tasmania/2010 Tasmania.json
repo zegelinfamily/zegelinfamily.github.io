@@ -1,0 +1,17 @@
+{
+"mapInfo":{
+	"title":"Tasmania",
+	"bounds":[-41.143499,146.575082,-42.240665,148.674456],
+	"blurb":"",
+	"detail":""
+},
+"stops":[
+ {"title":"Canberra", "loc":[-35.355434, 149.066050], "curvature":0.05, "stop":1.0, "mode":1.0, "note":""},
+ {"title":"Launceston", "loc":[-41.434495, 147.123430], "curvature":0.3, "stop":2.0, "mode":0.0, "note":""},
+ {"title":"Leaning Church", "loc":[-41.252053, 147.184606], "curvature":0.3, "stop":0.0, "mode":0.0, "note":""},
+ {"title":"Launceston", "loc":[-41.434495, 147.123430], "curvature":0.3, "stop":3.0, "mode":0.0, "note":""},
+ {"title":"Swansea", "loc":[-42.132863, 148.068255], "curvature":0.3, "stop":0.0, "mode":0.0, "note":""},
+ {"title":"Launceston", "loc":[-41.434495, 147.123430], "curvature":0.05, "stop":1.0, "mode":1.0, "note":""},
+ {"title":"Canberra", "loc":[-35.355434, 149.066050], "curvature":0.0, "stop":1.0, "mode":0.0, "note":""}
+]
+}

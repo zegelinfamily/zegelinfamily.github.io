@@ -1,0 +1,19 @@
+{
+"mapInfo":{
+	"title":"Cambodia and Thailand",
+	"bounds":[14.990994,93.720834,6.467815,107.871600],
+	"blurb":"This was just a quick trip mainly to visit Ankor Wat in Cambodia. We spent 3 days following in the footsteps of Lara Croft as we explored the temple ruins during the day followed by eating and drinking at some of the wonderful restaurants along Siem Reaps’ food street. This was followed by a relaxing two week holiday on the island of Phuket.",
+	"detail":""
+},
+"stops":[
+ {"title":"Canberra", "loc":[-35.355434, 149.066050], "curvature":0.3, "stop":1.0, "mode":0.0, "note":""},
+ {"title":"Sydney", "loc":[-33.939914, 151.175287], "curvature":0.05, "stop":1.0, "mode":1.0, "note":""},
+ {"title":"Bangkok", "loc":[13.751241, 100.537659], "curvature":0.3, "stop":1.0, "mode":1.0, "note":""},
+ {"title":"Siem Reap", "loc":[13.369475, 103.845786], "curvature":0.3, "stop":2.0, "mode":1.0, "note":""},
+ {"title":"Bangkok", "loc":[13.751241, 100.537659], "curvature":0.3, "stop":1.0, "mode":1.0, "note":""},
+ {"title":"Phuket", "loc":[7.883361, 98.393287], "curvature":0.3, "stop":2.0, "mode":1.0, "note":""},
+ {"title":"Bangkok", "loc":[13.751241, 100.537659], "curvature":0.05, "stop":1.0, "mode":1.0, "note":""},
+ {"title":"Sydney", "loc":[-33.939914, 151.175287], "curvature":0.3, "stop":1.0, "mode":1.0, "note":""},
+ {"title":"Canberra", "loc":[-35.355434, 149.066050], "curvature":0.3, "stop":1.0, "mode":0.0, "note":""}
+]
+}

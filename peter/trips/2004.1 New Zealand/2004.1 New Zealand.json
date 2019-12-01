@@ -1,0 +1,21 @@
+{
+"mapInfo":{
+	"title":"North Island New Zealand",
+	"bounds":[-36.463804,172.419695,-39.062652,178.398284],
+	"blurb":"",
+	"detail":""
+},
+"stops":[
+ {"title":"Canberra", "loc":[-35.355434, 149.066050], "curvature":0.3, "stop":1.0, "mode":0.0, "note":""},
+ {"title":"Sydney", "loc":[-33.939914, 151.175287], "curvature":0.05, "stop":1.0, "mode":1.0, "note":""},
+ {"title":"Auckland", "loc":[-36.849507, 174.752834], "curvature":0.3, "stop":1.0, "mode":0.0, "note":""},
+ {"title":"Waitomo Caves", "loc":[-38.261466, 175.118129], "curvature":0.3, "stop":0.0, "mode":0.0, "note":""},
+ {"title":"Taupo", "loc":[-38.687216, 176.067073], "curvature":0.3, "stop":0.0, "mode":0.0, "note":""},
+ {"title":"Rotorua", "loc":[-38.137356, 176.249721], "curvature":0.3, "stop":2.0, "mode":0.0, "note":""},
+ {"title":"Tauranga", "loc":[-37.690984, 176.156337], "curvature":0.3, "stop":0.0, "mode":0.0, "note":""},
+ {"title":"Coromandel", "loc":[-36.819830, 175.618007], "curvature":0.3, "stop":0.0, "mode":0.0, "note":""},
+ {"title":"Auckland", "loc":[-36.849507, 174.752834], "curvature":0.05, "stop":2.0, "mode":1.0, "note":""},
+ {"title":"Sydney", "loc":[-33.939914, 151.175287], "curvature":0.3, "stop":1.0, "mode":0.0, "note":""},
+ {"title":"Canberra", "loc":[-35.355434, 149.066050], "curvature":0.0, "stop":1.0, "mode":0.0, "note":""}
+]
+}
