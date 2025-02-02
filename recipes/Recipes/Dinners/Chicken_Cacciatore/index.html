@@ -1,0 +1,133 @@
+<!doctype html>
+<html data-bs-theme="auto" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <meta content="notes:" name="description" />
+    <meta content="Peter Zegelin" name="author" />
+    <meta content="Ignite v0.2.1" name="generator" />
+    <title>Chicken Cacciatore</title>
+    <link href="/recipes/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="/recipes/css/bootstrap-icons.min.css" rel="stylesheet" />
+    <link href="/recipes/css/themes.min.css" rel="stylesheet" />
+    <link href="https://www.zegelin.com/recipes//Recipes/Dinners/Chicken_Cacciatore" rel="canonical" />
+    <script>/*
+ Automatic Theme Switching Implementation
+ Used in HTMLHead.swift.
+ For user-driven theme switching implementation, see ignite-core.js.
+ */
+
+(function() {
+    function getThemePreference() {
+        return localStorage.getItem('custom-theme') || 'auto';
+    }
+
+    function applyTheme(themeID) {
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        const lightThemeID = document.documentElement.getAttribute('data-light-theme') || 'light';
+        const darkThemeID = document.documentElement.getAttribute('data-dark-theme') || 'dark';
+        const actualThemeID = themeID === 'auto' ? (prefersDark ? darkThemeID : lightThemeID) : themeID;
+
+        document.documentElement.setAttribute('data-bs-theme', actualThemeID);
+        document.documentElement.setAttribute('data-theme-state', themeID);
+    }
+
+    function applySyntaxTheme() {
+        const syntaxTheme = getComputedStyle(document.documentElement)
+            .getPropertyValue('--syntax-highlight-theme').trim().replace(/"/g, '');
+
+        if (!syntaxTheme) return;
+
+        document.querySelectorAll('link[data-highlight-theme]').forEach(link => {
+            link.setAttribute('disabled', 'disabled');
+        });
+
+        const themeLink = document.querySelector(`link[data-highlight-theme="${syntaxTheme}"]`);
+        if (themeLink) {
+            themeLink.removeAttribute('disabled');
+        }
+    }
+
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
+        const currentTheme = getThemePreference();
+        if (currentTheme === 'auto') {
+            applyTheme('auto');
+            applySyntaxTheme();
+        }
+    });
+
+    const savedTheme = getThemePreference();
+    applyTheme(savedTheme);
+    applySyntaxTheme();
+})();
+</script>
+    <meta content="Our Recipes" property="og:site_name" />
+    <meta content="Chicken Cacciatore" property="og:title" />
+    <meta content="Chicken Cacciatore" name="twitter:title" />
+    <meta content="notes:" property="og:description" />
+    <meta content="notes:" name="twitter:description" />
+    <meta content="https://www.zegelin.com/recipes//Recipes/Dinners/Chicken_Cacciatore" property="og:url" />
+    <meta content="zegelin.com" name="twitter:domain" />
+    <meta content="summary_large_image" name="twitter:card" />
+    <meta content="on" name="twitter:dnt" />
+  </head>
+  <body class="container">
+    <div>
+      <div style="padding-top: 20px">
+        <h2 class="text-start">Chicken Cacciatore</h2>
+        <p class="text-end" style="margin-top: -42px"><a href="/recipes/" class="link-underline link-underline-opacity-100 link-underline-opacity-100-hover" style="color: #aaa; font-size: 1.5em; text-decoration: none">home</a></p>
+      </div>
+      <div class="row">
+        <div class=" col-md-5">
+          <p></p>
+          <p>If anchovies are too strong, soak in a little milk for 10 minutes</p>
+          <p></p>
+        </div>
+        <div class=" col-md-1">
+          <div class="justify-content-center align-items-center" style="height: 20px"></div>
+        </div>
+        <div class=" col" style="padding-top: 20px">
+          <div style="padding-top: 20px">
+            <h3>Ingredients:</h3>
+            <p></p>
+            <ul>
+              <li>1 kg skinless chicken pieces</li>
+              <li>1 teaspoon olive oil</li>
+              <li>1 small onion, diced</li>
+              <li>1 clove garlic, chopped</li>
+              <li>1 cup dry white wine</li>
+              <li>1 teaspoon vinegar</li>
+              <li>½ cup chicken stock</li>
+              <li>400g can peeled tomatoes</li>
+              <li>1 tablespoon finely sliced basil leaves</li>
+              <li>2 anchovy fillets, chopped</li>
+              <li>2 tablespoons black olives</li>
+              <li>2 tablespoons chopped parsley</li>
+              <li>salt and freshly ground black pepper</li>
+              <li>pasta or mashed potatoes, to serve</li>
+              <li>vegetables, to serve</li>
+            </ul>
+            <p></p>
+          </div>
+        </div>
+        <div class=" col" style="padding-top: 20px">
+          <div style="padding-top: 20px">
+            <h3>Preparation:</h3>
+            <p></p>
+            <ol>
+              <li>Heat oil in a small saucepan and brown chicken pieces on all sides. Transfer chicken to a plate</li>
+              <li>Stir onion and garlic into saucepan and cook for about 5 minutes</li>
+              <li>Add wine and vinegar and bring to boil before adding stock and crushed tomatoes with their juice</li>
+              <li>Transfer chicken, sauce and basil to a baking dish. Season with a little salt and pepper, cover with a lid and cook in a moderate oven for about 35 minutes</li>
+              <li>One minute before serving, stir in anchovies, olives and parsley</li>
+              <li>Serve with pasta or mashed potatoes and vegetables</li>
+            </ol>
+            <p></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="/recipes/js/bootstrap.bundle.min.js"></script>
+    <script src="/recipes/js/ignite-core.js"></script>
+  </body>
+</html>

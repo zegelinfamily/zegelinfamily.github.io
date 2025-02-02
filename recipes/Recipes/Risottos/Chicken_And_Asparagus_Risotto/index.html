@@ -1,0 +1,139 @@
+<!doctype html>
+<html data-bs-theme="auto" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <meta content="notes:" name="description" />
+    <meta content="Peter Zegelin" name="author" />
+    <meta content="Ignite v0.2.1" name="generator" />
+    <title>Chicken and Asparagus Risotto</title>
+    <link href="/recipes/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="/recipes/css/bootstrap-icons.min.css" rel="stylesheet" />
+    <link href="/recipes/css/themes.min.css" rel="stylesheet" />
+    <link href="https://www.zegelin.com/recipes//Recipes/Risottos/Chicken_And_Asparagus_Risotto" rel="canonical" />
+    <script>/*
+ Automatic Theme Switching Implementation
+ Used in HTMLHead.swift.
+ For user-driven theme switching implementation, see ignite-core.js.
+ */
+
+(function() {
+    function getThemePreference() {
+        return localStorage.getItem('custom-theme') || 'auto';
+    }
+
+    function applyTheme(themeID) {
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        const lightThemeID = document.documentElement.getAttribute('data-light-theme') || 'light';
+        const darkThemeID = document.documentElement.getAttribute('data-dark-theme') || 'dark';
+        const actualThemeID = themeID === 'auto' ? (prefersDark ? darkThemeID : lightThemeID) : themeID;
+
+        document.documentElement.setAttribute('data-bs-theme', actualThemeID);
+        document.documentElement.setAttribute('data-theme-state', themeID);
+    }
+
+    function applySyntaxTheme() {
+        const syntaxTheme = getComputedStyle(document.documentElement)
+            .getPropertyValue('--syntax-highlight-theme').trim().replace(/"/g, '');
+
+        if (!syntaxTheme) return;
+
+        document.querySelectorAll('link[data-highlight-theme]').forEach(link => {
+            link.setAttribute('disabled', 'disabled');
+        });
+
+        const themeLink = document.querySelector(`link[data-highlight-theme="${syntaxTheme}"]`);
+        if (themeLink) {
+            themeLink.removeAttribute('disabled');
+        }
+    }
+
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
+        const currentTheme = getThemePreference();
+        if (currentTheme === 'auto') {
+            applyTheme('auto');
+            applySyntaxTheme();
+        }
+    });
+
+    const savedTheme = getThemePreference();
+    applyTheme(savedTheme);
+    applySyntaxTheme();
+})();
+</script>
+    <meta content="Our Recipes" property="og:site_name" />
+    <meta content="/images/Chicken%20And%20Asparagus%20Risotto.jpg" property="og:image" />
+    <meta content="/images/Chicken%20And%20Asparagus%20Risotto.jpg" name="twitter:image" />
+    <meta content="Chicken and Asparagus Risotto" property="og:title" />
+    <meta content="Chicken and Asparagus Risotto" name="twitter:title" />
+    <meta content="notes:" property="og:description" />
+    <meta content="notes:" name="twitter:description" />
+    <meta content="https://www.zegelin.com/recipes//Recipes/Risottos/Chicken_And_Asparagus_Risotto" property="og:url" />
+    <meta content="zegelin.com" name="twitter:domain" />
+    <meta content="summary_large_image" name="twitter:card" />
+    <meta content="on" name="twitter:dnt" />
+  </head>
+  <body class="container">
+    <div>
+      <div style="padding-top: 20px">
+        <h2 class="text-start">Chicken and Asparagus Risotto</h2>
+        <p class="text-end" style="margin-top: -42px"><a href="/recipes/" class="link-underline link-underline-opacity-100 link-underline-opacity-100-hover" style="color: #aaa; font-size: 1.5em; text-decoration: none">home</a></p>
+      </div>
+      <div class="row">
+        <div class=" col-md-5">
+          <p></p>
+          <p>Add small amounts of extra water if rice is drying out</p>
+          <p></p>
+        </div>
+        <div class=" col-md-1">
+          <div class="justify-content-center align-items-center" style="height: 20px"></div>
+        </div>
+        <div class=" col-md-6">
+          <img alt="" src="/recipes/images/Chicken And Asparagus Risotto.jpg" class="justify-content-center align-items-center" style="border-radius: 20px; height: 300px" />
+        </div>
+        <div class=" col" style="padding-top: 20px">
+          <div style="padding-top: 20px">
+            <h3>Ingredients:</h3>
+            <p></p>
+            <ul>
+              <li>40g butter</li>
+              <li>2 tablespoons extra virgin olive oil</li>
+              <li>1 small onion, finely chopped</li>
+              <li>2 clove of garlic, crushed</li>
+              <li>750ml vegetable stock or chicken stock</li>
+              <li>1 full cup arborio rice</li>
+              <li>½ cup white wine</li>
+              <li>1 Chicken breast, baked.</li>
+              <li>½ bunch asparagus, ends trimmed</li>
+              <li>½ tsp dried thyme</li>
+              <li>Small quantity soy sauce</li>
+              <li>grated parmesan cheese</li>
+            </ul>
+            <p></p>
+          </div>
+        </div>
+        <div class=" col" style="padding-top: 20px">
+          <div style="padding-top: 20px">
+            <h3>Preparation:</h3>
+            <p></p>
+            <ol>
+              <li>Bake chicken in oven, flavoring with soy sauce and thyme. Set aside to cool. Slice thinly</li>
+              <li>Cut asparagus to 4 cm lengths and precook in microwave until nearly done. Replace water with cold water to prevent further cooking and preserve color</li>
+              <li>Heat oil and butter in a large pot and fry onion until golden</li>
+              <li>Add the garlic and cook for a minute or two</li>
+              <li>Turn temperature up fairly high and add risotto, striring until grains are coated</li>
+              <li>Lower temperature and add stock, wine and salt and pepper</li>
+              <li>Simmer, stiring regularly for about 20 minutes or until rice is nearly done</li>
+              <li>When Risotto is nearly done add asparagus and cook for a few minutes more</li>
+              <li>Add most of the chicken to reheat, stirring gently</li>
+              <li>Serve risotto into bowls. Top with the rest of the chicken and parmesan cheese</li>
+            </ol>
+            <p></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="/recipes/js/bootstrap.bundle.min.js"></script>
+    <script src="/recipes/js/ignite-core.js"></script>
+  </body>
+</html>

@@ -1,0 +1,130 @@
+<!doctype html>
+<html data-bs-theme="auto" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <meta content="notes: Serves: 2" name="description" />
+    <meta content="Peter Zegelin" name="author" />
+    <meta content="Ignite v0.2.1" name="generator" />
+    <title>Spaghetti Alla Carbonara</title>
+    <link href="/recipes/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="/recipes/css/bootstrap-icons.min.css" rel="stylesheet" />
+    <link href="/recipes/css/themes.min.css" rel="stylesheet" />
+    <link href="https://www.zegelin.com/recipes//Recipes/Pasta/Spaghetti_Alla_Carbonara" rel="canonical" />
+    <script>/*
+ Automatic Theme Switching Implementation
+ Used in HTMLHead.swift.
+ For user-driven theme switching implementation, see ignite-core.js.
+ */
+
+(function() {
+    function getThemePreference() {
+        return localStorage.getItem('custom-theme') || 'auto';
+    }
+
+    function applyTheme(themeID) {
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        const lightThemeID = document.documentElement.getAttribute('data-light-theme') || 'light';
+        const darkThemeID = document.documentElement.getAttribute('data-dark-theme') || 'dark';
+        const actualThemeID = themeID === 'auto' ? (prefersDark ? darkThemeID : lightThemeID) : themeID;
+
+        document.documentElement.setAttribute('data-bs-theme', actualThemeID);
+        document.documentElement.setAttribute('data-theme-state', themeID);
+    }
+
+    function applySyntaxTheme() {
+        const syntaxTheme = getComputedStyle(document.documentElement)
+            .getPropertyValue('--syntax-highlight-theme').trim().replace(/"/g, '');
+
+        if (!syntaxTheme) return;
+
+        document.querySelectorAll('link[data-highlight-theme]').forEach(link => {
+            link.setAttribute('disabled', 'disabled');
+        });
+
+        const themeLink = document.querySelector(`link[data-highlight-theme="${syntaxTheme}"]`);
+        if (themeLink) {
+            themeLink.removeAttribute('disabled');
+        }
+    }
+
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
+        const currentTheme = getThemePreference();
+        if (currentTheme === 'auto') {
+            applyTheme('auto');
+            applySyntaxTheme();
+        }
+    });
+
+    const savedTheme = getThemePreference();
+    applyTheme(savedTheme);
+    applySyntaxTheme();
+})();
+</script>
+    <meta content="Our Recipes" property="og:site_name" />
+    <meta content="/images/Spaghetti%20Alla%20Carbonara.jpg" property="og:image" />
+    <meta content="/images/Spaghetti%20Alla%20Carbonara.jpg" name="twitter:image" />
+    <meta content="Spaghetti Alla Carbonara" property="og:title" />
+    <meta content="Spaghetti Alla Carbonara" name="twitter:title" />
+    <meta content="notes: Serves: 2" property="og:description" />
+    <meta content="notes: Serves: 2" name="twitter:description" />
+    <meta content="https://www.zegelin.com/recipes//Recipes/Pasta/Spaghetti_Alla_Carbonara" property="og:url" />
+    <meta content="zegelin.com" name="twitter:domain" />
+    <meta content="summary_large_image" name="twitter:card" />
+    <meta content="on" name="twitter:dnt" />
+  </head>
+  <body class="container">
+    <div>
+      <div style="padding-top: 20px">
+        <h2 class="text-start">Spaghetti Alla Carbonara</h2>
+        <p class="text-end" style="margin-top: -42px"><a href="/recipes/" class="link-underline link-underline-opacity-100 link-underline-opacity-100-hover" style="color: #aaa; font-size: 1.5em; text-decoration: none">home</a></p>
+      </div>
+      <div class="row">
+        <div class=" col-md-5">
+          <p> Serves: 2</p>
+          <p>An authentic Roman spaghetti alla carbonara.</p>
+          <p></p>
+        </div>
+        <div class=" col-md-1">
+          <div class="justify-content-center align-items-center" style="height: 20px"></div>
+        </div>
+        <div class=" col-md-6">
+          <img alt="" src="/recipes/images/Spaghetti Alla Carbonara.jpg" class="justify-content-center align-items-center" style="border-radius: 20px; height: 300px" />
+        </div>
+        <div class=" col" style="padding-top: 20px">
+          <div style="padding-top: 20px">
+            <h3>Ingredients:</h3>
+            <p></p>
+            <ul>
+              <li>3 large egg yolks</li>
+              <li>40g pecorino, grated and extra for serving</li>
+              <li>200g spaghetti</li>
+              <li>salt</li>
+              <li>100g piece guanciale (or streaky bacon), roughly chopped into small strips</li>
+              <li>extra virgin olive oil, only if needed</li>
+              <li>freshly ground black pepper</li>
+            </ul>
+            <p></p>
+          </div>
+        </div>
+        <div class=" col" style="padding-top: 20px">
+          <div style="padding-top: 20px">
+            <h3>Preparation:</h3>
+            <p></p>
+            <ol>
+              <li>In a small bowl beat the egg yolks with the pecorino and set aside</li>
+              <li>Bring a large saucepan of salted water to the boil and cook the spaghetti until al dente</li>
+              <li>In a large frying pan, cook the guanciale/streaky bacon on medium heat, stir frying until crispy. Add a little olive oil only if the streaky bacon is not fatty enough to produce an adequate amount of oil for the sauce</li>
+              <li>With tongs add the spaghetti to the pan of guanciale/streaky bacon and mix well, adding more cooking water if necessary</li>
+              <li>Remove the pan from the heat, stir in the egg mixture</li>
+              <li>Serve immediately with some grated pecorino and freshly ground black pepper</li>
+            </ol>
+            <p></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="/recipes/js/bootstrap.bundle.min.js"></script>
+    <script src="/recipes/js/ignite-core.js"></script>
+  </body>
+</html>
