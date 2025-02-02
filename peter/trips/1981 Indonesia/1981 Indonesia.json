@@ -1,0 +1,19 @@
+{
+"mapInfo":{
+	"title":"Indonesia and Singapore",
+	"bounds":[3.432756,95.258512,-10.725781,123.803121],
+	"blurb":"We had enjoyed our trip to Bali a few years earlier so we resolved to go back - with a few friends this time. Everything was developing rapidly and the changes in just a few years were astonishing - shades of things to come. Still lots of great food and beautiful scenery. We also took a side trip to Singapore to see the sights and stock up on duty free goodies.",
+	"detail":""
+},
+"stops":[
+ {"title":"Canberra", "loc":[-35.355434, 149.066050], "curvature":0.3, "stop":1.0, "mode":1.0, "note":""},
+ {"title":"Sydney", "loc":[-33.939914, 151.175287], "curvature":0.05, "stop":1.0, "mode":1.0, "note":""},
+ {"title":"Denpasar", "loc":[-8.669797, 115.213963], "curvature":0.3, "stop":1.0, "mode":0.0, "note":"Went on Simons Volcanic tour again"},
+ {"title":"Legian", "loc":[-8.705871, 115.169556], "curvature":0.3, "stop":2.0, "mode":0.0, "note":""},
+ {"title":"Denpasar", "loc":[-8.669797, 115.213963], "curvature":0.1, "stop":1.0, "mode":1.0, "note":""},
+ {"title":"Jakarta", "loc":[-6.137955, 106.848977], "curvature":0.1, "stop":2.0, "mode":1.0, "note":""},
+ {"title":"Singapore", "loc":[1.354541, 103.854563], "curvature":0.05, "stop":2.0, "mode":1.0, "note":""},
+ {"title":"Sydney", "loc":[-33.939914, 151.175287], "curvature":0.3, "stop":1.0, "mode":1.0, "note":""},
+ {"title":"Canberra", "loc":[-35.355434, 149.066050], "curvature":0.3, "stop":1.0, "mode":0.0, "note":""}
+]
+}

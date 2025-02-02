@@ -1,0 +1,23 @@
+{
+"mapInfo":{
+	"title":"Central Australia",
+	"bounds":[-22.749294,127.148607,-36.324490,155.629167],
+	"blurb":"",
+	"detail":""
+},
+"stops":[
+ {"title":"Canberra", "loc":[-35.355434, 149.066050], "curvature":0.3, "stop":1.0, "mode":0.0, "note":""},
+ {"title":"Sydney", "loc":[-33.939914, 151.175287], "curvature":0.05, "stop":1.0, "mode":1.0, "note":""},
+ {"title":"Alice Springs", "loc":[-23.700591, 133.879202], "curvature":-0.3, "stop":2.0, "mode":3.0, "note":""},
+ {"title":"Hermannsburg", "loc":[-23.943338, 132.777007], "curvature":0.3, "stop":0.0, "mode":3.0, "note":""},
+ {"title":"Finke Gorge National Park", "loc":[-24.189380, 132.823785], "curvature":-0.3, "stop":0.0, "mode":3.0, "note":"Palm Valley"},
+ {"title":"Alice Springs", "loc":[-23.700591, 133.879202], "curvature":0.3, "stop":3.0, "mode":0.0, "note":""},
+ {"title":"Uluru", "loc":[-25.342261, 131.036490], "curvature":0.3, "stop":2.0, "mode":0.0, "note":""},
+ {"title":"Olgas", "loc":[-25.312470, 130.770071], "curvature":0.3, "stop":0.0, "mode":0.0, "note":""},
+ {"title":"Uluru", "loc":[-25.342261, 131.036490], "curvature":-0.3, "stop":3.0, "mode":0.0, "note":""},
+ {"title":"Kings Canyon", "loc":[-24.265217, 131.555594], "curvature":0.3, "stop":0.0, "mode":0.0, "note":""},
+ {"title":"Alice Springs", "loc":[-23.700591, 133.879202], "curvature":0.05, "stop":1.0, "mode":1.0, "note":""},
+ {"title":"Sydney", "loc":[-33.939914, 151.175287], "curvature":0.3, "stop":1.0, "mode":0.0, "note":""},
+ {"title":"Canberra", "loc":[-35.355434, 149.066050], "curvature":0.3, "stop":1.0, "mode":0.0, "note":""}
+]
+}
