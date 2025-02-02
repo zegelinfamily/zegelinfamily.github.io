@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Zegelin Family Website</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: "Lato", sans-serif;
+}
+
+.sidenav {
+  width: 130px;
+  position: fixed;
+  z-index: 1;
+  top: 20px;
+  left: 10px;
+  background: #eee;
+  overflow-x: hidden;
+  padding: 8px 0;
+}
+
+.sidenav a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 20px;
+  color: #2196F3;
+  display: block;
+}
+
+.sidenav a:hover {
+  color: #064579;
+}
+
+.main {
+  margin-left: 140px; /* Same width as the sidebar + left position in px */
+  font-size: 18px; /* Increased text to enable scrolling */
+  padding: 0px 10px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.row {
+  display: flex;
+}
+
+/* Create three equal columns that sits next to each other */
+.column {
+  flex: 50%;
+  padding: 25px;
+}
+
+</style>
+</head>
+<body>
+
+<div class="sidenav">
+  <a href= "peter/index.html">Peter</a>
+</div>
+
+<div class="main">
+  <h4>Welcome to the Zegelin Family web site</h4>
+  <p>This site is dedicated to the memory of Karl and Frieda Zegelin. Karl was born in 1889 and died in 1977. Frieda was born in 1888 and died in 1970. They emigrated from Germany to Australia in 1913 and settled in Rochester, Victoria. The family has thrived in Australia.</p>
+  
+  <div class="row">
+  <div class="column">
+    <img src="Frieda Zegelin 1910.jpg" alt="Frieda Zegelin 1910" style="width:80%">
+  </div>
+  <div class="column">
+    <img src="Karl Zegelin 1912.jpg" alt="Karl Zegelin 1912" style="width:80%">
+  </div>
+</div>
+  
+</div>  
+
+</body>
+</html> 
+
