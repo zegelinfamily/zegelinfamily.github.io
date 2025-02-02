@@ -1,0 +1,161 @@
+<!doctype html>
+<html data-bs-theme="auto" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <meta content="Peter Zegelin" name="author" />
+    <meta content="Ignite v0.2.1" name="generator" />
+    <title>Recipes</title>
+    <link href="/recipes/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="/recipes/css/bootstrap-icons.min.css" rel="stylesheet" />
+    <link href="/recipes/css/themes.min.css" rel="stylesheet" />
+    <link href="https://www.zegelin.com/recipes/" rel="canonical" />
+    <script>/*
+ Automatic Theme Switching Implementation
+ Used in HTMLHead.swift.
+ For user-driven theme switching implementation, see ignite-core.js.
+ */
+
+(function() {
+    function getThemePreference() {
+        return localStorage.getItem('custom-theme') || 'auto';
+    }
+
+    function applyTheme(themeID) {
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        const lightThemeID = document.documentElement.getAttribute('data-light-theme') || 'light';
+        const darkThemeID = document.documentElement.getAttribute('data-dark-theme') || 'dark';
+        const actualThemeID = themeID === 'auto' ? (prefersDark ? darkThemeID : lightThemeID) : themeID;
+
+        document.documentElement.setAttribute('data-bs-theme', actualThemeID);
+        document.documentElement.setAttribute('data-theme-state', themeID);
+    }
+
+    function applySyntaxTheme() {
+        const syntaxTheme = getComputedStyle(document.documentElement)
+            .getPropertyValue('--syntax-highlight-theme').trim().replace(/"/g, '');
+
+        if (!syntaxTheme) return;
+
+        document.querySelectorAll('link[data-highlight-theme]').forEach(link => {
+            link.setAttribute('disabled', 'disabled');
+        });
+
+        const themeLink = document.querySelector(`link[data-highlight-theme="${syntaxTheme}"]`);
+        if (themeLink) {
+            themeLink.removeAttribute('disabled');
+        }
+    }
+
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
+        const currentTheme = getThemePreference();
+        if (currentTheme === 'auto') {
+            applyTheme('auto');
+            applySyntaxTheme();
+        }
+    });
+
+    const savedTheme = getThemePreference();
+    applyTheme(savedTheme);
+    applySyntaxTheme();
+})();
+</script>
+    <meta content="Our Recipes" property="og:site_name" />
+    <meta content="Recipes" property="og:title" />
+    <meta content="Recipes" name="twitter:title" />
+    <meta content="https://www.zegelin.com/recipes/" property="og:url" />
+    <meta content="zegelin.com" name="twitter:domain" />
+    <meta content="summary_large_image" name="twitter:card" />
+    <meta content="on" name="twitter:dnt" />
+  </head>
+  <body class="container">
+    <div style="padding-top: 20px">
+      <h2>Recipes</h2>
+      <p class="text-end" style="margin-top: -42px"><a href="/recipes/menu-planner" class="link-underline link-underline-opacity-100 link-underline-opacity-100-hover" style="color: #aaa; font-size: 1.5em; text-decoration: none">menu planner</a></p>
+    </div>
+    <div class="row">
+      <div class=" col">
+        <p style="font-size: 1.5em; font-weight: 300; margin: 0px">Drinks</p>
+        <ul style="list-style: none; margin: 0px">
+          <li><a href="/recipes/Recipes/Drinks/Aperol_Spritz" class="link-underline link-underline-opacity-100 link-underline-opacity-100-hover" style="color: #aaa; margin-left: -20px; text-decoration: none">Aperol Spritz</a></li>
+          <li><a href="/recipes/Recipes/Drinks/Cosmopolitan" class="link-underline link-underline-opacity-100 link-underline-opacity-100-hover" style="color: #aaa; margin-left: -20px; text-decoration: none">Cosmopolitan</a></li>
+          <li><a href="/recipes/Recipes/Drinks/Margarita" class="link-underline link-underline-opacity-100 link-underline-opacity-100-hover" style="color: #aaa; margin-left: -20px; text-decoration: none">Margarita</a></li>
+          <li><a href="/recipes/Recipes/Drinks/Mojito" class="link-underline link-underline-opacity-100 link-underline-opacity-100-hover" style="color: #aaa; margin-left: -20px; text-decoration: none">Mojito</a></li>
+        </ul>
+        <p style="font-size: 1.5em; font-weight: 300; margin: 0px">BBQ</p>
+        <ul style="list-style: none; margin: 0px">
+          <li><a href="/recipes/Recipes/BBQ/Antipasto_Barbecue_Chicken" class="link-underline link-underline-opacity-100 link-underline-opacity-100-hover" style="color: #aaa; margin-left: -20px; text-decoration: none">Antipasto Barbecue Chicken</a></li>
+          <li><a href="/recipes/Recipes/BBQ/BBQ_Chicken_With_Spicy_Honey_Bacon_Glaze" class="link-underline link-underline-opacity-100 link-underline-opacity-100-hover" style="color: #aaa; margin-left: -20px; text-decoration: none">BBQ Chicken With Spicy Honey Bacon Glaze</a></li>
+          <li><a href="/recipes/Recipes/BBQ/Barbecued_Citrus_Garlic_Prawns" class="link-underline link-underline-opacity-100 link-underline-opacity-100-hover" style="color: #aaa; margin-left: -20px; text-decoration: none">Barbecued Citrus Garlic Prawns</a></li>
+          <li><a href="/recipes/Recipes/BBQ/Middle_Eastern_Chicken_Skewers" class="link-underline link-underline-opacity-100 link-underline-opacity-100-hover" style="color: #aaa; margin-left: -20px; text-decoration: none">Middle Eastern Chicken Skewers</a></li>
+          <li><a href="/recipes/Recipes/BBQ/Sate_Chicken" class="link-underline link-underline-opacity-100 link-underline-opacity-100-hover" style="color: #aaa; margin-left: -20px; text-decoration: none">Sate Chicken</a></li>
+        </ul>
+        <p style="font-size: 1.5em; font-weight: 300; margin: 0px">Pasta</p>
+        <ul style="list-style: none; margin: 0px">
+          <li><a href="/recipes/Recipes/Pasta/Buffalo_Mozzarella_Lasagne" class="link-underline link-underline-opacity-100 link-underline-opacity-100-hover" style="color: #aaa; margin-left: -20px; text-decoration: none">Buffalo Mozzarella Lasagne</a></li>
+          <li><a href="/recipes/Recipes/Pasta/Homemade_Pasta" class="link-underline link-underline-opacity-100 link-underline-opacity-100-hover" style="color: #aaa; margin-left: -20px; text-decoration: none">Homemade Pasta</a></li>
+          <li><a href="/recipes/Recipes/Pasta/Linguine_With_Prawns_Snow_Peas_And_Lemon" class="link-underline link-underline-opacity-100 link-underline-opacity-100-hover" style="color: #aaa; margin-left: -20px; text-decoration: none">Linguine With Prawns, Snow Peas And Lemon</a></li>
+          <li><a href="/recipes/Recipes/Pasta/Mac_&amp;_Cheese" class="link-underline link-underline-opacity-100 link-underline-opacity-100-hover" style="color: #aaa; margin-left: -20px; text-decoration: none">Mac and Cheese</a></li>
+          <li><a href="/recipes/Recipes/Pasta/Penne_With_Eggplant_Caponata" class="link-underline link-underline-opacity-100 link-underline-opacity-100-hover" style="color: #aaa; margin-left: -20px; text-decoration: none">Penne With Eggplant Caponata</a></li>
+          <li><a href="/recipes/Recipes/Pasta/Prawn_And_Prosecco_Linguine" class="link-underline link-underline-opacity-100 link-underline-opacity-100-hover" style="color: #aaa; margin-left: -20px; text-decoration: none">Prawn And Prosecco Linguine</a></li>
+          <li><a href="/recipes/Recipes/Pasta/Spaghetti_Alla_Carbonara" class="link-underline link-underline-opacity-100 link-underline-opacity-100-hover" style="color: #aaa; margin-left: -20px; text-decoration: none">Spaghetti Alla Carbonara</a></li>
+        </ul>
+        <p style="font-size: 1.5em; font-weight: 300; margin: 0px">Risottos</p>
+        <ul style="list-style: none; margin: 0px">
+          <li><a href="/recipes/Recipes/Risottos/Bacon_And_Pea_Risotto" class="link-underline link-underline-opacity-100 link-underline-opacity-100-hover" style="color: #aaa; margin-left: -20px; text-decoration: none">Bacon and Pea Risotto</a></li>
+          <li><a href="/recipes/Recipes/Risottos/Chicken_And_Asparagus_Risotto" class="link-underline link-underline-opacity-100 link-underline-opacity-100-hover" style="color: #aaa; margin-left: -20px; text-decoration: none">Chicken and Asparagus Risotto</a></li>
+          <li><a href="/recipes/Recipes/Risottos/Pumpkin_And_Leek_Risotto" class="link-underline link-underline-opacity-100 link-underline-opacity-100-hover" style="color: #aaa; margin-left: -20px; text-decoration: none">Pumpkin And Leek Risotto</a></li>
+          <li><a href="/recipes/Recipes/Risottos/Sundried_Tomato_Risotto" class="link-underline link-underline-opacity-100 link-underline-opacity-100-hover" style="color: #aaa; margin-left: -20px; text-decoration: none">Sundried Tomato Risotto</a></li>
+        </ul>
+        <p style="font-size: 1.5em; font-weight: 300; margin: 0px">Salads</p>
+        <ul style="list-style: none; margin: 0px">
+          <li><a href="/recipes/Recipes/Salads/Tabouleh" class="link-underline link-underline-opacity-100 link-underline-opacity-100-hover" style="color: #aaa; margin-left: -20px; text-decoration: none">Tabouleh</a></li>
+        </ul>
+        <p style="font-size: 1.5em; font-weight: 300; margin: 0px">Soups</p>
+        <ul style="list-style: none; margin: 0px">
+          <li><a href="/recipes/Recipes/Soups/Moroccan_Sweet_Potato_Carrot_And_Chickpea_Soup" class="link-underline link-underline-opacity-100 link-underline-opacity-100-hover" style="color: #aaa; margin-left: -20px; text-decoration: none">Moroccan Sweet Potato, Carrot and Chickpea Soup</a></li>
+          <li><a href="/recipes/Recipes/Soups/Pumpkin_Soup" class="link-underline link-underline-opacity-100 link-underline-opacity-100-hover" style="color: #aaa; margin-left: -20px; text-decoration: none">Pumpkin Soup</a></li>
+          <li><a href="/recipes/Recipes/Soups/Roasted_Tomato_and_Capsicum_Soup" class="link-underline link-underline-opacity-100 link-underline-opacity-100-hover" style="color: #aaa; margin-left: -20px; text-decoration: none">Roasted Tomato and Capsicum Soup</a></li>
+        </ul>
+      </div>
+      <div class=" col">
+        <p style="font-size: 1.5em; font-weight: 300; margin: 0px">Stir Fries</p>
+        <ul style="list-style: none; margin: 0px">
+          <li><a href="/recipes/Recipes/StirFries/Cashew_Chicken" class="link-underline link-underline-opacity-100 link-underline-opacity-100-hover" style="color: #aaa; margin-left: -20px; text-decoration: none">Cashew Chicken</a></li>
+          <li><a href="/recipes/Recipes/StirFries/Chilli_Mango_Chicken" class="link-underline link-underline-opacity-100 link-underline-opacity-100-hover" style="color: #aaa; margin-left: -20px; text-decoration: none">Chilli Mango Chicken</a></li>
+          <li><a href="/recipes/Recipes/StirFries/Honey_Prawns" class="link-underline link-underline-opacity-100 link-underline-opacity-100-hover" style="color: #aaa; margin-left: -20px; text-decoration: none">Honey Prawns</a></li>
+          <li><a href="/recipes/Recipes/StirFries/Thai_Chilli_Jam_Chicken" class="link-underline link-underline-opacity-100 link-underline-opacity-100-hover" style="color: #aaa; margin-left: -20px; text-decoration: none">Thai Chilli Jam Chicken</a></li>
+          <li><a href="/recipes/Recipes/StirFries/Tofu_With_Chilli_Jam_And_Spring_Onions" class="link-underline link-underline-opacity-100 link-underline-opacity-100-hover" style="color: #aaa; margin-left: -20px; text-decoration: none">Tofu with Chilli Jam and Spring Onions</a></li>
+        </ul>
+        <p style="font-size: 1.5em; font-weight: 300; margin: 0px">Tray Bakes</p>
+        <ul style="list-style: none; margin: 0px">
+          <li><a href="/recipes/Recipes/TrayBakes/Baked_Chicken_With_Lemon_Potato_And_Green_Olives" class="link-underline link-underline-opacity-100 link-underline-opacity-100-hover" style="color: #aaa; margin-left: -20px; text-decoration: none">Baked Chicken with Lemon, Potato and Green Olives</a></li>
+          <li><a href="/recipes/Recipes/TrayBakes/Chicken_Tray_Bake_With_Smoky_Bacon_And_Tomatoes" class="link-underline link-underline-opacity-100 link-underline-opacity-100-hover" style="color: #aaa; margin-left: -20px; text-decoration: none">Chicken Tray Bake with Smoky Bacon and Tomatoes</a></li>
+          <li><a href="/recipes/Recipes/TrayBakes/Cider_Roasted_Chicken_With_Prosciutto_Apple_And_Potato" class="link-underline link-underline-opacity-100 link-underline-opacity-100-hover" style="color: #aaa; margin-left: -20px; text-decoration: none">Cider Roasted Chicken with Prosciutto, Apple and Potato</a></li>
+          <li><a href="/recipes/Recipes/TrayBakes/Leek_Chorizo_Cauliflower_And_Chicken_Bake" class="link-underline link-underline-opacity-100 link-underline-opacity-100-hover" style="color: #aaa; margin-left: -20px; text-decoration: none">Leek, Chorizo, Cauliflower and Chicken Bake</a></li>
+          <li><a href="/recipes/Recipes/TrayBakes/Mediterranean_Chicken_Bake" class="link-underline link-underline-opacity-100 link-underline-opacity-100-hover" style="color: #aaa; margin-left: -20px; text-decoration: none">Mediterranean Chicken Bake</a></li>
+        </ul>
+        <p style="font-size: 1.5em; font-weight: 300; margin: 0px">Dinners</p>
+        <ul style="list-style: none; margin: 0px">
+          <li><a href="/recipes/Recipes/Dinners/Baked_Teriyaki_Salmon" class="link-underline link-underline-opacity-100 link-underline-opacity-100-hover" style="color: #aaa; margin-left: -20px; text-decoration: none">Baked Teriyaki Salmon</a></li>
+          <li><a href="/recipes/Recipes/Dinners/Cantonese_Chicken" class="link-underline link-underline-opacity-100 link-underline-opacity-100-hover" style="color: #aaa; margin-left: -20px; text-decoration: none">Cantonese Chicken</a></li>
+          <li><a href="/recipes/Recipes/Dinners/Chicken_Cacciatore" class="link-underline link-underline-opacity-100 link-underline-opacity-100-hover" style="color: #aaa; margin-left: -20px; text-decoration: none">Chicken Cacciatore</a></li>
+          <li><a href="/recipes/Recipes/Dinners/Chicken_Piccata" class="link-underline link-underline-opacity-100 link-underline-opacity-100-hover" style="color: #aaa; margin-left: -20px; text-decoration: none">Chicken Piccata</a></li>
+          <li><a href="/recipes/Recipes/Dinners/Paprika_Chicken" class="link-underline link-underline-opacity-100 link-underline-opacity-100-hover" style="color: #aaa; margin-left: -20px; text-decoration: none">Paprika Chicken</a></li>
+          <li><a href="/recipes/Recipes/Dinners/Pizza_Toppings" class="link-underline link-underline-opacity-100 link-underline-opacity-100-hover" style="color: #aaa; margin-left: -20px; text-decoration: none">Pizza Toppings</a></li>
+          <li><a href="/recipes/Recipes/Dinners/Quiche" class="link-underline link-underline-opacity-100 link-underline-opacity-100-hover" style="color: #aaa; margin-left: -20px; text-decoration: none">Quiche</a></li>
+        </ul>
+        <p style="font-size: 1.5em; font-weight: 300; margin: 0px">Other</p>
+        <ul style="list-style: none; margin: 0px">
+          <li><a href="/recipes/Recipes/Other/Chocolate_Chip_Biscuits" class="link-underline link-underline-opacity-100 link-underline-opacity-100-hover" style="color: #aaa; margin-left: -20px; text-decoration: none">Chocolate Chip Biscuits</a></li>
+          <li><a href="/recipes/Recipes/Other/Pancakes" class="link-underline link-underline-opacity-100 link-underline-opacity-100-hover" style="color: #aaa; margin-left: -20px; text-decoration: none">Pancakes</a></li>
+          <li><a href="/recipes/Recipes/Other/Rum_Balls" class="link-underline link-underline-opacity-100 link-underline-opacity-100-hover" style="color: #aaa; margin-left: -20px; text-decoration: none">Rum Balls</a></li>
+          <li><a href="/recipes/Recipes/Other/Scones" class="link-underline link-underline-opacity-100 link-underline-opacity-100-hover" style="color: #aaa; margin-left: -20px; text-decoration: none">Scones</a></li>
+          <li><a href="/recipes/Recipes/Other/Turkish_Carrot_Dip" class="link-underline link-underline-opacity-100 link-underline-opacity-100-hover" style="color: #aaa; margin-left: -20px; text-decoration: none">Turkish Carrot Dip</a></li>
+        </ul>
+      </div>
+    </div>
+    <script src="/recipes/js/bootstrap.bundle.min.js"></script>
+    <script src="/recipes/js/ignite-core.js"></script>
+  </body>
+</html>
