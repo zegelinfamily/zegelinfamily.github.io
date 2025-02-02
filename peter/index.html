@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title  id="page-title">Our Travels</title>
+    <link rel="stylesheet" type="text/css" href="./css/mainpage.css">
+    <link rel="stylesheet" type="text/css" href="./css/overlay.css">
+    <link rel="stylesheet" type="text/css" href="./css/mapControls.css">
+    
+    <script src="./js/overlay.js"></script>
+    <script src="./js/map-overlay.js"></script> <!--map Javascript functions-->
+    <script src="./js/list-overlay.js"></script> <!--List of Visited Places Javascript functions-->
+    <script src="./js/map-buttons.js"></script>
+    
+    <!-- leaflet -->
+    <link rel="stylesheet" type="text/css" href="./css/leaflet.css">
+    <script src="./js/leaflet.js"></script>
+    <script src="./js/leaflet.curve.js"></script>
+    
+    <!-- zoom-bar plugin -->
+    <link rel="stylesheet" type="text/css" href="./plugins/leaflet-zoombar/zoom-bar.css" />
+    <script src="./plugins/leaflet-zoombar/zoom-bar.js"></script>
+    
+    <!-- nav-bar plugin -->
+    <link rel="stylesheet" type="text/css" href="./plugins/leaflet-navbar/Leaflet.navBar.css" />
+    <script src="./plugins/leaflet-navbar/Leaflet.navBar.js"></script>
+    
+    <!-- swap-provider plugin -->
+    <link rel="stylesheet" type="text/css" href="./plugins/provider/swap-provider.css" />
+    <script src="./plugins/provider/swap-provider.js"></script>
+    <script src="./plugins/provider/leaflet-providers.js"></script>
+      
+    <!-- label collision plugin -->
+    <script src="./plugins/label-collision/rbush.js"></script>
+    <script src="./plugins/label-collision/Leaflet.LayerGroup.Collision.js"></script>
+</head>
+
+<body>
+    <!--overlay section - initially hidden -->
+    <div id="overlay" class="hidden">
+        <div class="overlay-wrapper">
+            <div class="overlay-container">
+                <div>
+                    <div id="map-title"></div>
+                    <a id="overlay-closeButton" onclick="hideOverlay()">main page</a>
+                </div>
+                <div id="map-blurb"></div><!-- populated in overlay.js-->
+                <div id="scrolling-thumbnails"></div><!-- populated in overlay.js-->
+                <section>
+                    <div id ="sidePanel">
+                        <div id="top">
+                            <div id="tableHeader">Places We Visited</div>
+                        </div>
+                        <div id="mainList"></div><!-- populated in list-overlay.js-->
+                    </div>
+                    <div id="map"></div><!-- populated in map-overlay.js-->
+                </section>
+            </div><!--overlay-container-->
+        </div><!--overlay-wrapper-->
+    </div><!--overlay-->
+
+    <!--main page section - this is what shows at first -->
+    <div class="wrapper">
+        <div id="container">
+            <h1>Our Travels</h1>
+
+            <p>One of Chris&#8217s and my great loves is travelling, and over the years we&#8217ve managed to do quite a bit of it!  Keeping track of all our trips using a large paper map of the world would be completely impractical by now, so I came up with the idea of a website where each trip could be shown separately. The result is what you see here. It isn&#8217t quite finished yet, with some trips just being placeholders, and a list of improvements that could be made, but I had to start somewhere so it is what it is.</p>
+
+            <p class="centered"><b>Click on an image to see the trip map!</b></p>
+
+            <hr/>
+    
+            <div id="destinations" class="grid">
+                <script>
+                    var xmlhttp = new XMLHttpRequest();
+                    xmlhttp.onreadystatechange = function() {
+                        if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+                            var myArr = JSON.parse(xmlhttp.responseText);
+                            writeTrips(myArr);
+                        }
+                    };
+                    xmlhttp.open("GET", "tripInfo.txt", true);
+                    xmlhttp.send();
+
+                    function writeTrips(arr){
+                        var out = "";
+                        var i;
+                        for(i = 0; i < arr.length; i++){
+                            var trip = arr[i];
+                            out += '<div onclick="showOverlay(\'' + trip.url + '\')" class="gridItem">'
+                            out += '<img src="trips/' + trip.url + '/' + trip.url + '.jpg">'
+                            out += '<div id="date"><h3>' + trip.date + '</h3></div>'
+                            out += '<div id="days"><h3>' + trip.days + ' days</h3></div>'
+                            out += '<p>' + trip.title + '</p>'
+                            out += '</div>'
+                        }
+                        document.getElementById("destinations").innerHTML = out;
+                    
+                        // see if we are coming from an external link and want to show a map immediately eg. http://localhost:8000/?2016%20Scotland
+                        var url = document.URL;
+                        var res = url.split("?");
+                        // Damn Facebook
+                        //if(res.length > 1){
+                        //    showOverlayImmediately(res[1]);
+                        //}
+                    }
+                </script>
+            </div><!--destinations-->
+        
+            <hr/>
+        
+            <div id="footer">
+                <p>&copy; 2018 - <script>document.write(new Date().getFullYear());</script> Peter Zegelin | Source Code for this site is at <a href="/support.html">GitHub</a></p>
+            </div>
+        </div><!--container-->
+    </div><!--wrapper-->
+</body>
+</html>
