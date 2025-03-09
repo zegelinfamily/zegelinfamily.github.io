@@ -35,7 +35,7 @@ image: "[YYYY] [trip name]" # Optional, else you will get a white rectangle. Siz
 tsv: "[YYYY]_[trip_name]"   # Required stops file
 mapbounds: [lat1, long1], [lat2, long2]  # Initial map bounding box
 ---
-
+```
 
 #### Blurb
 A blurb can be added after the YAML header. This will be displayed above the map on the individual trip page.
