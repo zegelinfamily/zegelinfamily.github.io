@@ -1,20 +1,21 @@
-# Travel Route Mapping
+# Travel Route Mapping - Standard and Workflow
 
 A website to display our travels using the Ignite website builder. By placing a few files in the proper locations of this package and rebuilding the website a new trip can be added to the website. This will show a new trip on the front page, with the latest trip at the top. Clicking on the trip image will go to a trip page showing a map with with a sidebar list of all the locations visited.
 
-After adding a new trip the website is rebuilt via the Run command 'cmd R'
+After adding a new trip the website is rebuilt via the Run command 'cmd R'.
 
 ## Adding a New Trip
 Requires 2 files, with an optional image file to display on the front page. The location specifies where the file should be placed within this package. See an example trip for a better understanding.
 
-1. **Stops Data**
+1. **Trip Markdown**
+   - Format: YAML configuration header and optional blurb to be displayed on trip page
+   - Location: `Content/`
+   - Naming: `[YYYY]_[trip_name].md` (NO SPACES! - Use '_')
+   
+2. **Stops Data**
    - Format: Tab-separated (.tsv) spreadsheet
    - Location: `Resources/Trip/`
    - Naming: `[YYYY] [trip-name].tsv`
-
-2. **Trip Markdown**
-   - Location: `Content/`
-   - Naming: `[YYYY]_[trip_name].md` (NO SPACES! - Use '_')
    
 3. **Image**
    - Location: `Assets/images/`
@@ -24,6 +25,7 @@ Requires 2 files, with an optional image file to display on the front page. The 
 ### Trip Markdown File Structure
 #### YAML Header
 ```yaml
+---
 title: "Trip Card Name"
 subtitle: "Trip Page Name"  # Optional, defaults to title
 date: "YYYY-MM-DD"          # Start date, only year is displayed
@@ -32,7 +34,9 @@ days: 14                    # Optional, use if dates unknown
 image: "[YYYY] [trip name]" # Optional, else you will get a white rectangle. Size 350W x 233H
 tsv: "[YYYY]_[trip_name]"   # Required stops file
 mapbounds: [lat1, long1], [lat2, long2]  # Initial map bounding box
-```
+---
+
+
 #### Blurb
 A blurb can be added after the YAML header. This will be displayed above the map on the individual trip page.
 
