@@ -1,16 +1,22 @@
 <!doctype html>
-<html lang="en">
+<html data-bs-theme="auto" lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="author" content="Peter" />
-    <meta name="generator" content="Ignite v0.5.0" />
-    <title>Home</title>
-    <link href="/ourtravels/css/bootstrap.min.css" rel="stylesheet" />
-    <link href="/ourtravels/css/bootstrap-icons.min.css" rel="stylesheet" />
-    <link href="/ourtravels/css/ignite-core.min.css" rel="stylesheet" />
-    <link href="https://www.zegelin.com/ourtravels/" rel="canonical" />
-    <script>(function() {
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <meta content="Peter Zegelin" name="author" />
+    <meta content="Ignite v0.2.1" name="generator" />
+    <title>Recipes</title>
+    <link href="/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="/css/bootstrap-icons.min.css" rel="stylesheet" />
+    <link href="/css/themes.min.css" rel="stylesheet" />
+    <link href="https://www.zegelin.com/" rel="canonical" />
+    <script>/*
+ Automatic Theme Switching Implementation
+ Used in HTMLHead.swift.
+ For user-driven theme switching implementation, see ignite-core.js.
+ */
+
+(function() {
     function getThemePreference() {
         return localStorage.getItem('custom-theme') || 'auto';
     }
@@ -54,390 +60,100 @@
     applySyntaxTheme();
 })();
 </script>
-    <meta property="og:site_name" content="Our Trips" />
-    <meta property="og:title" content="Home" />
-    <meta name="twitter:title" content="Home" />
-    <meta property="og:url" content="https://www.zegelin.com/ourtravels/" />
-    <meta name="twitter:domain" content="zegelin.com" />
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:dnt" content="on" />
-    <link href="/ourtravels/css/trip.css" rel="stylesheet" />
+    <meta content="Our Recipes" property="og:site_name" />
+    <meta content="Recipes" property="og:title" />
+    <meta content="Recipes" name="twitter:title" />
+    <meta content="https://www.zegelin.com/" property="og:url" />
+    <meta content="zegelin.com" name="twitter:domain" />
+    <meta content="summary_large_image" name="twitter:card" />
+    <meta content="on" name="twitter:dnt" />
   </head>
   <body class="container">
-    <div>
-      <div>
-        <h1 class="text-center">Our Travels</h1>
-        <p>One of Chris's and my great loves is travelling, and over the years we've managed to do quite a bit of it! Keeping track of all our trips using a large paper map of the world would be completely impractical by now, so I came up with the idea of a website where each trip could be shown separately. The result is what you see here. It isn't quite finished yet, with some trips missing, and a list of improvements that could be made, but I had to start somewhere so it is what it is.</p>
-        <p class="text-center"><strong>Click on an image to see the trip map!</strong></p>
-      </div>
-      <div class="text-center">
-        <div style="color: rgb(105 105 105 / 100%); width: min(304px, 100%); margin: 5px; display: inline-block">
-          <div class="color-inherit" style="background-color: rgb(211 211 211 / 100%)">
-            <a href="/2024_Victoria_And_South_Australia"><img src="/images/_blank.jpg" alt="" style="width: min(280px, 100%); margin: 12px" /></a>
-            <div style="margin-left: 12px; margin-right: 12px; margin-top: -6px">
-              <h5 class="text-start">2024</h5>
-              <h5 class="text-end" style="margin-top: -36px">13 days</h5>
-              <p class="text-start" style="margin-top: 0px; padding-bottom: 8px; font-size: 0.9em">Victoria and South Australia</p>
-            </div>
-          </div>
-        </div>
-        <div style="color: rgb(105 105 105 / 100%); width: min(304px, 100%); margin: 5px; display: inline-block">
-          <div class="color-inherit" style="background-color: rgb(211 211 211 / 100%)">
-            <a href="/2023_Florida,_Georgia_And_South_Carolina"><img src="/images/2023%20USA.jpg" alt="" style="width: min(280px, 100%); margin: 12px" /></a>
-            <div style="margin-left: 12px; margin-right: 12px; margin-top: -6px">
-              <h5 class="text-start">2023</h5>
-              <h5 class="text-end" style="margin-top: -36px">40 days</h5>
-              <p class="text-start" style="margin-top: 0px; padding-bottom: 8px; font-size: 0.9em">Florida, Georgia and South Carolina</p>
-            </div>
-          </div>
-        </div>
-        <div style="color: rgb(105 105 105 / 100%); width: min(304px, 100%); margin: 5px; display: inline-block">
-          <div class="color-inherit" style="background-color: rgb(211 211 211 / 100%)">
-            <a href="/2019_Italy"><img src="/images/2019%20Italy.jpg" alt="" style="width: min(280px, 100%); margin: 12px" /></a>
-            <div style="margin-left: 12px; margin-right: 12px; margin-top: -6px">
-              <h5 class="text-start">2019</h5>
-              <h5 class="text-end" style="margin-top: -36px">35 days</h5>
-              <p class="text-start" style="margin-top: 0px; padding-bottom: 8px; font-size: 0.9em">Northern Italy</p>
-            </div>
-          </div>
-        </div>
-        <div style="color: rgb(105 105 105 / 100%); width: min(304px, 100%); margin: 5px; display: inline-block">
-          <div class="color-inherit" style="background-color: rgb(211 211 211 / 100%)">
-            <a href="/2018_Mount_Rushmore_And_Yellowstone_NP"><img src="/images/2018%20USA.jpg" alt="" style="width: min(280px, 100%); margin: 12px" /></a>
-            <div style="margin-left: 12px; margin-right: 12px; margin-top: -6px">
-              <h5 class="text-start">2018</h5>
-              <h5 class="text-end" style="margin-top: -36px">36 days</h5>
-              <p class="text-start" style="margin-top: 0px; padding-bottom: 8px; font-size: 0.9em">Mount Rushmore and Yellowstone NP</p>
-            </div>
-          </div>
-        </div>
-        <div style="color: rgb(105 105 105 / 100%); width: min(304px, 100%); margin: 5px; display: inline-block">
-          <div class="color-inherit" style="background-color: rgb(211 211 211 / 100%)">
-            <a href="/2017_Greece"><img src="/images/2017%20Greece.jpg" alt="" style="width: min(280px, 100%); margin: 12px" /></a>
-            <div style="margin-left: 12px; margin-right: 12px; margin-top: -6px">
-              <h5 class="text-start">2017</h5>
-              <h5 class="text-end" style="margin-top: -36px">43 days</h5>
-              <p class="text-start" style="margin-top: 0px; padding-bottom: 8px; font-size: 0.9em">Greece</p>
-            </div>
-          </div>
-        </div>
-        <div style="color: rgb(105 105 105 / 100%); width: min(304px, 100%); margin: 5px; display: inline-block">
-          <div class="color-inherit" style="background-color: rgb(211 211 211 / 100%)">
-            <a href="/2016_New_Zealand"><img src="/images/2016%20New%20Zealand.jpg" alt="" style="width: min(280px, 100%); margin: 12px" /></a>
-            <div style="margin-left: 12px; margin-right: 12px; margin-top: -6px">
-              <h5 class="text-start">2016</h5>
-              <h5 class="text-end" style="margin-top: -36px">14 days</h5>
-              <p class="text-start" style="margin-top: 0px; padding-bottom: 8px; font-size: 0.9em">New Zealand</p>
-            </div>
-          </div>
-        </div>
-        <div style="color: rgb(105 105 105 / 100%); width: min(304px, 100%); margin: 5px; display: inline-block">
-          <div class="color-inherit" style="background-color: rgb(211 211 211 / 100%)">
-            <a href="/2016_Scotland"><img src="/images/2016%20Scotland.jpg" alt="" style="width: min(280px, 100%); margin: 12px" /></a>
-            <div style="margin-left: 12px; margin-right: 12px; margin-top: -6px">
-              <h5 class="text-start">2016</h5>
-              <h5 class="text-end" style="margin-top: -36px">34 days</h5>
-              <p class="text-start" style="margin-top: 0px; padding-bottom: 8px; font-size: 0.9em">Scotland</p>
-            </div>
-          </div>
-        </div>
-        <div style="color: rgb(105 105 105 / 100%); width: min(304px, 100%); margin: 5px; display: inline-block">
-          <div class="color-inherit" style="background-color: rgb(211 211 211 / 100%)">
-            <a href="/2015_Margaret_River"><img src="/images/2015%20Margaret%20River.jpg" alt="" style="width: min(280px, 100%); margin: 12px" /></a>
-            <div style="margin-left: 12px; margin-right: 12px; margin-top: -6px">
-              <h5 class="text-start">2015</h5>
-              <h5 class="text-end" style="margin-top: -36px">17 days</h5>
-              <p class="text-start" style="margin-top: 0px; padding-bottom: 8px; font-size: 0.9em">WA - Fremantle and Margaret River</p>
-            </div>
-          </div>
-        </div>
-        <div style="color: rgb(105 105 105 / 100%); width: min(304px, 100%); margin: 5px; display: inline-block">
-          <div class="color-inherit" style="background-color: rgb(211 211 211 / 100%)">
-            <a href="/2015_New_York_And_New_England"><img src="/images/2015%20USA.jpg" alt="" style="width: min(280px, 100%); margin: 12px" /></a>
-            <div style="margin-left: 12px; margin-right: 12px; margin-top: -6px">
-              <h5 class="text-start">2015</h5>
-              <h5 class="text-end" style="margin-top: -36px">40 days</h5>
-              <p class="text-start" style="margin-top: 0px; padding-bottom: 8px; font-size: 0.9em">New York and New England</p>
-            </div>
-          </div>
-        </div>
-        <div style="color: rgb(105 105 105 / 100%); width: min(304px, 100%); margin: 5px; display: inline-block">
-          <div class="color-inherit" style="background-color: rgb(211 211 211 / 100%)">
-            <a href="/2014_Italy"><img src="/images/2014%20Italy.jpg" alt="" style="width: min(280px, 100%); margin: 12px" /></a>
-            <div style="margin-left: 12px; margin-right: 12px; margin-top: -6px">
-              <h5 class="text-start">2014</h5>
-              <h5 class="text-end" style="margin-top: -36px">46 days</h5>
-              <p class="text-start" style="margin-top: 0px; padding-bottom: 8px; font-size: 0.9em">Central Italy</p>
-            </div>
-          </div>
-        </div>
-        <div style="color: rgb(105 105 105 / 100%); width: min(304px, 100%); margin: 5px; display: inline-block">
-          <div class="color-inherit" style="background-color: rgb(211 211 211 / 100%)">
-            <a href="/2013_Phuket"><img src="/images/2013%20Phuket.jpg" alt="" style="width: min(280px, 100%); margin: 12px" /></a>
-            <div style="margin-left: 12px; margin-right: 12px; margin-top: -6px">
-              <h5 class="text-start">2013</h5>
-              <h5 class="text-end" style="margin-top: -36px">39 days</h5>
-              <p class="text-start" style="margin-top: 0px; padding-bottom: 8px; font-size: 0.9em">Phuket and Malacca</p>
-            </div>
-          </div>
-        </div>
-        <div style="color: rgb(105 105 105 / 100%); width: min(304px, 100%); margin: 5px; display: inline-block">
-          <div class="color-inherit" style="background-color: rgb(211 211 211 / 100%)">
-            <a href="/2013_New_Mexico_And_Arizona"><img src="/images/2013%20USA.jpg" alt="" style="width: min(280px, 100%); margin: 12px" /></a>
-            <div style="margin-left: 12px; margin-right: 12px; margin-top: -6px">
-              <h5 class="text-start">2013</h5>
-              <h5 class="text-end" style="margin-top: -36px">32 days</h5>
-              <p class="text-start" style="margin-top: 0px; padding-bottom: 8px; font-size: 0.9em">New Mexico and Arizona</p>
-            </div>
-          </div>
-        </div>
-        <div style="color: rgb(105 105 105 / 100%); width: min(304px, 100%); margin: 5px; display: inline-block">
-          <div class="color-inherit" style="background-color: rgb(211 211 211 / 100%)">
-            <a href="/2012_Phuket"><img src="/images/2012%20Phuket.jpg" alt="" style="width: min(280px, 100%); margin: 12px" /></a>
-            <div style="margin-left: 12px; margin-right: 12px; margin-top: -6px">
-              <h5 class="text-start">2012</h5>
-              <h5 class="text-end" style="margin-top: -36px">45 days</h5>
-              <p class="text-start" style="margin-top: 0px; padding-bottom: 8px; font-size: 0.9em">Sri Lanka and Phuket</p>
-            </div>
-          </div>
-        </div>
-        <div style="color: rgb(105 105 105 / 100%); width: min(304px, 100%); margin: 5px; display: inline-block">
-          <div class="color-inherit" style="background-color: rgb(211 211 211 / 100%)">
-            <a href="/2012_Ireland"><img src="/images/2012%20Ireland.jpg" alt="" style="width: min(280px, 100%); margin: 12px" /></a>
-            <div style="margin-left: 12px; margin-right: 12px; margin-top: -6px">
-              <h5 class="text-start">2012</h5>
-              <h5 class="text-end" style="margin-top: -36px">27 days</h5>
-              <p class="text-start" style="margin-top: 0px; padding-bottom: 8px; font-size: 0.9em">Ireland</p>
-            </div>
-          </div>
-        </div>
-        <div style="color: rgb(105 105 105 / 100%); width: min(304px, 100%); margin: 5px; display: inline-block">
-          <div class="color-inherit" style="background-color: rgb(211 211 211 / 100%)">
-            <a href="/2011_West_Coast_USA"><img src="/images/2011%20USA.jpg" alt="" style="width: min(280px, 100%); margin: 12px" /></a>
-            <div style="margin-left: 12px; margin-right: 12px; margin-top: -6px">
-              <h5 class="text-start">2011</h5>
-              <h5 class="text-end" style="margin-top: -36px">30 days</h5>
-              <p class="text-start" style="margin-top: 0px; padding-bottom: 8px; font-size: 0.9em">West Coast USA</p>
-            </div>
-          </div>
-        </div>
-        <div style="color: rgb(105 105 105 / 100%); width: min(304px, 100%); margin: 5px; display: inline-block">
-          <div class="color-inherit" style="background-color: rgb(211 211 211 / 100%)">
-            <a href="/2010_Vietnam"><img src="/images/2010%20Vietnam.jpg" alt="" style="width: min(280px, 100%); margin: 12px" /></a>
-            <div style="margin-left: 12px; margin-right: 12px; margin-top: -6px">
-              <h5 class="text-start">2010</h5>
-              <h5 class="text-end" style="margin-top: -36px">24 days</h5>
-              <p class="text-start" style="margin-top: 0px; padding-bottom: 8px; font-size: 0.9em">Darwin and Vietnam</p>
-            </div>
-          </div>
-        </div>
-        <div style="color: rgb(105 105 105 / 100%); width: min(304px, 100%); margin: 5px; display: inline-block">
-          <div class="color-inherit" style="background-color: rgb(211 211 211 / 100%)">
-            <a href="/2010_Tasmania"><img src="/images/2010%20Tasmania.jpg" alt="" style="width: min(280px, 100%); margin: 12px" /></a>
-            <div style="margin-left: 12px; margin-right: 12px; margin-top: -6px">
-              <h5 class="text-start">2010</h5>
-              <h5 class="text-end" style="margin-top: -36px">8 days</h5>
-              <p class="text-start" style="margin-top: 0px; padding-bottom: 8px; font-size: 0.9em">Tasmania</p>
-            </div>
-          </div>
-        </div>
-        <div style="color: rgb(105 105 105 / 100%); width: min(304px, 100%); margin: 5px; display: inline-block">
-          <div class="color-inherit" style="background-color: rgb(211 211 211 / 100%)">
-            <a href="/2008_Cambodia"><img src="/images/2008%20Cambodia.jpg" alt="" style="width: min(280px, 100%); margin: 12px" /></a>
-            <div style="margin-left: 12px; margin-right: 12px; margin-top: -6px">
-              <h5 class="text-start">2008</h5>
-              <h5 class="text-end" style="margin-top: -36px">18 days</h5>
-              <p class="text-start" style="margin-top: 0px; padding-bottom: 8px; font-size: 0.9em">Cambodia and Thailand</p>
-            </div>
-          </div>
-        </div>
-        <div style="color: rgb(105 105 105 / 100%); width: min(304px, 100%); margin: 5px; display: inline-block">
-          <div class="color-inherit" style="background-color: rgb(211 211 211 / 100%)">
-            <a href="/2006_Fiji"><img src="/images/2006%20Fiji.jpg" alt="" style="width: min(280px, 100%); margin: 12px" /></a>
-            <div style="margin-left: 12px; margin-right: 12px; margin-top: -6px">
-              <h5 class="text-start">2006</h5>
-              <h5 class="text-end" style="margin-top: -36px">21 days</h5>
-              <p class="text-start" style="margin-top: 0px; padding-bottom: 8px; font-size: 0.9em">Fiji</p>
-            </div>
-          </div>
-        </div>
-        <div style="color: rgb(105 105 105 / 100%); width: min(304px, 100%); margin: 5px; display: inline-block">
-          <div class="color-inherit" style="background-color: rgb(211 211 211 / 100%)">
-            <a href="/2005_Hawaii"><img src="/images/2005%20Hawaii.jpg" alt="" style="width: min(280px, 100%); margin: 12px" /></a>
-            <div style="margin-left: 12px; margin-right: 12px; margin-top: -6px">
-              <h5 class="text-start">2005</h5>
-              <h5 class="text-end" style="margin-top: -36px">18 days</h5>
-              <p class="text-start" style="margin-top: 0px; padding-bottom: 8px; font-size: 0.9em">Hawaii</p>
-            </div>
-          </div>
-        </div>
-        <div style="color: rgb(105 105 105 / 100%); width: min(304px, 100%); margin: 5px; display: inline-block">
-          <div class="color-inherit" style="background-color: rgb(211 211 211 / 100%)">
-            <a href="/2004_New_Zealand"><img src="/images/2004%20New%20Zealand.jpg" alt="" style="width: min(280px, 100%); margin: 12px" /></a>
-            <div style="margin-left: 12px; margin-right: 12px; margin-top: -6px">
-              <h5 class="text-start">2004</h5>
-              <h5 class="text-end" style="margin-top: -36px">10 days</h5>
-              <p class="text-start" style="margin-top: 0px; padding-bottom: 8px; font-size: 0.9em">New Zealand</p>
-            </div>
-          </div>
-        </div>
-        <div style="color: rgb(105 105 105 / 100%); width: min(304px, 100%); margin: 5px; display: inline-block">
-          <div class="color-inherit" style="background-color: rgb(211 211 211 / 100%)">
-            <a href="/2004_Queensland"><img src="/images/2004%20Queensland.jpg" alt="" style="width: min(280px, 100%); margin: 12px" /></a>
-            <div style="margin-left: 12px; margin-right: 12px; margin-top: -6px">
-              <h5 class="text-start">2004</h5>
-              <h5 class="text-end" style="margin-top: -36px">13 days</h5>
-              <p class="text-start" style="margin-top: 0px; padding-bottom: 8px; font-size: 0.9em">Far North Queensland</p>
-            </div>
-          </div>
-        </div>
-        <div style="color: rgb(105 105 105 / 100%); width: min(304px, 100%); margin: 5px; display: inline-block">
-          <div class="color-inherit" style="background-color: rgb(211 211 211 / 100%)">
-            <a href="/2003_Central_Australia"><img src="/images/2003%20Central%20Australia.jpg" alt="" style="width: min(280px, 100%); margin: 12px" /></a>
-            <div style="margin-left: 12px; margin-right: 12px; margin-top: -6px">
-              <h5 class="text-start">2003</h5>
-              <h5 class="text-end" style="margin-top: -36px">0 days</h5>
-              <p class="text-start" style="margin-top: 0px; padding-bottom: 8px; font-size: 0.9em">Central Australia</p>
-            </div>
-          </div>
-        </div>
-        <div style="color: rgb(105 105 105 / 100%); width: min(304px, 100%); margin: 5px; display: inline-block">
-          <div class="color-inherit" style="background-color: rgb(211 211 211 / 100%)">
-            <a href="/2002_Thailand"><img src="/images/2002%20Thailand.jpg" alt="" style="width: min(280px, 100%); margin: 12px" /></a>
-            <div style="margin-left: 12px; margin-right: 12px; margin-top: -6px">
-              <h5 class="text-start">2002</h5>
-              <h5 class="text-end" style="margin-top: -36px">19 days</h5>
-              <p class="text-start" style="margin-top: 0px; padding-bottom: 8px; font-size: 0.9em">Thailand and Singapore</p>
-            </div>
-          </div>
-        </div>
-        <div style="color: rgb(105 105 105 / 100%); width: min(304px, 100%); margin: 5px; display: inline-block">
-          <div class="color-inherit" style="background-color: rgb(211 211 211 / 100%)">
-            <a href="/2000_Outback_NSW"><img src="/images/2000%20Outback%20NSW.jpg" alt="" style="width: min(280px, 100%); margin: 12px" /></a>
-            <div style="margin-left: 12px; margin-right: 12px; margin-top: -6px">
-              <h5 class="text-start">2000</h5>
-              <h5 class="text-end" style="margin-top: -36px">16 days</h5>
-              <p class="text-start" style="margin-top: 0px; padding-bottom: 8px; font-size: 0.9em">Outback NSW</p>
-            </div>
-          </div>
-        </div>
-        <div style="color: rgb(105 105 105 / 100%); width: min(304px, 100%); margin: 5px; display: inline-block">
-          <div class="color-inherit" style="background-color: rgb(211 211 211 / 100%)">
-            <a href="/1999_Tasmania"><img src="/images/1999%20Tasmania.jpg" alt="" style="width: min(280px, 100%); margin: 12px" /></a>
-            <div style="margin-left: 12px; margin-right: 12px; margin-top: -6px">
-              <h5 class="text-start">1999</h5>
-              <h5 class="text-end" style="margin-top: -36px">~10 days</h5>
-              <p class="text-start" style="margin-top: 0px; padding-bottom: 8px; font-size: 0.9em">Tasmania</p>
-            </div>
-          </div>
-        </div>
-        <div style="color: rgb(105 105 105 / 100%); width: min(304px, 100%); margin: 5px; display: inline-block">
-          <div class="color-inherit" style="background-color: rgb(211 211 211 / 100%)">
-            <a href="/1997_California_And_Utah"><img src="/images/1997%20USA.jpg" alt="" style="width: min(280px, 100%); margin: 12px" /></a>
-            <div style="margin-left: 12px; margin-right: 12px; margin-top: -6px">
-              <h5 class="text-start">1997</h5>
-              <h5 class="text-end" style="margin-top: -36px">23 days</h5>
-              <p class="text-start" style="margin-top: 0px; padding-bottom: 8px; font-size: 0.9em">California and Utah</p>
-            </div>
-          </div>
-        </div>
-        <div style="color: rgb(105 105 105 / 100%); width: min(304px, 100%); margin: 5px; display: inline-block">
-          <div class="color-inherit" style="background-color: rgb(211 211 211 / 100%)">
-            <a href="/1996_Italy"><img src="/images/1996%20Italy.jpg" alt="" style="width: min(280px, 100%); margin: 12px" /></a>
-            <div style="margin-left: 12px; margin-right: 12px; margin-top: -6px">
-              <h5 class="text-start">1996</h5>
-              <h5 class="text-end" style="margin-top: -36px">30 days</h5>
-              <p class="text-start" style="margin-top: 0px; padding-bottom: 8px; font-size: 0.9em">Italy</p>
-            </div>
-          </div>
-        </div>
-        <div style="color: rgb(105 105 105 / 100%); width: min(304px, 100%); margin: 5px; display: inline-block">
-          <div class="color-inherit" style="background-color: rgb(211 211 211 / 100%)">
-            <a href="/1995_Bali_And_Lombok"><img src="/images/1995%20Bali%20and%20Lombok.jpg" alt="" style="width: min(280px, 100%); margin: 12px" /></a>
-            <div style="margin-left: 12px; margin-right: 12px; margin-top: -6px">
-              <h5 class="text-start">1995</h5>
-              <h5 class="text-end" style="margin-top: -36px">23 days</h5>
-              <p class="text-start" style="margin-top: 0px; padding-bottom: 8px; font-size: 0.9em">Bali and Lombok</p>
-            </div>
-          </div>
-        </div>
-        <div style="color: rgb(105 105 105 / 100%); width: min(304px, 100%); margin: 5px; display: inline-block">
-          <div class="color-inherit" style="background-color: rgb(211 211 211 / 100%)">
-            <a href="/1993_Europe_And_Morocco"><img src="/images/1993%20Europe%20and%20Morocco.jpg" alt="" style="width: min(280px, 100%); margin: 12px" /></a>
-            <div style="margin-left: 12px; margin-right: 12px; margin-top: -6px">
-              <h5 class="text-start">1993</h5>
-              <h5 class="text-end" style="margin-top: -36px">56 days</h5>
-              <p class="text-start" style="margin-top: 0px; padding-bottom: 8px; font-size: 0.9em">Spain, Portugal and Morocco</p>
-            </div>
-          </div>
-        </div>
-        <div style="color: rgb(105 105 105 / 100%); width: min(304px, 100%); margin: 5px; display: inline-block">
-          <div class="color-inherit" style="background-color: rgb(211 211 211 / 100%)">
-            <a href="/1991_England_And_Wales"><img src="/images/1991%20England%20and%20Wales.jpg" alt="" style="width: min(280px, 100%); margin: 12px" /></a>
-            <div style="margin-left: 12px; margin-right: 12px; margin-top: -6px">
-              <h5 class="text-start">1991</h5>
-              <h5 class="text-end" style="margin-top: -36px">64 days</h5>
-              <p class="text-start" style="margin-top: 0px; padding-bottom: 8px; font-size: 0.9em">England and Wales</p>
-            </div>
-          </div>
-        </div>
-        <div style="color: rgb(105 105 105 / 100%); width: min(304px, 100%); margin: 5px; display: inline-block">
-          <div class="color-inherit" style="background-color: rgb(211 211 211 / 100%)">
-            <a href="/1986_Around_The_World"><img src="/images/1986%20Around%20The%20World.jpg" alt="" style="width: min(280px, 100%); margin: 12px" /></a>
-            <div style="margin-left: 12px; margin-right: 12px; margin-top: -6px">
-              <h5 class="text-start">1986</h5>
-              <h5 class="text-end" style="margin-top: -36px">180 days</h5>
-              <p class="text-start" style="margin-top: 0px; padding-bottom: 8px; font-size: 0.9em">Around the World</p>
-            </div>
-          </div>
-        </div>
-        <div style="color: rgb(105 105 105 / 100%); width: min(304px, 100%); margin: 5px; display: inline-block">
-          <div class="color-inherit" style="background-color: rgb(211 211 211 / 100%)">
-            <a href="/1983_Asia"><img src="/images/1983%20Asia.jpg" alt="" style="width: min(280px, 100%); margin: 12px" /></a>
-            <div style="margin-left: 12px; margin-right: 12px; margin-top: -6px">
-              <h5 class="text-start">1983</h5>
-              <h5 class="text-end" style="margin-top: -36px">156 days</h5>
-              <p class="text-start" style="margin-top: 0px; padding-bottom: 8px; font-size: 0.9em">Asia and SE Asia</p>
-            </div>
-          </div>
-        </div>
-        <div style="color: rgb(105 105 105 / 100%); width: min(304px, 100%); margin: 5px; display: inline-block">
-          <div class="color-inherit" style="background-color: rgb(211 211 211 / 100%)">
-            <a href="/1981_Indonesia"><img src="/images/1981%20Indonesia.jpg" alt="" style="width: min(280px, 100%); margin: 12px" /></a>
-            <div style="margin-left: 12px; margin-right: 12px; margin-top: -6px">
-              <h5 class="text-start">1981</h5>
-              <h5 class="text-end" style="margin-top: -36px">32 days</h5>
-              <p class="text-start" style="margin-top: 0px; padding-bottom: 8px; font-size: 0.9em">Indonesia and Singapore</p>
-            </div>
-          </div>
-        </div>
-        <div style="color: rgb(105 105 105 / 100%); width: min(304px, 100%); margin: 5px; display: inline-block">
-          <div class="color-inherit" style="background-color: rgb(211 211 211 / 100%)">
-            <a href="/1980_Europe_And_Kenya"><img src="/images/1980%20Europe%20and%20Kenya.jpg" alt="" style="width: min(280px, 100%); margin: 12px" /></a>
-            <div style="margin-left: 12px; margin-right: 12px; margin-top: -6px">
-              <h5 class="text-start">1980</h5>
-              <h5 class="text-end" style="margin-top: -36px">~50 days</h5>
-              <p class="text-start" style="margin-top: 0px; padding-bottom: 8px; font-size: 0.9em">Europe and Kenya</p>
-            </div>
-          </div>
-        </div>
-        <div style="color: rgb(105 105 105 / 100%); width: min(304px, 100%); margin: 5px; display: inline-block">
-          <div class="color-inherit" style="background-color: rgb(211 211 211 / 100%)">
-            <a href="/1978_Bali_And_Java"><img src="/images/1978%20Bali%20and%20Java.jpg" alt="" style="width: min(280px, 100%); margin: 12px" /></a>
-            <div style="margin-left: 12px; margin-right: 12px; margin-top: -6px">
-              <h5 class="text-start">1978</h5>
-              <h5 class="text-end" style="margin-top: -36px">~35 days</h5>
-              <p class="text-start" style="margin-top: 0px; padding-bottom: 8px; font-size: 0.9em">Bali and Java</p>
-            </div>
-          </div>
-        </div>
-      </div>
+    <div style="padding-top: 20px">
+      <h2>Recipes</h2>
+      <p class="text-end" style="margin-top: -42px"><a href="/menu-planner" class="link-underline link-underline-opacity-100 link-underline-opacity-100-hover" style="color: #aaa; font-size: 1.5em; text-decoration: none">menu planner</a></p>
     </div>
-    <div class="d-flex justify-content-center m-2" style="font-size: 0.8em">
-      <p>© 2018 - <span id="currentYear"></span> Peter Zegelin | </p>
-      <script>document.getElementById('currentYear').textContent = new Date().getFullYear();</script>
-      <p>Created in Swift with <a href="https://github.com/twostraws/Ignite">Ignite</a></p>
-      <p> | Source Code for this site is at <a href="https://github.com/zegelinfamily/">GitHub </a></p>
+    <div class="row">
+      <div class=" col">
+        <p style="font-size: 1.5em; font-weight: 300; margin: 0px">Drinks</p>
+        <ul style="list-style: none; margin: 0px">
+          <li><a href="/Recipes/Drinks/Aperol_Spritz" class="link-underline link-underline-opacity-100 link-underline-opacity-100-hover" style="color: #aaa; margin-left: -20px; text-decoration: none">Aperol Spritz</a></li>
+          <li><a href="/Recipes/Drinks/Cosmopolitan" class="link-underline link-underline-opacity-100 link-underline-opacity-100-hover" style="color: #aaa; margin-left: -20px; text-decoration: none">Cosmopolitan</a></li>
+          <li><a href="/Recipes/Drinks/Margarita" class="link-underline link-underline-opacity-100 link-underline-opacity-100-hover" style="color: #aaa; margin-left: -20px; text-decoration: none">Margarita</a></li>
+          <li><a href="/Recipes/Drinks/Mojito" class="link-underline link-underline-opacity-100 link-underline-opacity-100-hover" style="color: #aaa; margin-left: -20px; text-decoration: none">Mojito</a></li>
+        </ul>
+        <p style="font-size: 1.5em; font-weight: 300; margin: 0px">BBQ</p>
+        <ul style="list-style: none; margin: 0px">
+          <li><a href="/Recipes/BBQ/Antipasto_Barbecue_Chicken" class="link-underline link-underline-opacity-100 link-underline-opacity-100-hover" style="color: #aaa; margin-left: -20px; text-decoration: none">Antipasto Barbecue Chicken</a></li>
+          <li><a href="/Recipes/BBQ/BBQ_Chicken_With_Spicy_Honey_Bacon_Glaze" class="link-underline link-underline-opacity-100 link-underline-opacity-100-hover" style="color: #aaa; margin-left: -20px; text-decoration: none">BBQ Chicken With Spicy Honey Bacon Glaze</a></li>
+          <li><a href="/Recipes/BBQ/Barbecued_Citrus_Garlic_Prawns" class="link-underline link-underline-opacity-100 link-underline-opacity-100-hover" style="color: #aaa; margin-left: -20px; text-decoration: none">Barbecued Citrus Garlic Prawns</a></li>
+          <li><a href="/Recipes/BBQ/Middle_Eastern_Chicken_Skewers" class="link-underline link-underline-opacity-100 link-underline-opacity-100-hover" style="color: #aaa; margin-left: -20px; text-decoration: none">Middle Eastern Chicken Skewers</a></li>
+          <li><a href="/Recipes/BBQ/Sate_Chicken" class="link-underline link-underline-opacity-100 link-underline-opacity-100-hover" style="color: #aaa; margin-left: -20px; text-decoration: none">Sate Chicken</a></li>
+        </ul>
+        <p style="font-size: 1.5em; font-weight: 300; margin: 0px">Pasta</p>
+        <ul style="list-style: none; margin: 0px">
+          <li><a href="/Recipes/Pasta/Buffalo_Mozzarella_Lasagne" class="link-underline link-underline-opacity-100 link-underline-opacity-100-hover" style="color: #aaa; margin-left: -20px; text-decoration: none">Buffalo Mozzarella Lasagne</a></li>
+          <li><a href="/Recipes/Pasta/Homemade_Pasta" class="link-underline link-underline-opacity-100 link-underline-opacity-100-hover" style="color: #aaa; margin-left: -20px; text-decoration: none">Homemade Pasta</a></li>
+          <li><a href="/Recipes/Pasta/Linguine_With_Prawns_Snow_Peas_And_Lemon" class="link-underline link-underline-opacity-100 link-underline-opacity-100-hover" style="color: #aaa; margin-left: -20px; text-decoration: none">Linguine With Prawns, Snow Peas And Lemon</a></li>
+          <li><a href="/Recipes/Pasta/Mac_&amp;_Cheese" class="link-underline link-underline-opacity-100 link-underline-opacity-100-hover" style="color: #aaa; margin-left: -20px; text-decoration: none">Mac and Cheese</a></li>
+          <li><a href="/Recipes/Pasta/Penne_With_Eggplant_Caponata" class="link-underline link-underline-opacity-100 link-underline-opacity-100-hover" style="color: #aaa; margin-left: -20px; text-decoration: none">Penne With Eggplant Caponata</a></li>
+          <li><a href="/Recipes/Pasta/Prawn_And_Prosecco_Linguine" class="link-underline link-underline-opacity-100 link-underline-opacity-100-hover" style="color: #aaa; margin-left: -20px; text-decoration: none">Prawn And Prosecco Linguine</a></li>
+          <li><a href="/Recipes/Pasta/Spaghetti_Alla_Carbonara" class="link-underline link-underline-opacity-100 link-underline-opacity-100-hover" style="color: #aaa; margin-left: -20px; text-decoration: none">Spaghetti Alla Carbonara</a></li>
+        </ul>
+        <p style="font-size: 1.5em; font-weight: 300; margin: 0px">Risottos</p>
+        <ul style="list-style: none; margin: 0px">
+          <li><a href="/Recipes/Risottos/Bacon_And_Pea_Risotto" class="link-underline link-underline-opacity-100 link-underline-opacity-100-hover" style="color: #aaa; margin-left: -20px; text-decoration: none">Bacon and Pea Risotto</a></li>
+          <li><a href="/Recipes/Risottos/Chicken_And_Asparagus_Risotto" class="link-underline link-underline-opacity-100 link-underline-opacity-100-hover" style="color: #aaa; margin-left: -20px; text-decoration: none">Chicken and Asparagus Risotto</a></li>
+          <li><a href="/Recipes/Risottos/Pumpkin_And_Leek_Risotto" class="link-underline link-underline-opacity-100 link-underline-opacity-100-hover" style="color: #aaa; margin-left: -20px; text-decoration: none">Pumpkin And Leek Risotto</a></li>
+          <li><a href="/Recipes/Risottos/Sundried_Tomato_Risotto" class="link-underline link-underline-opacity-100 link-underline-opacity-100-hover" style="color: #aaa; margin-left: -20px; text-decoration: none">Sundried Tomato Risotto</a></li>
+        </ul>
+        <p style="font-size: 1.5em; font-weight: 300; margin: 0px">Salads</p>
+        <ul style="list-style: none; margin: 0px">
+          <li><a href="/Recipes/Salads/Tabouleh" class="link-underline link-underline-opacity-100 link-underline-opacity-100-hover" style="color: #aaa; margin-left: -20px; text-decoration: none">Tabouleh</a></li>
+        </ul>
+        <p style="font-size: 1.5em; font-weight: 300; margin: 0px">Soups</p>
+        <ul style="list-style: none; margin: 0px">
+          <li><a href="/Recipes/Soups/Moroccan_Sweet_Potato_Carrot_And_Chickpea_Soup" class="link-underline link-underline-opacity-100 link-underline-opacity-100-hover" style="color: #aaa; margin-left: -20px; text-decoration: none">Moroccan Sweet Potato, Carrot and Chickpea Soup</a></li>
+          <li><a href="/Recipes/Soups/Pumpkin_Soup" class="link-underline link-underline-opacity-100 link-underline-opacity-100-hover" style="color: #aaa; margin-left: -20px; text-decoration: none">Pumpkin Soup</a></li>
+          <li><a href="/Recipes/Soups/Roasted_Tomato_and_Capsicum_Soup" class="link-underline link-underline-opacity-100 link-underline-opacity-100-hover" style="color: #aaa; margin-left: -20px; text-decoration: none">Roasted Tomato and Capsicum Soup</a></li>
+        </ul>
+      </div>
+      <div class=" col">
+        <p style="font-size: 1.5em; font-weight: 300; margin: 0px">Stir Fries</p>
+        <ul style="list-style: none; margin: 0px">
+          <li><a href="/Recipes/StirFries/Cashew_Chicken" class="link-underline link-underline-opacity-100 link-underline-opacity-100-hover" style="color: #aaa; margin-left: -20px; text-decoration: none">Cashew Chicken</a></li>
+          <li><a href="/Recipes/StirFries/Chilli_Mango_Chicken" class="link-underline link-underline-opacity-100 link-underline-opacity-100-hover" style="color: #aaa; margin-left: -20px; text-decoration: none">Chilli Mango Chicken</a></li>
+          <li><a href="/Recipes/StirFries/Honey_Prawns" class="link-underline link-underline-opacity-100 link-underline-opacity-100-hover" style="color: #aaa; margin-left: -20px; text-decoration: none">Honey Prawns</a></li>
+          <li><a href="/Recipes/StirFries/Thai_Chilli_Jam_Chicken" class="link-underline link-underline-opacity-100 link-underline-opacity-100-hover" style="color: #aaa; margin-left: -20px; text-decoration: none">Thai Chilli Jam Chicken</a></li>
+          <li><a href="/Recipes/StirFries/Tofu_With_Chilli_Jam_And_Spring_Onions" class="link-underline link-underline-opacity-100 link-underline-opacity-100-hover" style="color: #aaa; margin-left: -20px; text-decoration: none">Tofu with Chilli Jam and Spring Onions</a></li>
+        </ul>
+        <p style="font-size: 1.5em; font-weight: 300; margin: 0px">Tray Bakes</p>
+        <ul style="list-style: none; margin: 0px">
+          <li><a href="/Recipes/TrayBakes/Baked_Chicken_With_Lemon_Potato_And_Green_Olives" class="link-underline link-underline-opacity-100 link-underline-opacity-100-hover" style="color: #aaa; margin-left: -20px; text-decoration: none">Baked Chicken with Lemon, Potato and Green Olives</a></li>
+          <li><a href="/Recipes/TrayBakes/Chicken_Tray_Bake_With_Smoky_Bacon_And_Tomatoes" class="link-underline link-underline-opacity-100 link-underline-opacity-100-hover" style="color: #aaa; margin-left: -20px; text-decoration: none">Chicken Tray Bake with Smoky Bacon and Tomatoes</a></li>
+          <li><a href="/Recipes/TrayBakes/Cider_Roasted_Chicken_With_Prosciutto_Apple_And_Potato" class="link-underline link-underline-opacity-100 link-underline-opacity-100-hover" style="color: #aaa; margin-left: -20px; text-decoration: none">Cider Roasted Chicken with Prosciutto, Apple and Potato</a></li>
+          <li><a href="/Recipes/TrayBakes/Leek_Chorizo_Cauliflower_And_Chicken_Bake" class="link-underline link-underline-opacity-100 link-underline-opacity-100-hover" style="color: #aaa; margin-left: -20px; text-decoration: none">Leek, Chorizo, Cauliflower and Chicken Bake</a></li>
+          <li><a href="/Recipes/TrayBakes/Mediterranean_Chicken_Bake" class="link-underline link-underline-opacity-100 link-underline-opacity-100-hover" style="color: #aaa; margin-left: -20px; text-decoration: none">Mediterranean Chicken Bake</a></li>
+        </ul>
+        <p style="font-size: 1.5em; font-weight: 300; margin: 0px">Dinners</p>
+        <ul style="list-style: none; margin: 0px">
+          <li><a href="/Recipes/Dinners/Baked_Teriyaki_Salmon" class="link-underline link-underline-opacity-100 link-underline-opacity-100-hover" style="color: #aaa; margin-left: -20px; text-decoration: none">Baked Teriyaki Salmon</a></li>
+          <li><a href="/Recipes/Dinners/Cantonese_Chicken" class="link-underline link-underline-opacity-100 link-underline-opacity-100-hover" style="color: #aaa; margin-left: -20px; text-decoration: none">Cantonese Chicken</a></li>
+          <li><a href="/Recipes/Dinners/Chicken_Cacciatore" class="link-underline link-underline-opacity-100 link-underline-opacity-100-hover" style="color: #aaa; margin-left: -20px; text-decoration: none">Chicken Cacciatore</a></li>
+          <li><a href="/Recipes/Dinners/Chicken_Piccata" class="link-underline link-underline-opacity-100 link-underline-opacity-100-hover" style="color: #aaa; margin-left: -20px; text-decoration: none">Chicken Piccata</a></li>
+          <li><a href="/Recipes/Dinners/Paprika_Chicken" class="link-underline link-underline-opacity-100 link-underline-opacity-100-hover" style="color: #aaa; margin-left: -20px; text-decoration: none">Paprika Chicken</a></li>
+          <li><a href="/Recipes/Dinners/Pizza_Toppings" class="link-underline link-underline-opacity-100 link-underline-opacity-100-hover" style="color: #aaa; margin-left: -20px; text-decoration: none">Pizza Toppings</a></li>
+          <li><a href="/Recipes/Dinners/Quiche" class="link-underline link-underline-opacity-100 link-underline-opacity-100-hover" style="color: #aaa; margin-left: -20px; text-decoration: none">Quiche</a></li>
+        </ul>
+        <p style="font-size: 1.5em; font-weight: 300; margin: 0px">Other</p>
+        <ul style="list-style: none; margin: 0px">
+          <li><a href="/Recipes/Other/Chocolate_Chip_Biscuits" class="link-underline link-underline-opacity-100 link-underline-opacity-100-hover" style="color: #aaa; margin-left: -20px; text-decoration: none">Chocolate Chip Biscuits</a></li>
+          <li><a href="/Recipes/Other/Pancakes" class="link-underline link-underline-opacity-100 link-underline-opacity-100-hover" style="color: #aaa; margin-left: -20px; text-decoration: none">Pancakes</a></li>
+          <li><a href="/Recipes/Other/Rum_Balls" class="link-underline link-underline-opacity-100 link-underline-opacity-100-hover" style="color: #aaa; margin-left: -20px; text-decoration: none">Rum Balls</a></li>
+          <li><a href="/Recipes/Other/Scones" class="link-underline link-underline-opacity-100 link-underline-opacity-100-hover" style="color: #aaa; margin-left: -20px; text-decoration: none">Scones</a></li>
+          <li><a href="/Recipes/Other/Turkish_Carrot_Dip" class="link-underline link-underline-opacity-100 link-underline-opacity-100-hover" style="color: #aaa; margin-left: -20px; text-decoration: none">Turkish Carrot Dip</a></li>
+        </ul>
+      </div>
     </div>
     <script src="/js/bootstrap.bundle.min.js"></script>
     <script src="/js/ignite-core.js"></script>

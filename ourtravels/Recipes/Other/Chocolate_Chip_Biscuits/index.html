@@ -1,0 +1,121 @@
+<!doctype html>
+<html data-bs-theme="auto" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <meta content="notes: Makes about 50 biscuits" name="description" />
+    <meta content="Peter Zegelin" name="author" />
+    <meta content="Ignite v0.2.1" name="generator" />
+    <title>Chocolate Chip Biscuits</title>
+    <link href="/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="/css/bootstrap-icons.min.css" rel="stylesheet" />
+    <link href="/css/themes.min.css" rel="stylesheet" />
+    <link href="https://www.zegelin.com/Recipes/Other/Chocolate_Chip_Biscuits" rel="canonical" />
+    <script>/*
+ Automatic Theme Switching Implementation
+ Used in HTMLHead.swift.
+ For user-driven theme switching implementation, see ignite-core.js.
+ */
+
+(function() {
+    function getThemePreference() {
+        return localStorage.getItem('custom-theme') || 'auto';
+    }
+
+    function applyTheme(themeID) {
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        const lightThemeID = document.documentElement.getAttribute('data-light-theme') || 'light';
+        const darkThemeID = document.documentElement.getAttribute('data-dark-theme') || 'dark';
+        const actualThemeID = themeID === 'auto' ? (prefersDark ? darkThemeID : lightThemeID) : themeID;
+
+        document.documentElement.setAttribute('data-bs-theme', actualThemeID);
+        document.documentElement.setAttribute('data-theme-state', themeID);
+    }
+
+    function applySyntaxTheme() {
+        const syntaxTheme = getComputedStyle(document.documentElement)
+            .getPropertyValue('--syntax-highlight-theme').trim().replace(/"/g, '');
+
+        if (!syntaxTheme) return;
+
+        document.querySelectorAll('link[data-highlight-theme]').forEach(link => {
+            link.setAttribute('disabled', 'disabled');
+        });
+
+        const themeLink = document.querySelector(`link[data-highlight-theme="${syntaxTheme}"]`);
+        if (themeLink) {
+            themeLink.removeAttribute('disabled');
+        }
+    }
+
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
+        const currentTheme = getThemePreference();
+        if (currentTheme === 'auto') {
+            applyTheme('auto');
+            applySyntaxTheme();
+        }
+    });
+
+    const savedTheme = getThemePreference();
+    applyTheme(savedTheme);
+    applySyntaxTheme();
+})();
+</script>
+    <meta content="Our Recipes" property="og:site_name" />
+    <meta content="Chocolate Chip Biscuits" property="og:title" />
+    <meta content="Chocolate Chip Biscuits" name="twitter:title" />
+    <meta content="notes: Makes about 50 biscuits" property="og:description" />
+    <meta content="notes: Makes about 50 biscuits" name="twitter:description" />
+    <meta content="https://www.zegelin.com/Recipes/Other/Chocolate_Chip_Biscuits" property="og:url" />
+    <meta content="zegelin.com" name="twitter:domain" />
+    <meta content="summary_large_image" name="twitter:card" />
+    <meta content="on" name="twitter:dnt" />
+  </head>
+  <body class="container">
+    <div>
+      <div style="padding-top: 20px">
+        <h2 class="text-start">Chocolate Chip Biscuits</h2>
+        <p class="text-end" style="margin-top: -42px"><a href="/" class="link-underline link-underline-opacity-100 link-underline-opacity-100-hover" style="color: #aaa; font-size: 1.5em; text-decoration: none">home</a></p>
+      </div>
+      <div class="row">
+        <div class=" col-md-5">
+          <p> Makes about 50 biscuits</p>
+          <p></p>
+        </div>
+        <div class=" col-md-1">
+          <div class="justify-content-center align-items-center" style="height: 20px"></div>
+        </div>
+        <div class=" col" style="padding-top: 20px">
+          <div style="padding-top: 20px">
+            <h3>Ingredients:</h3>
+            <p></p>
+            <ul>
+              <li>1 cup plain flour</li>
+              <li>½ cup castor sugar</li>
+              <li>¼ cup packed brown sugar</li>
+              <li>1 egg</li>
+              <li>½ cup butter</li>
+              <li>1 tsp vanilla essence</li>
+              <li>¾ tsp salt</li>
+              <li>½ tsp bicarbonate of soda</li>
+              <li>2 tablespoons milk</li>
+              <li>l cup semisweet chocolate bits</li>
+              <li>1 cup one-minute oats</li>
+              <li>½ cup chopped nuts</li>
+            </ul>
+            <p></p>
+          </div>
+        </div>
+        <div class=" col" style="padding-top: 20px">
+          <div style="padding-top: 20px">
+            <h3>Preparation:</h3>
+            <p> Beat together sugars, butter, egg, milk and vanilla in a mixing bowl until light and fuffy Stir together flour, oats, nuts, chocolate bits, salt and bicarbonate of soda Stir flour mixture into creamed mixture and blend well Line baking pan with baking paper and drop cookie mixture from a teaspoon about 5cm apart Bake in a 190°C oven for 8 to 10 minutes Let stand for a few minutes to cool and place on wire rack to cool completely</p>
+            <p></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/ignite-core.js"></script>
+  </body>
+</html>
