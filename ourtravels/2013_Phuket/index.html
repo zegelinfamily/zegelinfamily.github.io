@@ -1,0 +1,396 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="We’d enjoyed our previous stay at Phuket so much that we decided to do the same thing the next year. We had a different villa in the complex this time but it was still excellent with a private pool and all. We spent much of the month relaxing and going ‘local’. It did rain quite a bit more this time but we still managed to spend a lot of time out and about and eating at lots of excellent restaurants. At the end of our trip we spent a few days in the old Malaysian trading port of Malacca which we had last visited 30 years before." />
+    <meta name="author" content="Peter" />
+    <meta name="generator" content="Ignite v0.5.0" />
+    <title>Phuket and Malacca</title>
+    <link href="/ourtravels/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="/ourtravels/css/bootstrap-icons.min.css" rel="stylesheet" />
+    <link href="/ourtravels/css/ignite-core.min.css" rel="stylesheet" />
+    <link href="https://www.zegelin.com/ourtravels//2013_Phuket" rel="canonical" />
+    <script>(function() {
+    function getThemePreference() {
+        return localStorage.getItem('custom-theme') || 'auto';
+    }
+
+    function applyTheme(themeID) {
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        const lightThemeID = document.documentElement.getAttribute('data-light-theme') || 'light';
+        const darkThemeID = document.documentElement.getAttribute('data-dark-theme') || 'dark';
+        const actualThemeID = themeID === 'auto' ? (prefersDark ? darkThemeID : lightThemeID) : themeID;
+
+        document.documentElement.setAttribute('data-bs-theme', actualThemeID);
+        document.documentElement.setAttribute('data-theme-state', themeID);
+    }
+
+    function applySyntaxTheme() {
+        const syntaxTheme = getComputedStyle(document.documentElement)
+            .getPropertyValue('--syntax-highlight-theme').trim().replace(/"/g, '');
+
+        if (!syntaxTheme) return;
+
+        document.querySelectorAll('link[data-highlight-theme]').forEach(link => {
+            link.setAttribute('disabled', 'disabled');
+        });
+
+        const themeLink = document.querySelector(`link[data-highlight-theme="${syntaxTheme}"]`);
+        if (themeLink) {
+            themeLink.removeAttribute('disabled');
+        }
+    }
+
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
+        const currentTheme = getThemePreference();
+        if (currentTheme === 'auto') {
+            applyTheme('auto');
+            applySyntaxTheme();
+        }
+    });
+
+    const savedTheme = getThemePreference();
+    applyTheme(savedTheme);
+    applySyntaxTheme();
+})();
+</script>
+    <meta property="og:site_name" content="Our Trips" />
+    <meta property="og:image" content="2013%20Phuket.jpg" />
+    <meta name="twitter:image" content="2013%20Phuket.jpg" />
+    <meta property="og:title" content="Phuket and Malacca" />
+    <meta name="twitter:title" content="Phuket and Malacca" />
+    <meta property="og:description" content="We’d enjoyed our previous stay at Phuket so much that we decided to do the same thing the next year. We had a different villa in the complex this time but it was still excellent with a private pool and all. We spent much of the month relaxing and going ‘local’. It did rain quite a bit more this time but we still managed to spend a lot of time out and about and eating at lots of excellent restaurants. At the end of our trip we spent a few days in the old Malaysian trading port of Malacca which we had last visited 30 years before." />
+    <meta name="twitter:description" content="We’d enjoyed our previous stay at Phuket so much that we decided to do the same thing the next year. We had a different villa in the complex this time but it was still excellent with a private pool and all. We spent much of the month relaxing and going ‘local’. It did rain quite a bit more this time but we still managed to spend a lot of time out and about and eating at lots of excellent restaurants. At the end of our trip we spent a few days in the old Malaysian trading port of Malacca which we had last visited 30 years before." />
+    <meta property="og:url" content="https://www.zegelin.com/ourtravels//2013_Phuket" />
+    <meta name="twitter:domain" content="zegelin.com" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:dnt" content="on" />
+    <link href="/ourtravels/css/leaflet.css" rel="stylesheet" />
+    <script src="/leaflet/leaflet.js"></script>
+    <script src="/leaflet/leaflet.curve.js"></script>
+    <link href="/ourtravels/zoombar/L.Control.ZoomBar.css" rel="stylesheet" />
+    <script src="/zoombar/L.Control.ZoomBar.js"></script>
+    <link href="/ourtravels/navbar/Leaflet.NavBar.css" rel="stylesheet" />
+    <script src="/navbar/Leaflet.NavBar.js"></script>
+    <link href="/ourtravels/css/labels.css" rel="stylesheet" />
+    <link href="/ourtravels/css/legend.css" rel="stylesheet" />
+    <script src="/label-collision/rbush.js"></script>
+    <script src="/label-collision/Leaflet.LayerGroup.Collision.js"></script>
+    <link href="/ourtravels/css/trip.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div>
+      <div>
+        <div class="flex-container">
+          <div class="top-content">
+            <div class="d-flex justify-content-left">
+              <div class="fs-3" style="margin-left: -33px; margin-right: 5px">
+                <a href="/" class="font-inherit"><i class="bi-arrow-left"></i></a>
+              </div>
+              <h2>Phuket and Malacca</h2>
+            </div>
+            <p style="margin-top: -15px"></p>
+            <p>We’d enjoyed our previous stay at Phuket so much that we decided to do the same thing the next year. We had a different villa in the complex this time but it was still excellent with a private pool and all. We spent much of the month relaxing and going ‘local’. It did rain quite a bit more this time but we still managed to spend a lot of time out and about and eating at lots of excellent restaurants. At the end of our trip we spent a few days in the old Malaysian trading port of Malacca which we had last visited 30 years before.</p>
+            <p></p>
+          </div>
+          <div class="map-sidebar-container">
+            <div class="sidebar">
+              <ul class="listbox">
+                <li>
+                  <div class="m-0" style="display: grid">
+                    <div class="mb-0" style="position: relative; display: grid; grid-area: 1/1; z-index: 0; align-self: center; justify-self: center">
+                      <canvas id="tutorial" width="250" height="216"></canvas>
+                      <script>        function draw() {
+        const canvas = document.getElementById("tutorial");
+        if (canvas.getContext) {
+        const ctx = canvas.getContext("2d");
+        ctx.strokeStyle = "red";
+        ctx.lineWidth = 1.5;    // Start a new Path
+    ctx.beginPath();
+    ctx.moveTo(7, 138);
+    ctx.lineTo(1, 138);
+    ctx.lineTo(1, 158);
+    ctx.lineTo(7, 158);
+    
+    // Draw the Path
+    ctx.stroke();    }
+    }
+    draw();</script>
+                    </div>
+                    <div class="mb-0" style="position: relative; display: grid; grid-area: 1/1; z-index: 1; align-self: center; justify-self: center">
+                      <p class="listItem" onclick="    stopItemClicked(&quot;Canberra&quot;,-35.355434, 149.06605)">Canberra</p>
+                      <p class="listItem" onclick="    stopItemClicked(&quot;Sydney&quot;,-33.939914, 151.175287)">Sydney</p>
+                      <p class="listItem" onclick="    stopItemClicked(&quot;Kuala Lumpur&quot;,3.141743, 101.678614)">Kuala Lumpur</p>
+                      <p class="listItem" onclick="    stopItemClicked(&quot;Phuket&quot;,7.883361, 98.393287)">Phuket</p>
+                      <p class="listItem" onclick="    stopItemClicked(&quot;Kuala Lumpur&quot;,3.141743, 101.678614)">Kuala Lumpur</p>
+                      <p class="listItem" onclick="    stopItemClicked(&quot;Malaka&quot;,2.194996, 102.250538)">        Malaka</p>
+                      <p class="listItem" onclick="    stopItemClicked(&quot;Sydney&quot;,-33.939914, 151.175287)">Sydney</p>
+                      <p class="listItem" onclick="    stopItemClicked(&quot;Canberra&quot;,-35.355434, 149.06605)">Canberra</p>
+                    </div>
+                  </div></li>
+              </ul>
+            </div>
+            <div id="map" onclick="    map.removeLayer(marker);
+    sessionStorage.setItem(&quot;location&quot;, &quot;&quot;);">
+              <script>    const map = L.map('map',{
+        zoomDelta: 0.25,    // Controls zoom increment (default is 1)
+        zoomSnap: 0.25,     // Snaps zoom to multiples of this value (default is 1)
+        zoomControl: false
+    });
+    
+    
+    // Add OpenStreetMap tiles
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{
+       attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+    }).addTo(map);
+    
+    // Fit the map to the bounds with optional padding
+    map.fitBounds([[8.806107,94.414978],[0.761813,108.311961]],{
+    });    var curve = L.curve(
+    [
+     'M', [-35.355434,149.06605], 
+     'Q', [-34.0149029,149.6960125],
+     [-33.939914,151.175287]
+    ],
+    {
+     color: '#000000',
+     weight: 2.0
+    }
+    ).addTo(map);    var curve = L.curve(
+    [
+     'M', [-33.939914,151.175287], 
+     'Q', [-17.873919150000003,124.57286764999999],
+     [3.141743,101.678614]
+    ],
+    {
+     color: '#3CB44B',
+     weight: 2.0
+    }
+    ).addTo(map);    var curve = L.curve(
+    [
+     'M', [3.141743,101.678614], 
+     'Q', [5.1840193,99.5617887],
+     [7.883361,98.393287]
+    ],
+    {
+     color: '#3CB44B',
+     weight: 2.0
+    }
+    ).addTo(map);    var curve = L.curve(
+    [
+     'M', [7.883361,98.393287], 
+     'Q', [5.8410847,100.5101123],
+     [3.141743,101.678614]
+    ],
+    {
+     color: '#3CB44B',
+     weight: 2.0
+    }
+    ).addTo(map);    var curve = L.curve(
+    [
+     'M', [3.141743,101.678614], 
+     'Q', [2.839946700000003,102.2486001],
+     [2.194996,102.250538]
+    ],
+    {
+     color: '#000000',
+     weight: 2.0
+    }
+    ).addTo(map);    var curve = L.curve(
+    [
+     'M', [2.194996,102.250538], 
+     'Q', [2.496792299999997,101.6805519],
+     [3.141743,101.678614]
+    ],
+    {
+     color: '#000000',
+     weight: 2.0
+    }
+    ).addTo(map);    var curve = L.curve(
+    [
+     'M', [3.141743,101.678614], 
+     'Q', [-12.92425185,128.28103335],
+     [-33.939914,151.175287]
+    ],
+    {
+     color: '#3CB44B',
+     weight: 2.0
+    }
+    ).addTo(map);    var curve = L.curve(
+    [
+     'M', [-33.939914,151.175287], 
+     'Q', [-35.2804451,150.5453245],
+     [-35.355434,149.06605]
+    ],
+    {
+     color: '#000000',
+     weight: 2.0
+    }
+    ).addTo(map);    var marker = new L.CircleMarker([-35.355434, 149.066050], {
+               radius: 4,
+               fillColor: "#000000",
+               color: "#000",
+               weight: 1.7,
+               opacity: 1,
+               fillOpacity: 1,
+           });
+     marker.addTo(map);    var marker = new L.CircleMarker([-33.939914, 151.175287], {
+               radius: 4,
+               fillColor: "#000000",
+               color: "#000",
+               weight: 1.7,
+               opacity: 1,
+               fillOpacity: 1,
+           });
+     marker.addTo(map);    var marker = new L.CircleMarker([3.141743, 101.678614], {
+               radius: 4,
+               fillColor: "#000000",
+               color: "#000",
+               weight: 1.7,
+               opacity: 1,
+               fillOpacity: 1,
+           });
+     marker.addTo(map);    var marker = new L.CircleMarker([7.883361, 98.393287], {
+               radius: 8,
+               fillColor: "#FF4D00",
+               color: "#000",
+               weight: 1.7,
+               opacity: 1,
+               fillOpacity: 1,
+           });
+     marker.addTo(map);    var marker = new L.CircleMarker([3.141743, 101.678614], {
+               radius: 8,
+               fillColor: "#FF4D00",
+               color: "#000",
+               weight: 1.7,
+               opacity: 1,
+               fillOpacity: 1,
+           });
+     marker.addTo(map);    var marker = new L.CircleMarker([2.194996, 102.250538], {
+               radius: 8,
+               fillColor: "#FF4D00",
+               color: "#000",
+               weight: 1.7,
+               opacity: 1,
+               fillOpacity: 1,
+           });
+     marker.addTo(map);    var marker = new L.CircleMarker([-33.939914, 151.175287], {
+               radius: 4,
+               fillColor: "#000000",
+               color: "#000",
+               weight: 1.7,
+               opacity: 1,
+               fillOpacity: 1,
+           });
+     marker.addTo(map);    var marker = new L.CircleMarker([-35.355434, 149.066050], {
+               radius: 4,
+               fillColor: "#000000",
+               color: "#000",
+               weight: 1.7,
+               opacity: 1,
+               fillOpacity: 1,
+           });
+     marker.addTo(map);    var legend = L.control({ position: "bottomleft" });
+
+    legend.onAdd = function(map) {
+        var div = L.DomUtil.create("div", "legend");
+        div.innerHTML = '<svg height="82" width="287">    <rect width="285" height="80" rx="8" ry="8" style="fill:rgb(255,255,255)" />         <!-- Add circles and text for visit type -->    <circle cx="18" cy="16" r="7" stroke="black" stroke-width="1.7" fill="#FF0000" />        <text x="30" y="20">Stayed a Few Days</text>    <circle cx="150" cy="16" r="7" stroke="black" stroke-width="1.7" fill="#CEFA05" />        <text x="161" y="20">Visited</text>    <circle cx="220" cy="16" r="7" stroke="black" stroke-width="1.7" fill="#000000" />        <text x="232" y="20">Waypoint</text>    <!-- Add lines and text for transport mode -->    <line x1="10" y1="38" x2="45" y2="38" style="stroke:#000000" />        <text x="51" y="41">Car</text>    <line x1="10" y1="52" x2="45" y2="52" style="stroke:#E6194B" />        <text x="51" y="55">Bus</text>    <line x1="90" y1="38" x2="125" y2="38" style="stroke:#3CB44B" />        <text x="131" y="41">Plane</text>    <line x1="90" y1="52" x2="125" y2="52" style="stroke:#a9a9a9" />        <text x="131" y="55">Train</text>    <line x1="175" y1="38" x2="210" y2="38" style="stroke:#4363D8" />        <text x="216" y="41">Ferry or Ship</text>    <line x1="175" y1="52" x2="210" y2="52" style="stroke:#F032E6" />        <text x="216" y="55">Campervan</text>   	<line x1="50" y1="66" x2="85" y2="66" style="stroke:#9A6324" />        <text x="91" y="69">Motorbike</text>	<line x1="150" y1="66" x2="195" y2="66" style="stroke:#42D4F4" />        <text x="201" y="69">Cablecar</text></svg>';
+
+        return div;
+    };
+
+    legend.addTo(map);
+
+    var zoom_bar = new L.Control.ZoomBar({position: 'topleft'}).addTo(map);
+    L.control.navbar().addTo(map);collisionLayer = L.LayerGroup.collision({margin:0});     var label = L.marker([7.883361, 98.393287],{
+     icon: L.divIcon({
+     iconAnchor:[-10,11],
+     className: '',
+     html:"<div class = 'city-label city-label-0'>Phuket</div>"
+     }),
+     interactive: false,
+     clickable:   false,
+     });
+     collisionLayer.addLayer(label);     var label = L.marker([2.194996, 102.250538],{
+     icon: L.divIcon({
+     iconAnchor:[-10,11],
+     className: '',
+     html:"<div class = 'city-label city-label-0'>Malaka</div>"
+     }),
+     interactive: false,
+     clickable:   false,
+     });
+     collisionLayer.addLayer(label);     var label = L.marker([-35.355434, 149.066050],{
+     icon: L.divIcon({
+     iconAnchor:[-10,11],
+     className: '',
+     html:"<div class = 'city-label city-label-0'>Canberra</div>"
+     }),
+     interactive: false,
+     clickable:   false,
+     });
+     collisionLayer.addLayer(label);     var label = L.marker([-33.939914, 151.175287],{
+     icon: L.divIcon({
+     iconAnchor:[-10,11],
+     className: '',
+     html:"<div class = 'city-label city-label-0'>Sydney</div>"
+     }),
+     interactive: false,
+     clickable:   false,
+     });
+     collisionLayer.addLayer(label);     var label = L.marker([3.141743, 101.678614],{
+     icon: L.divIcon({
+     iconAnchor:[-10,11],
+     className: '',
+     html:"<div class = 'city-label city-label-0'>Kuala Lumpur</div>"
+     }),
+     interactive: false,
+     clickable:   false,
+     });
+     collisionLayer.addLayer(label);collisionLayer.addTo(map);</script>
+              <script>    const generatePulsatingMarker = function(){
+        const cssStyle = `margin-left:-2px;
+        margin-top:-2px;
+        width: 16px;
+        height: 16px;
+        background: none;
+        color: red;`
+        return L.divIcon({html: `<span style="${cssStyle}" class="pulse"/>`,className: 'pulsatingIcon'})
+    }
+
+    const stopItemClicked = function(location, lat, long){
+        map.removeLayer(marker);
+        
+        if (sessionStorage.getItem("location") == location){
+            sessionStorage.setItem("location", "");
+        } else {
+            marker.setLatLng([lat, long]);
+            marker.addTo(map);
+            map.setView(marker.getLatLng(), map.getZoom());
+            sessionStorage.setItem("location", location );
+        }
+    }
+        
+    // Create Pulsating Marker
+    var marker = L.marker([0, 0], {
+        icon: generatePulsatingMarker()
+    })
+      
+    // Have to initialise the storage
+    sessionStorage.setItem("location", "");</script>
+            </div>
+          </div>
+          <div class="d-flex justify-content-center m-2" style="font-size: 0.8em">
+            <p>© 2018 - <span id="currentYear"></span> Peter Zegelin | </p>
+            <script>document.getElementById('currentYear').textContent = new Date().getFullYear();</script>
+            <p>Created in Swift with <a href="https://github.com/twostraws/Ignite">Ignite</a></p>
+            <p> | Source Code for this site is at <a href="https://github.com/zegelinfamily/">GitHub </a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/ignite-core.js"></script>
+  </body>
+</html>

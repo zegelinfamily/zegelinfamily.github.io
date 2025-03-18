@@ -1,0 +1,1113 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="All our trips to the US have been really interesting and this one was no exception. Virtually every day there was something different to see, from the majestic redwood forests and coastline of Northern California to Mount St. Helens, Portland and the waterfalls of the Columbia River Gorge, Seattle and the Boeing Factory, the Grand Coulee Dam and of course Yellowstone National Park and the Tetons. There were also some fun surprises like the unusual houses in Eureka and the remnants of the Aircraft Nuclear Propulsion experiment at EBR-1. A really great trip." />
+    <meta name="author" content="Peter" />
+    <meta name="generator" content="Ignite v0.5.0" />
+    <title>West Coast USA</title>
+    <link href="/ourtravels/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="/ourtravels/css/bootstrap-icons.min.css" rel="stylesheet" />
+    <link href="/ourtravels/css/ignite-core.min.css" rel="stylesheet" />
+    <link href="https://www.zegelin.com/ourtravels//2011_West_Coast_USA" rel="canonical" />
+    <script>(function() {
+    function getThemePreference() {
+        return localStorage.getItem('custom-theme') || 'auto';
+    }
+
+    function applyTheme(themeID) {
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        const lightThemeID = document.documentElement.getAttribute('data-light-theme') || 'light';
+        const darkThemeID = document.documentElement.getAttribute('data-dark-theme') || 'dark';
+        const actualThemeID = themeID === 'auto' ? (prefersDark ? darkThemeID : lightThemeID) : themeID;
+
+        document.documentElement.setAttribute('data-bs-theme', actualThemeID);
+        document.documentElement.setAttribute('data-theme-state', themeID);
+    }
+
+    function applySyntaxTheme() {
+        const syntaxTheme = getComputedStyle(document.documentElement)
+            .getPropertyValue('--syntax-highlight-theme').trim().replace(/"/g, '');
+
+        if (!syntaxTheme) return;
+
+        document.querySelectorAll('link[data-highlight-theme]').forEach(link => {
+            link.setAttribute('disabled', 'disabled');
+        });
+
+        const themeLink = document.querySelector(`link[data-highlight-theme="${syntaxTheme}"]`);
+        if (themeLink) {
+            themeLink.removeAttribute('disabled');
+        }
+    }
+
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
+        const currentTheme = getThemePreference();
+        if (currentTheme === 'auto') {
+            applyTheme('auto');
+            applySyntaxTheme();
+        }
+    });
+
+    const savedTheme = getThemePreference();
+    applyTheme(savedTheme);
+    applySyntaxTheme();
+})();
+</script>
+    <meta property="og:site_name" content="Our Trips" />
+    <meta property="og:image" content="2011%20USA.jpg" />
+    <meta name="twitter:image" content="2011%20USA.jpg" />
+    <meta property="og:title" content="West Coast USA" />
+    <meta name="twitter:title" content="West Coast USA" />
+    <meta property="og:description" content="All our trips to the US have been really interesting and this one was no exception. Virtually every day there was something different to see, from the majestic redwood forests and coastline of Northern California to Mount St. Helens, Portland and the waterfalls of the Columbia River Gorge, Seattle and the Boeing Factory, the Grand Coulee Dam and of course Yellowstone National Park and the Tetons. There were also some fun surprises like the unusual houses in Eureka and the remnants of the Aircraft Nuclear Propulsion experiment at EBR-1. A really great trip." />
+    <meta name="twitter:description" content="All our trips to the US have been really interesting and this one was no exception. Virtually every day there was something different to see, from the majestic redwood forests and coastline of Northern California to Mount St. Helens, Portland and the waterfalls of the Columbia River Gorge, Seattle and the Boeing Factory, the Grand Coulee Dam and of course Yellowstone National Park and the Tetons. There were also some fun surprises like the unusual houses in Eureka and the remnants of the Aircraft Nuclear Propulsion experiment at EBR-1. A really great trip." />
+    <meta property="og:url" content="https://www.zegelin.com/ourtravels//2011_West_Coast_USA" />
+    <meta name="twitter:domain" content="zegelin.com" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:dnt" content="on" />
+    <link href="/ourtravels/css/leaflet.css" rel="stylesheet" />
+    <script src="/leaflet/leaflet.js"></script>
+    <script src="/leaflet/leaflet.curve.js"></script>
+    <link href="/ourtravels/zoombar/L.Control.ZoomBar.css" rel="stylesheet" />
+    <script src="/zoombar/L.Control.ZoomBar.js"></script>
+    <link href="/ourtravels/navbar/Leaflet.NavBar.css" rel="stylesheet" />
+    <script src="/navbar/Leaflet.NavBar.js"></script>
+    <link href="/ourtravels/css/labels.css" rel="stylesheet" />
+    <link href="/ourtravels/css/legend.css" rel="stylesheet" />
+    <script src="/label-collision/rbush.js"></script>
+    <script src="/label-collision/Leaflet.LayerGroup.Collision.js"></script>
+    <link href="/ourtravels/css/trip.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div>
+      <div>
+        <div class="flex-container">
+          <div class="top-content">
+            <div class="d-flex justify-content-left">
+              <div class="fs-3" style="margin-left: -33px; margin-right: 5px">
+                <a href="/" class="font-inherit"><i class="bi-arrow-left"></i></a>
+              </div>
+              <h2>San Francisco to Seattle with a side trip to Yellowstone National Park</h2>
+            </div>
+            <p style="margin-top: -15px"></p>
+            <p>All our trips to the US have been really interesting and this one was no exception. Virtually every day there was something different to see, from the majestic redwood forests and coastline of Northern California to Mount St. Helens, Portland and the waterfalls of the Columbia River Gorge, Seattle and the Boeing Factory, the Grand Coulee Dam and of course Yellowstone National Park and the Tetons. There were also some fun surprises like the unusual houses in Eureka and the remnants of the Aircraft Nuclear Propulsion experiment at EBR-1. A really great trip.</p>
+            <p></p>
+          </div>
+          <div class="map-sidebar-container">
+            <div class="sidebar">
+              <ul class="listbox">
+                <li>
+                  <div class="m-0" style="display: grid">
+                    <div class="mb-0" style="position: relative; display: grid; grid-area: 1/1; z-index: 0; align-self: center; justify-self: center">
+                      <canvas id="tutorial" width="250" height="864"></canvas>
+                      <script>        function draw() {
+        const canvas = document.getElementById("tutorial");
+        if (canvas.getContext) {
+        const ctx = canvas.getContext("2d");
+        ctx.strokeStyle = "red";
+        ctx.lineWidth = 1.5;    // Start a new Path
+    ctx.beginPath();
+    ctx.moveTo(7, 300);
+    ctx.lineTo(1, 300);
+    ctx.lineTo(1, 320);
+    ctx.lineTo(7, 320);
+    
+    // Draw the Path
+    ctx.stroke();    // Start a new Path
+    ctx.beginPath();
+    ctx.moveTo(7, 408);
+    ctx.lineTo(1, 408);
+    ctx.lineTo(1, 428);
+    ctx.lineTo(7, 428);
+    
+    // Draw the Path
+    ctx.stroke();    // Start a new Path
+    ctx.beginPath();
+    ctx.moveTo(7, 435);
+    ctx.lineTo(1, 435);
+    ctx.lineTo(1, 455);
+    ctx.lineTo(7, 455);
+    
+    // Draw the Path
+    ctx.stroke();    // Start a new Path
+    ctx.beginPath();
+    ctx.moveTo(7, 462);
+    ctx.lineTo(1, 462);
+    ctx.lineTo(1, 482);
+    ctx.lineTo(7, 482);
+    
+    // Draw the Path
+    ctx.stroke();    }
+    }
+    draw();</script>
+                    </div>
+                    <div class="mb-0" style="position: relative; display: grid; grid-area: 1/1; z-index: 1; align-self: center; justify-self: center">
+                      <p class="listItem" onclick="    stopItemClicked(&quot;Canberra&quot;,-35.355434, -210.93395)">Canberra</p>
+                      <p class="listItem" onclick="    stopItemClicked(&quot;Sydney&quot;,-33.939914, -208.824713)">Sydney</p>
+                      <p class="listItem" onclick="    stopItemClicked(&quot;Auckland&quot;,-37.00811, -185.214953)">Auckland</p>
+                      <p class="listItem" onclick="    stopItemClicked(&quot;San Francisco&quot;,37.621355, -122.378955)">San Francisco</p>
+                      <p class="listItem" onclick="    stopItemClicked(&quot;San Jose&quot;,37.337343, -121.897069)">San Jose</p>
+                      <p class="listItem" onclick="    stopItemClicked(&quot;Bodega Bay&quot;,38.329055, -123.043955)">Bodega Bay</p>
+                      <p class="listItem" onclick="    stopItemClicked(&quot;Avenue of the Giants&quot;,40.258631, -123.837656)">Avenue of the Giants</p>
+                      <p class="listItem" onclick="    stopItemClicked(&quot;Loleta&quot;,40.641725, -124.22619)">Loleta</p>
+                      <p class="listItem" onclick="    stopItemClicked(&quot;Eureka&quot;,40.802195, -124.164245)">Eureka</p>
+                      <p class="listItem" onclick="    stopItemClicked(&quot;Crescent City&quot;,41.756045, -124.202513)">Crescent City</p>
+                      <p class="listItem" onclick="    stopItemClicked(&quot;Portland&quot;,45.522454, -122.678799)">Portland</p>
+                      <p class="listItem" onclick="    stopItemClicked(&quot;Columbia River Gorge&quot;,45.709013, -121.620912)">        Columbia River Gorge</p>
+                      <p class="listItem" onclick="    stopItemClicked(&quot;Mount St Helens&quot;,46.191387, -122.19538)">Mount St Helens</p>
+                      <p class="listItem" onclick="    stopItemClicked(&quot;Snoqualmie Pass&quot;,47.39263, -121.399669)">Snoqualmie Pass</p>
+                      <p class="listItem" onclick="    stopItemClicked(&quot;Everett&quot;,47.979066, -122.202564)">Everett</p>
+                      <p class="listItem" onclick="    stopItemClicked(&quot;Seattle&quot;,47.604579, -122.335911)">        Seattle</p>
+                      <p class="listItem" onclick="    stopItemClicked(&quot;Camano Island&quot;,48.187278, -122.508564)">        Camano Island</p>
+                      <p class="listItem" onclick="    stopItemClicked(&quot;Tacoma&quot;,47.253232, -122.444255)">        Tacoma</p>
+                      <p class="listItem" onclick="    stopItemClicked(&quot;Snoqualmie Falls&quot;,47.541807, -121.837831)">Snoqualmie Falls</p>
+                      <p class="listItem" onclick="    stopItemClicked(&quot;Grand Coulee Dam&quot;,47.956553, -118.980534)">Grand Coulee Dam</p>
+                      <p class="listItem" onclick="    stopItemClicked(&quot;Yellowstone National Park&quot;,44.424045, -110.588454)">Yellowstone National Park</p>
+                      <p class="listItem" onclick="    stopItemClicked(&quot;Grand Tetons&quot;,43.786463, -110.687256)">Grand Tetons</p>
+                      <p class="listItem" onclick="    stopItemClicked(&quot;EBR 1&quot;,43.511598, -113.012228)">EBR 1</p>
+                      <p class="listItem" onclick="    stopItemClicked(&quot;Craters of the Moon&quot;,43.416697, -113.516746)">Craters of the Moon</p>
+                      <p class="listItem" onclick="    stopItemClicked(&quot;Twin Falls&quot;,42.563369, -114.461377)">Twin Falls</p>
+                      <p class="listItem" onclick="    stopItemClicked(&quot;Reno&quot;,39.529254, -119.813769)">Reno</p>
+                      <p class="listItem" onclick="    stopItemClicked(&quot;Carson City&quot;,39.165417, -119.769136)">Carson City</p>
+                      <p class="listItem" onclick="    stopItemClicked(&quot;Sacramento&quot;,38.580846, -121.495099)">Sacramento</p>
+                      <p class="listItem" onclick="    stopItemClicked(&quot;San Francisco&quot;,37.621355, -122.378955)">San Francisco</p>
+                      <p class="listItem" onclick="    stopItemClicked(&quot;Auckland&quot;,-37.00811, -185.214953)">Auckland</p>
+                      <p class="listItem" onclick="    stopItemClicked(&quot;Sydney&quot;,-33.939914, -208.824713)">Sydney</p>
+                      <p class="listItem" onclick="    stopItemClicked(&quot;Canberra&quot;,-35.355434, -210.93395)">Canberra</p>
+                    </div>
+                  </div></li>
+              </ul>
+            </div>
+            <div id="map" onclick="    map.removeLayer(marker);
+    sessionStorage.setItem(&quot;location&quot;, &quot;&quot;);">
+              <script>    const map = L.map('map',{
+        zoomDelta: 0.25,    // Controls zoom increment (default is 1)
+        zoomSnap: 0.25,     // Snaps zoom to multiples of this value (default is 1)
+        zoomControl: false
+    });
+    
+    
+    // Add OpenStreetMap tiles
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{
+       attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+    }).addTo(map);
+    
+    // Fit the map to the bounds with optional padding
+    map.fitBounds([[49.375695,-133.266526],[36.150997,-103.676342]],{
+    });    var curve = L.curve(
+    [
+     'M', [-35.355434,-210.93395], 
+     'Q', [-34.0149029,-210.3039875],
+     [-33.939914,-208.824713]
+    ],
+    {
+     color: '#000000',
+     weight: 2.0
+    }
+    ).addTo(map);    var curve = L.curve(
+    [
+     'M', [-33.939914,-208.824713], 
+     'Q', [-33.113036,-196.7130134],
+     [-37.00811,-185.214953]
+    ],
+    {
+     color: '#3CB44B',
+     weight: 2.0
+    }
+    ).addTo(map);    var curve = L.curve(
+    [
+     'M', [-37.00811,-185.214953], 
+     'Q', [3.4484224000000054,-157.52842725],
+     [37.621355,-122.378955]
+    ],
+    {
+     color: '#3CB44B',
+     weight: 2.0
+    }
+    ).addTo(map);    var curve = L.curve(
+    [
+     'M', [37.621355,-122.378955], 
+     'Q', [37.6239148,-122.0528084],
+     [37.337343,-121.897069]
+    ],
+    {
+     color: '#000000',
+     weight: 2.0
+    }
+    ).addTo(map);    var curve = L.curve(
+    [
+     'M', [37.337343,-121.897069], 
+     'Q', [38.177264799999996,-122.1729984],
+     [38.329055,-123.043955]
+    ],
+    {
+     color: '#000000',
+     weight: 2.0
+    }
+    ).addTo(map);    var curve = L.curve(
+    [
+     'M', [38.329055,-123.043955], 
+     'Q', [39.1351028,-123.8267207],
+     [40.258631,-123.837656]
+    ],
+    {
+     color: '#000000',
+     weight: 2.0
+    }
+    ).addTo(map);    var curve = L.curve(
+    [
+     'M', [40.258631,-123.837656], 
+     'Q', [40.3336178,-124.1468512],
+     [40.641725,-124.22619]
+    ],
+    {
+     color: '#000000',
+     weight: 2.0
+    }
+    ).addTo(map);    var curve = L.curve(
+    [
+     'M', [40.641725,-124.22619], 
+     'Q', [40.7405435,-124.2433585],
+     [40.802195,-124.164245]
+    ],
+    {
+     color: '#000000',
+     weight: 2.0
+    }
+    ).addTo(map);    var curve = L.curve(
+    [
+     'M', [40.802195,-124.164245], 
+     'Q', [41.2906004,-123.897224],
+     [41.756045,-124.202513]
+    ],
+    {
+     color: '#000000',
+     weight: 2.0
+    }
+    ).addTo(map);    var curve = L.curve(
+    [
+     'M', [41.756045,-124.202513], 
+     'Q', [43.1821353,-122.3107333],
+     [45.522454,-122.678799]
+    ],
+    {
+     color: '#000000',
+     weight: 2.0
+    }
+    ).addTo(map);    var curve = L.curve(
+    [
+     'M', [45.522454,-122.678799], 
+     'Q', [45.8273109,-122.1871673],
+     [45.709013,-121.620912]
+    ],
+    {
+     color: '#000000',
+     weight: 2.0
+    }
+    ).addTo(map);    var curve = L.curve(
+    [
+     'M', [45.709013,-121.620912], 
+     'Q', [45.298367400000004,-122.0938878],
+     [45.522454,-122.678799]
+    ],
+    {
+     color: '#000000',
+     weight: 2.0
+    }
+    ).addTo(map);    var curve = L.curve(
+    [
+     'M', [45.522454,-122.678799], 
+     'Q', [45.9536043,-122.57087609999999],
+     [46.191387,-122.19538]
+    ],
+    {
+     color: '#000000',
+     weight: 2.0
+    }
+    ).addTo(map);    var curve = L.curve(
+    [
+     'M', [46.191387,-122.19538], 
+     'Q', [47.030721799999995,-122.1578974],
+     [47.39263,-121.399669]
+    ],
+    {
+     color: '#000000',
+     weight: 2.0
+    }
+    ).addTo(map);    var curve = L.curve(
+    [
+     'M', [47.39263,-121.399669], 
+     'Q', [47.404834750000006,-122.0063691],
+     [47.979066,-122.202564]
+    ],
+    {
+     color: '#000000',
+     weight: 2.0
+    }
+    ).addTo(map);    var curve = L.curve(
+    [
+     'M', [47.979066,-122.202564], 
+     'Q', [47.751818400000005,-122.15689139999999],
+     [47.604579,-122.335911]
+    ],
+    {
+     color: '#000000',
+     weight: 2.0
+    }
+    ).addTo(map);    var curve = L.curve(
+    [
+     'M', [47.604579,-122.335911], 
+     'Q', [47.8318266,-122.3815836],
+     [47.979066,-122.202564]
+    ],
+    {
+     color: '#000000',
+     weight: 2.0
+    }
+    ).addTo(map);    var curve = L.curve(
+    [
+     'M', [47.979066,-122.202564], 
+     'Q', [47.991372,-122.4180276],
+     [48.187278,-122.508564]
+    ],
+    {
+     color: '#000000',
+     weight: 2.0
+    }
+    ).addTo(map);    var curve = L.curve(
+    [
+     'M', [48.187278,-122.508564], 
+     'Q', [48.174972000000004,-122.2931004],
+     [47.979066,-122.202564]
+    ],
+    {
+     color: '#000000',
+     weight: 2.0
+    }
+    ).addTo(map);    var curve = L.curve(
+    [
+     'M', [47.979066,-122.202564], 
+     'Q', [47.5436417,-122.1056593],
+     [47.253232,-122.444255]
+    ],
+    {
+     color: '#000000',
+     weight: 2.0
+    }
+    ).addTo(map);    var curve = L.curve(
+    [
+     'M', [47.253232,-122.444255], 
+     'Q', [47.6886563,-122.5411597],
+     [47.979066,-122.202564]
+    ],
+    {
+     color: '#000000',
+     weight: 2.0
+    }
+    ).addTo(map);    var curve = L.curve(
+    [
+     'M', [47.979066,-122.202564], 
+     'Q', [47.8698564,-121.8890198],
+     [47.541807,-121.837831]
+    ],
+    {
+     color: '#000000',
+     weight: 2.0
+    }
+    ).addTo(map);    var curve = L.curve(
+    [
+     'M', [47.541807,-121.837831], 
+     'Q', [47.4634503,-120.3677079],
+     [47.956553,-118.980534]
+    ],
+    {
+     color: '#000000',
+     weight: 2.0
+    }
+    ).addTo(map);    var curve = L.curve(
+    [
+     'M', [47.956553,-118.980534], 
+     'Q', [47.868715,-114.0779924],
+     [44.424045,-110.588454]
+    ],
+    {
+     color: '#000000',
+     weight: 2.0
+    }
+    ).addTo(map);    var curve = L.curve(
+    [
+     'M', [44.424045,-110.588454], 
+     'Q', [44.075613399999995,-110.4465804],
+     [43.786463,-110.687256]
+    ],
+    {
+     color: '#000000',
+     weight: 2.0
+    }
+    ).addTo(map);    var curve = L.curve(
+    [
+     'M', [43.786463,-110.687256], 
+     'Q', [43.1840361,-111.794769],
+     [43.511598,-113.012228]
+    ],
+    {
+     color: '#000000',
+     weight: 2.0
+    }
+    ).addTo(map);    var curve = L.curve(
+    [
+     'M', [43.511598,-113.012228], 
+     'Q', [43.6155029,-113.2929573],
+     [43.416697,-113.516746]
+    ],
+    {
+     color: '#000000',
+     weight: 2.0
+    }
+    ).addTo(map);    var curve = L.curve(
+    [
+     'M', [43.416697,-113.516746], 
+     'Q', [43.2734223,-114.2450599],
+     [42.563369,-114.461377]
+    ],
+    {
+     color: '#000000',
+     weight: 2.0
+    }
+    ).addTo(map);    var curve = L.curve(
+    [
+     'M', [42.563369,-114.461377], 
+     'Q', [39.4405939,-116.2273385],
+     [39.529254,-119.813769]
+    ],
+    {
+     color: '#000000',
+     weight: 2.0
+    }
+    ).addTo(map);    var curve = L.curve(
+    [
+     'M', [39.529254,-119.813769], 
+     'Q', [39.3607254,-119.6823014],
+     [39.165417,-119.769136]
+    ],
+    {
+     color: '#000000',
+     weight: 2.0
+    }
+    ).addTo(map);    var curve = L.curve(
+    [
+     'M', [39.165417,-119.769136], 
+     'Q', [38.3553426,-120.4567462],
+     [38.580846,-121.495099]
+    ],
+    {
+     color: '#000000',
+     weight: 2.0
+    }
+    ).addTo(map);    var curve = L.curve(
+    [
+     'M', [38.580846,-121.495099], 
+     'Q', [37.8359437,-121.6491797],
+     [37.621355,-122.378955]
+    ],
+    {
+     color: '#000000',
+     weight: 2.0
+    }
+    ).addTo(map);    var curve = L.curve(
+    [
+     'M', [37.621355,-122.378955], 
+     'Q', [-2.8351774000000063,-150.06548075],
+     [-37.00811,-185.214953]
+    ],
+    {
+     color: '#3CB44B',
+     weight: 2.0
+    }
+    ).addTo(map);    var curve = L.curve(
+    [
+     'M', [-37.00811,-185.214953], 
+     'Q', [-37.834988,-197.32665260000002],
+     [-33.939914,-208.824713]
+    ],
+    {
+     color: '#3CB44B',
+     weight: 2.0
+    }
+    ).addTo(map);    var curve = L.curve(
+    [
+     'M', [-33.939914,-208.824713], 
+     'Q', [-35.2804451,-209.4546755],
+     [-35.355434,-210.93395]
+    ],
+    {
+     color: '#3CB44B',
+     weight: 2.0
+    }
+    ).addTo(map);    var marker = new L.CircleMarker([-35.355434, -210.93395], {
+               radius: 4,
+               fillColor: "#000000",
+               color: "#000",
+               weight: 1.7,
+               opacity: 1,
+               fillOpacity: 1,
+           });
+     marker.addTo(map);    var marker = new L.CircleMarker([-33.939914, -208.824713], {
+               radius: 4,
+               fillColor: "#000000",
+               color: "#000",
+               weight: 1.7,
+               opacity: 1,
+               fillOpacity: 1,
+           });
+     marker.addTo(map);    var marker = new L.CircleMarker([-37.008110, -185.214953], {
+               radius: 4,
+               fillColor: "#000000",
+               color: "#000",
+               weight: 1.7,
+               opacity: 1,
+               fillOpacity: 1,
+           });
+     marker.addTo(map);    var marker = new L.CircleMarker([37.621355, -122.378955], {
+               radius: 4,
+               fillColor: "#000000",
+               color: "#000",
+               weight: 1.7,
+               opacity: 1,
+               fillOpacity: 1,
+           });
+     marker.addTo(map);    var marker = new L.CircleMarker([37.337343, -121.897069], {
+               radius: 8,
+               fillColor: "#FF4D00",
+               color: "#000",
+               weight: 1.7,
+               opacity: 1,
+               fillOpacity: 1,
+           });
+     marker.addTo(map);    var marker = new L.CircleMarker([38.329055, -123.043955], {
+               radius: 5,
+               fillColor: "#CEFA05",
+               color: "#000",
+               weight: 1.7,
+               opacity: 1,
+               fillOpacity: 1,
+           });
+     marker.addTo(map);    var marker = new L.CircleMarker([40.258631, -123.837656], {
+               radius: 5,
+               fillColor: "#CEFA05",
+               color: "#000",
+               weight: 1.7,
+               opacity: 1,
+               fillOpacity: 1,
+           });
+     marker.addTo(map);    var marker = new L.CircleMarker([40.641725, -124.226190], {
+               radius: 5,
+               fillColor: "#CEFA05",
+               color: "#000",
+               weight: 1.7,
+               opacity: 1,
+               fillOpacity: 1,
+           });
+     marker.addTo(map);    var marker = new L.CircleMarker([40.802195, -124.164245], {
+               radius: 5,
+               fillColor: "#CEFA05",
+               color: "#000",
+               weight: 1.7,
+               opacity: 1,
+               fillOpacity: 1,
+           });
+     marker.addTo(map);    var marker = new L.CircleMarker([41.756045, -124.202513], {
+               radius: 5,
+               fillColor: "#CEFA05",
+               color: "#000",
+               weight: 1.7,
+               opacity: 1,
+               fillOpacity: 1,
+           });
+     marker.addTo(map);    var marker = new L.CircleMarker([45.522454, -122.678799], {
+               radius: 8,
+               fillColor: "#FF4D00",
+               color: "#000",
+               weight: 1.7,
+               opacity: 1,
+               fillOpacity: 1,
+           });
+     marker.addTo(map);    var marker = new L.CircleMarker([45.709013, -121.620912], {
+               radius: 5,
+               fillColor: "#CEFA05",
+               color: "#000",
+               weight: 1.7,
+               opacity: 1,
+               fillOpacity: 1,
+           });
+     marker.addTo(map);    var marker = new L.CircleMarker([46.191387, -122.195380], {
+               radius: 5,
+               fillColor: "#CEFA05",
+               color: "#000",
+               weight: 1.7,
+               opacity: 1,
+               fillOpacity: 1,
+           });
+     marker.addTo(map);    var marker = new L.CircleMarker([47.392630, -121.399669], {
+               radius: 4,
+               fillColor: "#000000",
+               color: "#000",
+               weight: 1.7,
+               opacity: 1,
+               fillOpacity: 1,
+           });
+     marker.addTo(map);    var marker = new L.CircleMarker([47.979066, -122.202564], {
+               radius: 8,
+               fillColor: "#FF4D00",
+               color: "#000",
+               weight: 1.7,
+               opacity: 1,
+               fillOpacity: 1,
+           });
+     marker.addTo(map);    var marker = new L.CircleMarker([47.604579, -122.335911], {
+               radius: 5,
+               fillColor: "#CEFA05",
+               color: "#000",
+               weight: 1.7,
+               opacity: 1,
+               fillOpacity: 1,
+           });
+     marker.addTo(map);    var marker = new L.CircleMarker([48.187278, -122.508564], {
+               radius: 5,
+               fillColor: "#CEFA05",
+               color: "#000",
+               weight: 1.7,
+               opacity: 1,
+               fillOpacity: 1,
+           });
+     marker.addTo(map);    var marker = new L.CircleMarker([47.253232, -122.444255], {
+               radius: 5,
+               fillColor: "#CEFA05",
+               color: "#000",
+               weight: 1.7,
+               opacity: 1,
+               fillOpacity: 1,
+           });
+     marker.addTo(map);    var marker = new L.CircleMarker([47.541807, -121.837831], {
+               radius: 5,
+               fillColor: "#CEFA05",
+               color: "#000",
+               weight: 1.7,
+               opacity: 1,
+               fillOpacity: 1,
+           });
+     marker.addTo(map);    var marker = new L.CircleMarker([47.956553, -118.980534], {
+               radius: 5,
+               fillColor: "#CEFA05",
+               color: "#000",
+               weight: 1.7,
+               opacity: 1,
+               fillOpacity: 1,
+           });
+     marker.addTo(map);    var marker = new L.CircleMarker([44.424045, -110.588454], {
+               radius: 8,
+               fillColor: "#FF4D00",
+               color: "#000",
+               weight: 1.7,
+               opacity: 1,
+               fillOpacity: 1,
+           });
+     marker.addTo(map);    var marker = new L.CircleMarker([43.786463, -110.687256], {
+               radius: 5,
+               fillColor: "#CEFA05",
+               color: "#000",
+               weight: 1.7,
+               opacity: 1,
+               fillOpacity: 1,
+           });
+     marker.addTo(map);    var marker = new L.CircleMarker([43.511598, -113.012228], {
+               radius: 5,
+               fillColor: "#CEFA05",
+               color: "#000",
+               weight: 1.7,
+               opacity: 1,
+               fillOpacity: 1,
+           });
+     marker.addTo(map);    var marker = new L.CircleMarker([43.416697, -113.516746], {
+               radius: 5,
+               fillColor: "#CEFA05",
+               color: "#000",
+               weight: 1.7,
+               opacity: 1,
+               fillOpacity: 1,
+           });
+     marker.addTo(map);    var marker = new L.CircleMarker([42.563369, -114.461377], {
+               radius: 4,
+               fillColor: "#000000",
+               color: "#000",
+               weight: 1.7,
+               opacity: 1,
+               fillOpacity: 1,
+           });
+     marker.addTo(map);    var marker = new L.CircleMarker([39.529254, -119.813769], {
+               radius: 4,
+               fillColor: "#000000",
+               color: "#000",
+               weight: 1.7,
+               opacity: 1,
+               fillOpacity: 1,
+           });
+     marker.addTo(map);    var marker = new L.CircleMarker([39.165417, -119.769136], {
+               radius: 5,
+               fillColor: "#CEFA05",
+               color: "#000",
+               weight: 1.7,
+               opacity: 1,
+               fillOpacity: 1,
+           });
+     marker.addTo(map);    var marker = new L.CircleMarker([38.580846, -121.495099], {
+               radius: 5,
+               fillColor: "#CEFA05",
+               color: "#000",
+               weight: 1.7,
+               opacity: 1,
+               fillOpacity: 1,
+           });
+     marker.addTo(map);    var marker = new L.CircleMarker([37.621355, -122.378955], {
+               radius: 4,
+               fillColor: "#000000",
+               color: "#000",
+               weight: 1.7,
+               opacity: 1,
+               fillOpacity: 1,
+           });
+     marker.addTo(map);    var marker = new L.CircleMarker([-37.008110, -185.214953], {
+               radius: 4,
+               fillColor: "#000000",
+               color: "#000",
+               weight: 1.7,
+               opacity: 1,
+               fillOpacity: 1,
+           });
+     marker.addTo(map);    var marker = new L.CircleMarker([-33.939914, -208.824713], {
+               radius: 4,
+               fillColor: "#000000",
+               color: "#000",
+               weight: 1.7,
+               opacity: 1,
+               fillOpacity: 1,
+           });
+     marker.addTo(map);    var marker = new L.CircleMarker([-35.355434, -210.93395], {
+               radius: 4,
+               fillColor: "#000000",
+               color: "#000",
+               weight: 1.7,
+               opacity: 1,
+               fillOpacity: 1,
+           });
+     marker.addTo(map);    var legend = L.control({ position: "bottomleft" });
+
+    legend.onAdd = function(map) {
+        var div = L.DomUtil.create("div", "legend");
+        div.innerHTML = '<svg height="82" width="287">    <rect width="285" height="80" rx="8" ry="8" style="fill:rgb(255,255,255)" />         <!-- Add circles and text for visit type -->    <circle cx="18" cy="16" r="7" stroke="black" stroke-width="1.7" fill="#FF0000" />        <text x="30" y="20">Stayed a Few Days</text>    <circle cx="150" cy="16" r="7" stroke="black" stroke-width="1.7" fill="#CEFA05" />        <text x="161" y="20">Visited</text>    <circle cx="220" cy="16" r="7" stroke="black" stroke-width="1.7" fill="#000000" />        <text x="232" y="20">Waypoint</text>    <!-- Add lines and text for transport mode -->    <line x1="10" y1="38" x2="45" y2="38" style="stroke:#000000" />        <text x="51" y="41">Car</text>    <line x1="10" y1="52" x2="45" y2="52" style="stroke:#E6194B" />        <text x="51" y="55">Bus</text>    <line x1="90" y1="38" x2="125" y2="38" style="stroke:#3CB44B" />        <text x="131" y="41">Plane</text>    <line x1="90" y1="52" x2="125" y2="52" style="stroke:#a9a9a9" />        <text x="131" y="55">Train</text>    <line x1="175" y1="38" x2="210" y2="38" style="stroke:#4363D8" />        <text x="216" y="41">Ferry or Ship</text>    <line x1="175" y1="52" x2="210" y2="52" style="stroke:#F032E6" />        <text x="216" y="55">Campervan</text>   	<line x1="50" y1="66" x2="85" y2="66" style="stroke:#9A6324" />        <text x="91" y="69">Motorbike</text>	<line x1="150" y1="66" x2="195" y2="66" style="stroke:#42D4F4" />        <text x="201" y="69">Cablecar</text></svg>';
+
+        return div;
+    };
+
+    legend.addTo(map);
+
+    var zoom_bar = new L.Control.ZoomBar({position: 'topleft'}).addTo(map);
+    L.control.navbar().addTo(map);collisionLayer = L.LayerGroup.collision({margin:0});     var label = L.marker([37.337343, -121.897069],{
+     icon: L.divIcon({
+     iconAnchor:[-10,11],
+     className: '',
+     html:"<div class = 'city-label city-label-0'>San Jose</div>"
+     }),
+     interactive: false,
+     clickable:   false,
+     });
+     collisionLayer.addLayer(label);     var label = L.marker([45.522454, -122.678799],{
+     icon: L.divIcon({
+     iconAnchor:[-10,11],
+     className: '',
+     html:"<div class = 'city-label city-label-0'>Portland</div>"
+     }),
+     interactive: false,
+     clickable:   false,
+     });
+     collisionLayer.addLayer(label);     var label = L.marker([47.979066, -122.202564],{
+     icon: L.divIcon({
+     iconAnchor:[-10,11],
+     className: '',
+     html:"<div class = 'city-label city-label-0'>Everett</div>"
+     }),
+     interactive: false,
+     clickable:   false,
+     });
+     collisionLayer.addLayer(label);     var label = L.marker([44.424045, -110.588454],{
+     icon: L.divIcon({
+     iconAnchor:[-10,11],
+     className: '',
+     html:"<div class = 'city-label city-label-0'>Yellowstone National Park</div>"
+     }),
+     interactive: false,
+     clickable:   false,
+     });
+     collisionLayer.addLayer(label);     var label = L.marker([38.329055, -123.043955],{
+     icon: L.divIcon({
+     iconAnchor:[-10,11],
+     className: '',
+     html:"<div class = 'city-label city-label-0'>Bodega Bay</div>"
+     }),
+     interactive: false,
+     clickable:   false,
+     });
+     collisionLayer.addLayer(label);     var label = L.marker([40.258631, -123.837656],{
+     icon: L.divIcon({
+     iconAnchor:[-10,11],
+     className: '',
+     html:"<div class = 'city-label city-label-0'>Avenue of the Giants</div>"
+     }),
+     interactive: false,
+     clickable:   false,
+     });
+     collisionLayer.addLayer(label);     var label = L.marker([40.641725, -124.226190],{
+     icon: L.divIcon({
+     iconAnchor:[-10,11],
+     className: '',
+     html:"<div class = 'city-label city-label-0'>Loleta</div>"
+     }),
+     interactive: false,
+     clickable:   false,
+     });
+     collisionLayer.addLayer(label);     var label = L.marker([40.802195, -124.164245],{
+     icon: L.divIcon({
+     iconAnchor:[-10,11],
+     className: '',
+     html:"<div class = 'city-label city-label-0'>Eureka</div>"
+     }),
+     interactive: false,
+     clickable:   false,
+     });
+     collisionLayer.addLayer(label);     var label = L.marker([41.756045, -124.202513],{
+     icon: L.divIcon({
+     iconAnchor:[-10,11],
+     className: '',
+     html:"<div class = 'city-label city-label-0'>Crescent City</div>"
+     }),
+     interactive: false,
+     clickable:   false,
+     });
+     collisionLayer.addLayer(label);     var label = L.marker([45.709013, -121.620912],{
+     icon: L.divIcon({
+     iconAnchor:[-10,11],
+     className: '',
+     html:"<div class = 'city-label city-label-0'>Columbia River Gorge</div>"
+     }),
+     interactive: false,
+     clickable:   false,
+     });
+     collisionLayer.addLayer(label);     var label = L.marker([46.191387, -122.195380],{
+     icon: L.divIcon({
+     iconAnchor:[-10,11],
+     className: '',
+     html:"<div class = 'city-label city-label-0'>Mount St Helens</div>"
+     }),
+     interactive: false,
+     clickable:   false,
+     });
+     collisionLayer.addLayer(label);     var label = L.marker([47.604579, -122.335911],{
+     icon: L.divIcon({
+     iconAnchor:[-10,11],
+     className: '',
+     html:"<div class = 'city-label city-label-0'>Seattle</div>"
+     }),
+     interactive: false,
+     clickable:   false,
+     });
+     collisionLayer.addLayer(label);     var label = L.marker([48.187278, -122.508564],{
+     icon: L.divIcon({
+     iconAnchor:[-10,11],
+     className: '',
+     html:"<div class = 'city-label city-label-0'>Camano Island</div>"
+     }),
+     interactive: false,
+     clickable:   false,
+     });
+     collisionLayer.addLayer(label);     var label = L.marker([47.253232, -122.444255],{
+     icon: L.divIcon({
+     iconAnchor:[-10,11],
+     className: '',
+     html:"<div class = 'city-label city-label-0'>Tacoma</div>"
+     }),
+     interactive: false,
+     clickable:   false,
+     });
+     collisionLayer.addLayer(label);     var label = L.marker([47.541807, -121.837831],{
+     icon: L.divIcon({
+     iconAnchor:[-10,11],
+     className: '',
+     html:"<div class = 'city-label city-label-0'>Snoqualmie Falls</div>"
+     }),
+     interactive: false,
+     clickable:   false,
+     });
+     collisionLayer.addLayer(label);     var label = L.marker([47.956553, -118.980534],{
+     icon: L.divIcon({
+     iconAnchor:[-10,11],
+     className: '',
+     html:"<div class = 'city-label city-label-0'>Grand Coulee Dam</div>"
+     }),
+     interactive: false,
+     clickable:   false,
+     });
+     collisionLayer.addLayer(label);     var label = L.marker([43.786463, -110.687256],{
+     icon: L.divIcon({
+     iconAnchor:[-10,11],
+     className: '',
+     html:"<div class = 'city-label city-label-0'>Grand Tetons</div>"
+     }),
+     interactive: false,
+     clickable:   false,
+     });
+     collisionLayer.addLayer(label);     var label = L.marker([43.511598, -113.012228],{
+     icon: L.divIcon({
+     iconAnchor:[-10,11],
+     className: '',
+     html:"<div class = 'city-label city-label-0'>EBR 1</div>"
+     }),
+     interactive: false,
+     clickable:   false,
+     });
+     collisionLayer.addLayer(label);     var label = L.marker([43.416697, -113.516746],{
+     icon: L.divIcon({
+     iconAnchor:[-10,11],
+     className: '',
+     html:"<div class = 'city-label city-label-0'>Craters of the Moon</div>"
+     }),
+     interactive: false,
+     clickable:   false,
+     });
+     collisionLayer.addLayer(label);     var label = L.marker([39.165417, -119.769136],{
+     icon: L.divIcon({
+     iconAnchor:[-10,11],
+     className: '',
+     html:"<div class = 'city-label city-label-0'>Carson City</div>"
+     }),
+     interactive: false,
+     clickable:   false,
+     });
+     collisionLayer.addLayer(label);     var label = L.marker([38.580846, -121.495099],{
+     icon: L.divIcon({
+     iconAnchor:[-10,11],
+     className: '',
+     html:"<div class = 'city-label city-label-0'>Sacramento</div>"
+     }),
+     interactive: false,
+     clickable:   false,
+     });
+     collisionLayer.addLayer(label);     var label = L.marker([-35.355434, -210.93395],{
+     icon: L.divIcon({
+     iconAnchor:[-10,11],
+     className: '',
+     html:"<div class = 'city-label city-label-0'>Canberra</div>"
+     }),
+     interactive: false,
+     clickable:   false,
+     });
+     collisionLayer.addLayer(label);     var label = L.marker([-33.939914, -208.824713],{
+     icon: L.divIcon({
+     iconAnchor:[-10,11],
+     className: '',
+     html:"<div class = 'city-label city-label-0'>Sydney</div>"
+     }),
+     interactive: false,
+     clickable:   false,
+     });
+     collisionLayer.addLayer(label);     var label = L.marker([-37.008110, -185.214953],{
+     icon: L.divIcon({
+     iconAnchor:[-10,11],
+     className: '',
+     html:"<div class = 'city-label city-label-0'>Auckland</div>"
+     }),
+     interactive: false,
+     clickable:   false,
+     });
+     collisionLayer.addLayer(label);     var label = L.marker([37.621355, -122.378955],{
+     icon: L.divIcon({
+     iconAnchor:[-10,11],
+     className: '',
+     html:"<div class = 'city-label city-label-0'>San Francisco</div>"
+     }),
+     interactive: false,
+     clickable:   false,
+     });
+     collisionLayer.addLayer(label);     var label = L.marker([47.392630, -121.399669],{
+     icon: L.divIcon({
+     iconAnchor:[-10,11],
+     className: '',
+     html:"<div class = 'city-label city-label-0'>Snoqualmie Pass</div>"
+     }),
+     interactive: false,
+     clickable:   false,
+     });
+     collisionLayer.addLayer(label);     var label = L.marker([42.563369, -114.461377],{
+     icon: L.divIcon({
+     iconAnchor:[-10,11],
+     className: '',
+     html:"<div class = 'city-label city-label-0'>Twin Falls</div>"
+     }),
+     interactive: false,
+     clickable:   false,
+     });
+     collisionLayer.addLayer(label);     var label = L.marker([39.529254, -119.813769],{
+     icon: L.divIcon({
+     iconAnchor:[-10,11],
+     className: '',
+     html:"<div class = 'city-label city-label-0'>Reno</div>"
+     }),
+     interactive: false,
+     clickable:   false,
+     });
+     collisionLayer.addLayer(label);collisionLayer.addTo(map);</script>
+              <script>    const generatePulsatingMarker = function(){
+        const cssStyle = `margin-left:-2px;
+        margin-top:-2px;
+        width: 16px;
+        height: 16px;
+        background: none;
+        color: red;`
+        return L.divIcon({html: `<span style="${cssStyle}" class="pulse"/>`,className: 'pulsatingIcon'})
+    }
+
+    const stopItemClicked = function(location, lat, long){
+        map.removeLayer(marker);
+        
+        if (sessionStorage.getItem("location") == location){
+            sessionStorage.setItem("location", "");
+        } else {
+            marker.setLatLng([lat, long]);
+            marker.addTo(map);
+            map.setView(marker.getLatLng(), map.getZoom());
+            sessionStorage.setItem("location", location );
+        }
+    }
+        
+    // Create Pulsating Marker
+    var marker = L.marker([0, 0], {
+        icon: generatePulsatingMarker()
+    })
+      
+    // Have to initialise the storage
+    sessionStorage.setItem("location", "");</script>
+            </div>
+          </div>
+          <div class="d-flex justify-content-center m-2" style="font-size: 0.8em">
+            <p>© 2018 - <span id="currentYear"></span> Peter Zegelin | </p>
+            <script>document.getElementById('currentYear').textContent = new Date().getFullYear();</script>
+            <p>Created in Swift with <a href="https://github.com/twostraws/Ignite">Ignite</a></p>
+            <p> | Source Code for this site is at <a href="https://github.com/zegelinfamily/">GitHub </a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/ignite-core.js"></script>
+  </body>
+</html>

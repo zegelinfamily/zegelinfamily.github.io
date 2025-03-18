@@ -1,0 +1,1044 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="Peter" />
+    <meta name="generator" content="Ignite v0.5.0" />
+    <title>Ireland</title>
+    <link href="/ourtravels/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="/ourtravels/css/bootstrap-icons.min.css" rel="stylesheet" />
+    <link href="/ourtravels/css/ignite-core.min.css" rel="stylesheet" />
+    <link href="https://www.zegelin.com/ourtravels//2012_Ireland" rel="canonical" />
+    <script>(function() {
+    function getThemePreference() {
+        return localStorage.getItem('custom-theme') || 'auto';
+    }
+
+    function applyTheme(themeID) {
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        const lightThemeID = document.documentElement.getAttribute('data-light-theme') || 'light';
+        const darkThemeID = document.documentElement.getAttribute('data-dark-theme') || 'dark';
+        const actualThemeID = themeID === 'auto' ? (prefersDark ? darkThemeID : lightThemeID) : themeID;
+
+        document.documentElement.setAttribute('data-bs-theme', actualThemeID);
+        document.documentElement.setAttribute('data-theme-state', themeID);
+    }
+
+    function applySyntaxTheme() {
+        const syntaxTheme = getComputedStyle(document.documentElement)
+            .getPropertyValue('--syntax-highlight-theme').trim().replace(/"/g, '');
+
+        if (!syntaxTheme) return;
+
+        document.querySelectorAll('link[data-highlight-theme]').forEach(link => {
+            link.setAttribute('disabled', 'disabled');
+        });
+
+        const themeLink = document.querySelector(`link[data-highlight-theme="${syntaxTheme}"]`);
+        if (themeLink) {
+            themeLink.removeAttribute('disabled');
+        }
+    }
+
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
+        const currentTheme = getThemePreference();
+        if (currentTheme === 'auto') {
+            applyTheme('auto');
+            applySyntaxTheme();
+        }
+    });
+
+    const savedTheme = getThemePreference();
+    applyTheme(savedTheme);
+    applySyntaxTheme();
+})();
+</script>
+    <meta property="og:site_name" content="Our Trips" />
+    <meta property="og:image" content="2012%20Ireland.jpg" />
+    <meta name="twitter:image" content="2012%20Ireland.jpg" />
+    <meta property="og:title" content="Ireland" />
+    <meta name="twitter:title" content="Ireland" />
+    <meta property="og:url" content="https://www.zegelin.com/ourtravels//2012_Ireland" />
+    <meta name="twitter:domain" content="zegelin.com" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:dnt" content="on" />
+    <link href="/ourtravels/css/leaflet.css" rel="stylesheet" />
+    <script src="/leaflet/leaflet.js"></script>
+    <script src="/leaflet/leaflet.curve.js"></script>
+    <link href="/ourtravels/zoombar/L.Control.ZoomBar.css" rel="stylesheet" />
+    <script src="/zoombar/L.Control.ZoomBar.js"></script>
+    <link href="/ourtravels/navbar/Leaflet.NavBar.css" rel="stylesheet" />
+    <script src="/navbar/Leaflet.NavBar.js"></script>
+    <link href="/ourtravels/css/labels.css" rel="stylesheet" />
+    <link href="/ourtravels/css/legend.css" rel="stylesheet" />
+    <script src="/label-collision/rbush.js"></script>
+    <script src="/label-collision/Leaflet.LayerGroup.Collision.js"></script>
+    <link href="/ourtravels/css/trip.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div>
+      <div>
+        <div class="flex-container">
+          <div class="top-content">
+            <div class="d-flex justify-content-left">
+              <div class="fs-3" style="margin-left: -33px; margin-right: 5px">
+                <a href="/" class="font-inherit"><i class="bi-arrow-left"></i></a>
+              </div>
+              <h2>Ireland and Northern Ireland</h2>
+            </div>
+            <p style="margin-top: -15px"></p>
+          </div>
+          <div class="map-sidebar-container">
+            <div class="sidebar">
+              <ul class="listbox">
+                <li>
+                  <div class="m-0" style="display: grid">
+                    <div class="mb-0" style="position: relative; display: grid; grid-area: 1/1; z-index: 0; align-self: center; justify-self: center">
+                      <canvas id="tutorial" width="250" height="837"></canvas>
+                      <script>        function draw() {
+        const canvas = document.getElementById("tutorial");
+        if (canvas.getContext) {
+        const ctx = canvas.getContext("2d");
+        ctx.strokeStyle = "red";
+        ctx.lineWidth = 1.5;    // Start a new Path
+    ctx.beginPath();
+    ctx.moveTo(7, 192);
+    ctx.lineTo(1, 192);
+    ctx.lineTo(1, 239);
+    ctx.lineTo(7, 239);
+    
+    // Draw the Path
+    ctx.stroke();    // Start a new Path
+    ctx.beginPath();
+    ctx.moveTo(7, 381);
+    ctx.lineTo(1, 381);
+    ctx.lineTo(1, 401);
+    ctx.lineTo(7, 401);
+    
+    // Draw the Path
+    ctx.stroke();    }
+    }
+    draw();</script>
+                    </div>
+                    <div class="mb-0" style="position: relative; display: grid; grid-area: 1/1; z-index: 1; align-self: center; justify-self: center">
+                      <p class="listItem" onclick="    stopItemClicked(&quot;Canberra&quot;,-35.355434, 149.06605)">Canberra</p>
+                      <p class="listItem" onclick="    stopItemClicked(&quot;Sydney&quot;,-33.939914, 151.175287)">Sydney</p>
+                      <p class="listItem" onclick="    stopItemClicked(&quot;Abu Dhabi&quot;,24.459632, 54.377252)">Abu Dhabi</p>
+                      <p class="listItem" onclick="    stopItemClicked(&quot;Dublin&quot;,53.361308, -6.317292)">Dublin</p>
+                      <p class="listItem" onclick="    stopItemClicked(&quot;Bir Castle Demesne&quot;,53.095782, -7.914277)">Bir Castle Demesne</p>
+                      <p class="listItem" onclick="    stopItemClicked(&quot;Clonmacnoise Monastery&quot;,53.325823, -7.986463)">Clonmacnoise Monastery</p>
+                      <p class="listItem" onclick="    stopItemClicked(&quot;Oranmore&quot;,53.265864, -8.931865)">Oranmore</p>
+                      <p class="listItem" onclick="    stopItemClicked(&quot;Clifden&quot;,53.491144, -10.029125)">        Clifden</p>
+                      <p class="listItem" onclick="    stopItemClicked(&quot;Kylemore Abbey&quot;,53.561351, -9.891577)">        Kylemore Abbey</p>
+                      <p class="listItem" onclick="    stopItemClicked(&quot;Aillwee Cave&quot;,53.089217, -9.1444)">Aillwee Cave</p>
+                      <p class="listItem" onclick="    stopItemClicked(&quot;Burren&quot;,53.007587, -9.002142)">Burren</p>
+                      <p class="listItem" onclick="    stopItemClicked(&quot;Cliffs of Moher&quot;,52.971869, -9.426512)">Cliffs of Moher</p>
+                      <p class="listItem" onclick="    stopItemClicked(&quot;Killaloe&quot;,52.807768, -8.446663)">Killaloe</p>
+                      <p class="listItem" onclick="    stopItemClicked(&quot;Killarney&quot;,52.061325, -9.516364)">Killarney</p>
+                      <p class="listItem" onclick="    stopItemClicked(&quot;Dingle Peninsula&quot;,52.201734, -10.121083)">        Dingle Peninsula</p>
+                      <p class="listItem" onclick="    stopItemClicked(&quot;Bantry&quot;,51.683167, -9.458686)">Bantry</p>
+                      <p class="listItem" onclick="    stopItemClicked(&quot;Cashel&quot;,52.518278, -7.887641)">Cashel</p>
+                      <p class="listItem" onclick="    stopItemClicked(&quot;Kilkenny&quot;,52.653987, -7.255438)">Kilkenny</p>
+                      <p class="listItem" onclick="    stopItemClicked(&quot;Glendalough&quot;,53.012629, -6.329926)">Glendalough</p>
+                      <p class="listItem" onclick="    stopItemClicked(&quot;Newgrange&quot;,53.694771, -6.475241)">Newgrange</p>
+                      <p class="listItem" onclick="    stopItemClicked(&quot;Carrick-a-Rede&quot;,55.239519, -6.332755)">Carrick-a-Rede</p>
+                      <p class="listItem" onclick="    stopItemClicked(&quot;Giant\'s Causeway&quot;,55.240831, -6.511552)">Giant's Causeway</p>
+                      <p class="listItem" onclick="    stopItemClicked(&quot;Old Bushmills Distillery&quot;,55.202854, -6.517227)">Old Bushmills Distillery</p>
+                      <p class="listItem" onclick="    stopItemClicked(&quot;Dunluce Castle&quot;,55.21084, -6.580055)">Dunluce Castle</p>
+                      <p class="listItem" onclick="    stopItemClicked(&quot;Londonderry&quot;,54.999164, -7.311676)">Londonderry</p>
+                      <p class="listItem" onclick="    stopItemClicked(&quot;Slieve League&quot;,54.641287, -8.681512)">Slieve League</p>
+                      <p class="listItem" onclick="    stopItemClicked(&quot;Sligo Abbey&quot;,54.27078, -8.47352)">Sligo Abbey</p>
+                      <p class="listItem" onclick="    stopItemClicked(&quot;Dublin&quot;,53.361308, -6.317292)">Dublin</p>
+                      <p class="listItem" onclick="    stopItemClicked(&quot;Abu Dhabi&quot;,24.459632, 54.377252)">Abu Dhabi</p>
+                      <p class="listItem" onclick="    stopItemClicked(&quot;Sydney&quot;,-33.939914, 151.175287)">Sydney</p>
+                      <p class="listItem" onclick="    stopItemClicked(&quot;Canberra&quot;,-35.355434, 149.06605)">Canberra</p>
+                    </div>
+                  </div></li>
+              </ul>
+            </div>
+            <div id="map" onclick="    map.removeLayer(marker);
+    sessionStorage.setItem(&quot;location&quot;, &quot;&quot;);">
+              <script>    const map = L.map('map',{
+        zoomDelta: 0.25,    // Controls zoom increment (default is 1)
+        zoomSnap: 0.25,     // Snaps zoom to multiples of this value (default is 1)
+        zoomControl: false
+    });
+    
+    
+    // Add OpenStreetMap tiles
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{
+       attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+    }).addTo(map);
+    
+    // Fit the map to the bounds with optional padding
+    map.fitBounds([[55.938094,-15.164356],[50.907856,-0.622648]],{
+    });    var curve = L.curve(
+    [
+     'M', [-35.355434,149.06605], 
+     'Q', [-34.0149029,149.6960125],
+     [-33.939914,151.175287]
+    ],
+    {
+     color: '#000000',
+     weight: 2.0
+    }
+    ).addTo(map);    var curve = L.curve(
+    [
+     'M', [-33.939914,151.175287], 
+     'Q', [-9.58004275,99.8562922],
+     [24.459632,54.377252]
+    ],
+    {
+     color: '#3CB44B',
+     weight: 2.0
+    }
+    ).addTo(map);    var curve = L.curve(
+    [
+     'M', [24.459632,54.377252], 
+     'Q', [35.8757428,22.5848962],
+     [53.361308,-6.317292]
+    ],
+    {
+     color: '#3CB44B',
+     weight: 2.0
+    }
+    ).addTo(map);    var curve = L.curve(
+    [
+     'M', [53.361308,-6.317292], 
+     'Q', [52.909148,-7.0626793],
+     [53.095782,-7.914277]
+    ],
+    {
+     color: '#000000',
+     weight: 2.0
+    }
+    ).addTo(map);    var curve = L.curve(
+    [
+     'M', [53.095782,-7.914277], 
+     'Q', [53.1891467,-8.0193823],
+     [53.325823,-7.986463]
+    ],
+    {
+     color: '#000000',
+     weight: 2.0
+    }
+    ).addTo(map);    var curve = L.curve(
+    [
+     'M', [53.325823,-7.986463], 
+     'Q', [53.4849239,-8.4711558],
+     [53.265864,-8.931865]
+    ],
+    {
+     color: '#000000',
+     weight: 2.0
+    }
+    ).addTo(map);    var curve = L.curve(
+    [
+     'M', [53.265864,-8.931865], 
+     'Q', [53.159052,-9.525551],
+     [53.491144,-10.029125]
+    ],
+    {
+     color: '#000000',
+     weight: 2.0
+    }
+    ).addTo(map);    var curve = L.curve(
+    [
+     'M', [53.491144,-10.029125], 
+     'Q', [53.5675119,-9.981413100000001],
+     [53.561351,-9.891577]
+    ],
+    {
+     color: '#000000',
+     weight: 2.0
+    }
+    ).addTo(map);    var curve = L.curve(
+    [
+     'M', [53.561351,-9.891577], 
+     'Q', [53.7015211,-9.3230749],
+     [53.265864,-8.931865]
+    ],
+    {
+     color: '#000000',
+     weight: 2.0
+    }
+    ).addTo(map);    var curve = L.curve(
+    [
+     'M', [53.265864,-8.931865], 
+     'Q', [53.11378,-8.985138399999999],
+     [53.089217,-9.1444]
+    ],
+    {
+     color: '#000000',
+     weight: 2.0
+    }
+    ).addTo(map);    var curve = L.curve(
+    [
+     'M', [53.089217,-9.1444], 
+     'Q', [53.0910794,-9.048782],
+     [53.007587,-9.002142]
+    ],
+    {
+     color: '#000000',
+     weight: 2.0
+    }
+    ).addTo(map);    var curve = L.curve(
+    [
+     'M', [53.007587,-9.002142], 
+     'Q', [53.074602,-9.2214706],
+     [52.971869,-9.426512]
+    ],
+    {
+     color: '#000000',
+     weight: 2.0
+    }
+    ).addTo(map);    var curve = L.curve(
+    [
+     'M', [52.971869,-9.426512], 
+     'Q', [52.693848700000004,-8.9694077],
+     [52.807768,-8.446663]
+    ],
+    {
+     color: '#000000',
+     weight: 2.0
+    }
+    ).addTo(map);    var curve = L.curve(
+    [
+     'M', [52.807768,-8.446663], 
+     'Q', [52.1136362,-8.757580599999997],
+     [52.061325,-9.516364]
+    ],
+    {
+     color: '#000000',
+     weight: 2.0
+    }
+    ).addTo(map);    var curve = L.curve(
+    [
+     'M', [52.061325,-9.516364], 
+     'Q', [51.9501138,-9.860846200000001],
+     [52.201734,-10.121083]
+    ],
+    {
+     color: '#000000',
+     weight: 2.0
+    }
+    ).addTo(map);    var curve = L.curve(
+    [
+     'M', [52.201734,-10.121083], 
+     'Q', [52.3129452,-9.776600799999999],
+     [52.061325,-9.516364]
+    ],
+    {
+     color: '#000000',
+     weight: 2.0
+    }
+    ).addTo(map);    var curve = L.curve(
+    [
+     'M', [52.061325,-9.516364], 
+     'Q', [51.8895494,-9.3740776],
+     [51.683167,-9.458686]
+    ],
+    {
+     color: '#000000',
+     weight: 2.0
+    }
+    ).addTo(map);    var curve = L.curve(
+    [
+     'M', [51.683167,-9.458686], 
+     'Q', [51.629409,-8.422630199999999],
+     [52.518278,-7.887641]
+    ],
+    {
+     color: '#000000',
+     weight: 2.0
+    }
+    ).addTo(map);    var curve = L.curve(
+    [
+     'M', [52.518278,-7.887641], 
+     'Q', [52.3964716,-7.530826800000001],
+     [52.653987,-7.255438]
+    ],
+    {
+     color: '#000000',
+     weight: 2.0
+    }
+    ).addTo(map);    var curve = L.curve(
+    [
+     'M', [52.653987,-7.255438], 
+     'Q', [52.5556544,-6.685089400000002],
+     [53.012629,-6.329926]
+    ],
+    {
+     color: '#000000',
+     weight: 2.0
+    }
+    ).addTo(map);    var curve = L.curve(
+    [
+     'M', [53.012629,-6.329926], 
+     'Q', [53.3101055,-6.607226100000002],
+     [53.694771,-6.475241]
+    ],
+    {
+     color: '#000000',
+     weight: 2.0
+    }
+    ).addTo(map);    var curve = L.curve(
+    [
+     'M', [53.694771,-6.475241], 
+     'Q', [54.5098908,-6.867422399999999],
+     [55.239519,-6.332755]
+    ],
+    {
+     color: '#000000',
+     weight: 2.0
+    }
+    ).addTo(map);    var curve = L.curve(
+    [
+     'M', [55.239519,-6.332755], 
+     'Q', [55.1865359,-6.422547099999999],
+     [55.240831,-6.511552]
+    ],
+    {
+     color: '#000000',
+     weight: 2.0
+    }
+    ).addTo(map);    var curve = L.curve(
+    [
+     'M', [55.240831,-6.511552], 
+     'Q', [55.22014,-6.502996400000001],
+     [55.202854,-6.517227]
+    ],
+    {
+     color: '#000000',
+     weight: 2.0
+    }
+    ).addTo(map);    var curve = L.curve(
+    [
+     'M', [55.202854,-6.517227], 
+     'Q', [55.1879986,-6.5510367999999985],
+     [55.21084,-6.580055]
+    ],
+    {
+     color: '#000000',
+     weight: 2.0
+    }
+    ).addTo(map);    var curve = L.curve(
+    [
+     'M', [55.21084,-6.580055], 
+     'Q', [54.9586778,-6.903530300000001],
+     [54.999164,-7.311676]
+    ],
+    {
+     color: '#000000',
+     weight: 2.0
+    }
+    ).addTo(map);    var curve = L.curve(
+    [
+     'M', [54.999164,-7.311676], 
+     'Q', [54.5462583,-7.9250186],
+     [54.641287,-8.681512]
+    ],
+    {
+     color: '#000000',
+     weight: 2.0
+    }
+    ).addTo(map);    var curve = L.curve(
+    [
+     'M', [54.641287,-8.681512], 
+     'Q', [54.5184311,-8.466363900000001],
+     [54.27078,-8.47352]
+    ],
+    {
+     color: '#000000',
+     weight: 2.0
+    }
+    ).addTo(map);    var curve = L.curve(
+    [
+     'M', [54.27078,-8.47352], 
+     'Q', [53.3847984,-7.5773004],
+     [53.361308,-6.317292]
+    ],
+    {
+     color: '#000000',
+     weight: 2.0
+    }
+    ).addTo(map);    var curve = L.curve(
+    [
+     'M', [53.361308,-6.317292], 
+     'Q', [41.9451972,25.4750638],
+     [24.459632,54.377252]
+    ],
+    {
+     color: '#3CB44B',
+     weight: 2.0
+    }
+    ).addTo(map);    var curve = L.curve(
+    [
+     'M', [24.459632,54.377252], 
+     'Q', [0.09976074999999796,105.6962468],
+     [-33.939914,151.175287]
+    ],
+    {
+     color: '#3CB44B',
+     weight: 2.0
+    }
+    ).addTo(map);    var curve = L.curve(
+    [
+     'M', [-33.939914,151.175287], 
+     'Q', [-35.2804451,150.5453245],
+     [-35.355434,149.06605]
+    ],
+    {
+     color: '#000000',
+     weight: 2.0
+    }
+    ).addTo(map);    var marker = new L.CircleMarker([-35.355434, 149.066050], {
+               radius: 4,
+               fillColor: "#000000",
+               color: "#000",
+               weight: 1.7,
+               opacity: 1,
+               fillOpacity: 1,
+           });
+     marker.addTo(map);    var marker = new L.CircleMarker([-33.939914, 151.175287], {
+               radius: 4,
+               fillColor: "#000000",
+               color: "#000",
+               weight: 1.7,
+               opacity: 1,
+               fillOpacity: 1,
+           });
+     marker.addTo(map);    var marker = new L.CircleMarker([24.459632, 54.377252], {
+               radius: 4,
+               fillColor: "#000000",
+               color: "#000",
+               weight: 1.7,
+               opacity: 1,
+               fillOpacity: 1,
+           });
+     marker.addTo(map);    var marker = new L.CircleMarker([53.361308, -6.317292], {
+               radius: 8,
+               fillColor: "#FF4D00",
+               color: "#000",
+               weight: 1.7,
+               opacity: 1,
+               fillOpacity: 1,
+           });
+     marker.addTo(map);    var marker = new L.CircleMarker([53.095782, -7.914277], {
+               radius: 5,
+               fillColor: "#CEFA05",
+               color: "#000",
+               weight: 1.7,
+               opacity: 1,
+               fillOpacity: 1,
+           });
+     marker.addTo(map);    var marker = new L.CircleMarker([53.325823, -7.986463], {
+               radius: 5,
+               fillColor: "#CEFA05",
+               color: "#000",
+               weight: 1.7,
+               opacity: 1,
+               fillOpacity: 1,
+           });
+     marker.addTo(map);    var marker = new L.CircleMarker([53.265864, -8.931865], {
+               radius: 8,
+               fillColor: "#FF4D00",
+               color: "#000",
+               weight: 1.7,
+               opacity: 1,
+               fillOpacity: 1,
+           });
+     marker.addTo(map);    var marker = new L.CircleMarker([53.491144, -10.029125], {
+               radius: 5,
+               fillColor: "#CEFA05",
+               color: "#000",
+               weight: 1.7,
+               opacity: 1,
+               fillOpacity: 1,
+           });
+     marker.addTo(map);    var marker = new L.CircleMarker([53.561351, -9.891577], {
+               radius: 5,
+               fillColor: "#CEFA05",
+               color: "#000",
+               weight: 1.7,
+               opacity: 1,
+               fillOpacity: 1,
+           });
+     marker.addTo(map);    var marker = new L.CircleMarker([53.089217, -9.144400], {
+               radius: 5,
+               fillColor: "#CEFA05",
+               color: "#000",
+               weight: 1.7,
+               opacity: 1,
+               fillOpacity: 1,
+           });
+     marker.addTo(map);    var marker = new L.CircleMarker([53.007587, -9.002142], {
+               radius: 5,
+               fillColor: "#CEFA05",
+               color: "#000",
+               weight: 1.7,
+               opacity: 1,
+               fillOpacity: 1,
+           });
+     marker.addTo(map);    var marker = new L.CircleMarker([52.971869, -9.426512], {
+               radius: 5,
+               fillColor: "#CEFA05",
+               color: "#000",
+               weight: 1.7,
+               opacity: 1,
+               fillOpacity: 1,
+           });
+     marker.addTo(map);    var marker = new L.CircleMarker([52.807768, -8.446663], {
+               radius: 5,
+               fillColor: "#CEFA05",
+               color: "#000",
+               weight: 1.7,
+               opacity: 1,
+               fillOpacity: 1,
+           });
+     marker.addTo(map);    var marker = new L.CircleMarker([52.061325, -9.516364], {
+               radius: 8,
+               fillColor: "#FF4D00",
+               color: "#000",
+               weight: 1.7,
+               opacity: 1,
+               fillOpacity: 1,
+           });
+     marker.addTo(map);    var marker = new L.CircleMarker([52.201734, -10.121083], {
+               radius: 5,
+               fillColor: "#CEFA05",
+               color: "#000",
+               weight: 1.7,
+               opacity: 1,
+               fillOpacity: 1,
+           });
+     marker.addTo(map);    var marker = new L.CircleMarker([51.683167, -9.458686], {
+               radius: 5,
+               fillColor: "#CEFA05",
+               color: "#000",
+               weight: 1.7,
+               opacity: 1,
+               fillOpacity: 1,
+           });
+     marker.addTo(map);    var marker = new L.CircleMarker([52.518278, -7.887641], {
+               radius: 5,
+               fillColor: "#CEFA05",
+               color: "#000",
+               weight: 1.7,
+               opacity: 1,
+               fillOpacity: 1,
+           });
+     marker.addTo(map);    var marker = new L.CircleMarker([52.653987, -7.255438], {
+               radius: 5,
+               fillColor: "#CEFA05",
+               color: "#000",
+               weight: 1.7,
+               opacity: 1,
+               fillOpacity: 1,
+           });
+     marker.addTo(map);    var marker = new L.CircleMarker([53.012629, -6.329926], {
+               radius: 5,
+               fillColor: "#CEFA05",
+               color: "#000",
+               weight: 1.7,
+               opacity: 1,
+               fillOpacity: 1,
+           });
+     marker.addTo(map);    var marker = new L.CircleMarker([53.694771, -6.475241], {
+               radius: 5,
+               fillColor: "#CEFA05",
+               color: "#000",
+               weight: 1.7,
+               opacity: 1,
+               fillOpacity: 1,
+           });
+     marker.addTo(map);    var marker = new L.CircleMarker([55.239519, -6.332755], {
+               radius: 5,
+               fillColor: "#CEFA05",
+               color: "#000",
+               weight: 1.7,
+               opacity: 1,
+               fillOpacity: 1,
+           });
+     marker.addTo(map);    var marker = new L.CircleMarker([55.240831, -6.511552], {
+               radius: 5,
+               fillColor: "#CEFA05",
+               color: "#000",
+               weight: 1.7,
+               opacity: 1,
+               fillOpacity: 1,
+           });
+     marker.addTo(map);    var marker = new L.CircleMarker([55.202854, -6.517227], {
+               radius: 5,
+               fillColor: "#CEFA05",
+               color: "#000",
+               weight: 1.7,
+               opacity: 1,
+               fillOpacity: 1,
+           });
+     marker.addTo(map);    var marker = new L.CircleMarker([55.210840, -6.580055], {
+               radius: 5,
+               fillColor: "#CEFA05",
+               color: "#000",
+               weight: 1.7,
+               opacity: 1,
+               fillOpacity: 1,
+           });
+     marker.addTo(map);    var marker = new L.CircleMarker([54.999164, -7.311676], {
+               radius: 5,
+               fillColor: "#CEFA05",
+               color: "#000",
+               weight: 1.7,
+               opacity: 1,
+               fillOpacity: 1,
+           });
+     marker.addTo(map);    var marker = new L.CircleMarker([54.641287, -8.681512], {
+               radius: 5,
+               fillColor: "#CEFA05",
+               color: "#000",
+               weight: 1.7,
+               opacity: 1,
+               fillOpacity: 1,
+           });
+     marker.addTo(map);    var marker = new L.CircleMarker([54.270780, -8.473520], {
+               radius: 5,
+               fillColor: "#CEFA05",
+               color: "#000",
+               weight: 1.7,
+               opacity: 1,
+               fillOpacity: 1,
+           });
+     marker.addTo(map);    var marker = new L.CircleMarker([53.361308, -6.317292], {
+               radius: 4,
+               fillColor: "#000000",
+               color: "#000",
+               weight: 1.7,
+               opacity: 1,
+               fillOpacity: 1,
+           });
+     marker.addTo(map);    var marker = new L.CircleMarker([24.459632, 54.377252], {
+               radius: 4,
+               fillColor: "#000000",
+               color: "#000",
+               weight: 1.7,
+               opacity: 1,
+               fillOpacity: 1,
+           });
+     marker.addTo(map);    var marker = new L.CircleMarker([-33.939914, 151.175287], {
+               radius: 4,
+               fillColor: "#000000",
+               color: "#000",
+               weight: 1.7,
+               opacity: 1,
+               fillOpacity: 1,
+           });
+     marker.addTo(map);    var marker = new L.CircleMarker([-35.355434, 149.066050], {
+               radius: 4,
+               fillColor: "#000000",
+               color: "#000",
+               weight: 1.7,
+               opacity: 1,
+               fillOpacity: 1,
+           });
+     marker.addTo(map);    var legend = L.control({ position: "bottomleft" });
+
+    legend.onAdd = function(map) {
+        var div = L.DomUtil.create("div", "legend");
+        div.innerHTML = '<svg height="82" width="287">    <rect width="285" height="80" rx="8" ry="8" style="fill:rgb(255,255,255)" />         <!-- Add circles and text for visit type -->    <circle cx="18" cy="16" r="7" stroke="black" stroke-width="1.7" fill="#FF0000" />        <text x="30" y="20">Stayed a Few Days</text>    <circle cx="150" cy="16" r="7" stroke="black" stroke-width="1.7" fill="#CEFA05" />        <text x="161" y="20">Visited</text>    <circle cx="220" cy="16" r="7" stroke="black" stroke-width="1.7" fill="#000000" />        <text x="232" y="20">Waypoint</text>    <!-- Add lines and text for transport mode -->    <line x1="10" y1="38" x2="45" y2="38" style="stroke:#000000" />        <text x="51" y="41">Car</text>    <line x1="10" y1="52" x2="45" y2="52" style="stroke:#E6194B" />        <text x="51" y="55">Bus</text>    <line x1="90" y1="38" x2="125" y2="38" style="stroke:#3CB44B" />        <text x="131" y="41">Plane</text>    <line x1="90" y1="52" x2="125" y2="52" style="stroke:#a9a9a9" />        <text x="131" y="55">Train</text>    <line x1="175" y1="38" x2="210" y2="38" style="stroke:#4363D8" />        <text x="216" y="41">Ferry or Ship</text>    <line x1="175" y1="52" x2="210" y2="52" style="stroke:#F032E6" />        <text x="216" y="55">Campervan</text>   	<line x1="50" y1="66" x2="85" y2="66" style="stroke:#9A6324" />        <text x="91" y="69">Motorbike</text>	<line x1="150" y1="66" x2="195" y2="66" style="stroke:#42D4F4" />        <text x="201" y="69">Cablecar</text></svg>';
+
+        return div;
+    };
+
+    legend.addTo(map);
+
+    var zoom_bar = new L.Control.ZoomBar({position: 'topleft'}).addTo(map);
+    L.control.navbar().addTo(map);collisionLayer = L.LayerGroup.collision({margin:0});     var label = L.marker([53.361308, -6.317292],{
+     icon: L.divIcon({
+     iconAnchor:[-10,11],
+     className: '',
+     html:"<div class = 'city-label city-label-0'>Dublin</div>"
+     }),
+     interactive: false,
+     clickable:   false,
+     });
+     collisionLayer.addLayer(label);     var label = L.marker([53.265864, -8.931865],{
+     icon: L.divIcon({
+     iconAnchor:[-10,11],
+     className: '',
+     html:"<div class = 'city-label city-label-0'>Oranmore</div>"
+     }),
+     interactive: false,
+     clickable:   false,
+     });
+     collisionLayer.addLayer(label);     var label = L.marker([52.061325, -9.516364],{
+     icon: L.divIcon({
+     iconAnchor:[-10,11],
+     className: '',
+     html:"<div class = 'city-label city-label-0'>Killarney</div>"
+     }),
+     interactive: false,
+     clickable:   false,
+     });
+     collisionLayer.addLayer(label);     var label = L.marker([53.095782, -7.914277],{
+     icon: L.divIcon({
+     iconAnchor:[-10,11],
+     className: '',
+     html:"<div class = 'city-label city-label-0'>Bir Castle Demesne</div>"
+     }),
+     interactive: false,
+     clickable:   false,
+     });
+     collisionLayer.addLayer(label);     var label = L.marker([53.325823, -7.986463],{
+     icon: L.divIcon({
+     iconAnchor:[-10,11],
+     className: '',
+     html:"<div class = 'city-label city-label-0'>Clonmacnoise Monastery</div>"
+     }),
+     interactive: false,
+     clickable:   false,
+     });
+     collisionLayer.addLayer(label);     var label = L.marker([53.491144, -10.029125],{
+     icon: L.divIcon({
+     iconAnchor:[-10,11],
+     className: '',
+     html:"<div class = 'city-label city-label-0'>Clifden</div>"
+     }),
+     interactive: false,
+     clickable:   false,
+     });
+     collisionLayer.addLayer(label);     var label = L.marker([53.561351, -9.891577],{
+     icon: L.divIcon({
+     iconAnchor:[-10,11],
+     className: '',
+     html:"<div class = 'city-label city-label-0'>Kylemore Abbey</div>"
+     }),
+     interactive: false,
+     clickable:   false,
+     });
+     collisionLayer.addLayer(label);     var label = L.marker([53.089217, -9.144400],{
+     icon: L.divIcon({
+     iconAnchor:[-10,11],
+     className: '',
+     html:"<div class = 'city-label city-label-0'>Aillwee Cave</div>"
+     }),
+     interactive: false,
+     clickable:   false,
+     });
+     collisionLayer.addLayer(label);     var label = L.marker([53.007587, -9.002142],{
+     icon: L.divIcon({
+     iconAnchor:[-10,11],
+     className: '',
+     html:"<div class = 'city-label city-label-0'>Burren</div>"
+     }),
+     interactive: false,
+     clickable:   false,
+     });
+     collisionLayer.addLayer(label);     var label = L.marker([52.971869, -9.426512],{
+     icon: L.divIcon({
+     iconAnchor:[-10,11],
+     className: '',
+     html:"<div class = 'city-label city-label-0'>Cliffs of Moher</div>"
+     }),
+     interactive: false,
+     clickable:   false,
+     });
+     collisionLayer.addLayer(label);     var label = L.marker([52.807768, -8.446663],{
+     icon: L.divIcon({
+     iconAnchor:[-10,11],
+     className: '',
+     html:"<div class = 'city-label city-label-0'>Killaloe</div>"
+     }),
+     interactive: false,
+     clickable:   false,
+     });
+     collisionLayer.addLayer(label);     var label = L.marker([52.201734, -10.121083],{
+     icon: L.divIcon({
+     iconAnchor:[-10,11],
+     className: '',
+     html:"<div class = 'city-label city-label-0'>Dingle Peninsula</div>"
+     }),
+     interactive: false,
+     clickable:   false,
+     });
+     collisionLayer.addLayer(label);     var label = L.marker([51.683167, -9.458686],{
+     icon: L.divIcon({
+     iconAnchor:[-10,11],
+     className: '',
+     html:"<div class = 'city-label city-label-0'>Bantry</div>"
+     }),
+     interactive: false,
+     clickable:   false,
+     });
+     collisionLayer.addLayer(label);     var label = L.marker([52.518278, -7.887641],{
+     icon: L.divIcon({
+     iconAnchor:[-10,11],
+     className: '',
+     html:"<div class = 'city-label city-label-0'>Cashel</div>"
+     }),
+     interactive: false,
+     clickable:   false,
+     });
+     collisionLayer.addLayer(label);     var label = L.marker([52.653987, -7.255438],{
+     icon: L.divIcon({
+     iconAnchor:[-10,11],
+     className: '',
+     html:"<div class = 'city-label city-label-0'>Kilkenny</div>"
+     }),
+     interactive: false,
+     clickable:   false,
+     });
+     collisionLayer.addLayer(label);     var label = L.marker([53.012629, -6.329926],{
+     icon: L.divIcon({
+     iconAnchor:[-10,11],
+     className: '',
+     html:"<div class = 'city-label city-label-0'>Glendalough</div>"
+     }),
+     interactive: false,
+     clickable:   false,
+     });
+     collisionLayer.addLayer(label);     var label = L.marker([53.694771, -6.475241],{
+     icon: L.divIcon({
+     iconAnchor:[-10,11],
+     className: '',
+     html:"<div class = 'city-label city-label-0'>Newgrange</div>"
+     }),
+     interactive: false,
+     clickable:   false,
+     });
+     collisionLayer.addLayer(label);     var label = L.marker([55.239519, -6.332755],{
+     icon: L.divIcon({
+     iconAnchor:[-10,11],
+     className: '',
+     html:"<div class = 'city-label city-label-0'>Carrick-a-Rede</div>"
+     }),
+     interactive: false,
+     clickable:   false,
+     });
+     collisionLayer.addLayer(label);     var label = L.marker([55.240831, -6.511552],{
+     icon: L.divIcon({
+     iconAnchor:[-10,11],
+     className: '',
+     html:"<div class = 'city-label city-label-0'>Giant's Causeway</div>"
+     }),
+     interactive: false,
+     clickable:   false,
+     });
+     collisionLayer.addLayer(label);     var label = L.marker([55.202854, -6.517227],{
+     icon: L.divIcon({
+     iconAnchor:[-10,11],
+     className: '',
+     html:"<div class = 'city-label city-label-0'>Old Bushmills Distillery</div>"
+     }),
+     interactive: false,
+     clickable:   false,
+     });
+     collisionLayer.addLayer(label);     var label = L.marker([55.210840, -6.580055],{
+     icon: L.divIcon({
+     iconAnchor:[-10,11],
+     className: '',
+     html:"<div class = 'city-label city-label-0'>Dunluce Castle</div>"
+     }),
+     interactive: false,
+     clickable:   false,
+     });
+     collisionLayer.addLayer(label);     var label = L.marker([54.999164, -7.311676],{
+     icon: L.divIcon({
+     iconAnchor:[-10,11],
+     className: '',
+     html:"<div class = 'city-label city-label-0'>Londonderry</div>"
+     }),
+     interactive: false,
+     clickable:   false,
+     });
+     collisionLayer.addLayer(label);     var label = L.marker([54.641287, -8.681512],{
+     icon: L.divIcon({
+     iconAnchor:[-10,11],
+     className: '',
+     html:"<div class = 'city-label city-label-0'>Slieve League</div>"
+     }),
+     interactive: false,
+     clickable:   false,
+     });
+     collisionLayer.addLayer(label);     var label = L.marker([54.270780, -8.473520],{
+     icon: L.divIcon({
+     iconAnchor:[-10,11],
+     className: '',
+     html:"<div class = 'city-label city-label-0'>Sligo Abbey</div>"
+     }),
+     interactive: false,
+     clickable:   false,
+     });
+     collisionLayer.addLayer(label);     var label = L.marker([-35.355434, 149.066050],{
+     icon: L.divIcon({
+     iconAnchor:[-10,11],
+     className: '',
+     html:"<div class = 'city-label city-label-0'>Canberra</div>"
+     }),
+     interactive: false,
+     clickable:   false,
+     });
+     collisionLayer.addLayer(label);     var label = L.marker([-33.939914, 151.175287],{
+     icon: L.divIcon({
+     iconAnchor:[-10,11],
+     className: '',
+     html:"<div class = 'city-label city-label-0'>Sydney</div>"
+     }),
+     interactive: false,
+     clickable:   false,
+     });
+     collisionLayer.addLayer(label);     var label = L.marker([24.459632, 54.377252],{
+     icon: L.divIcon({
+     iconAnchor:[-10,11],
+     className: '',
+     html:"<div class = 'city-label city-label-0'>Abu Dhabi</div>"
+     }),
+     interactive: false,
+     clickable:   false,
+     });
+     collisionLayer.addLayer(label);collisionLayer.addTo(map);</script>
+              <script>    const generatePulsatingMarker = function(){
+        const cssStyle = `margin-left:-2px;
+        margin-top:-2px;
+        width: 16px;
+        height: 16px;
+        background: none;
+        color: red;`
+        return L.divIcon({html: `<span style="${cssStyle}" class="pulse"/>`,className: 'pulsatingIcon'})
+    }
+
+    const stopItemClicked = function(location, lat, long){
+        map.removeLayer(marker);
+        
+        if (sessionStorage.getItem("location") == location){
+            sessionStorage.setItem("location", "");
+        } else {
+            marker.setLatLng([lat, long]);
+            marker.addTo(map);
+            map.setView(marker.getLatLng(), map.getZoom());
+            sessionStorage.setItem("location", location );
+        }
+    }
+        
+    // Create Pulsating Marker
+    var marker = L.marker([0, 0], {
+        icon: generatePulsatingMarker()
+    })
+      
+    // Have to initialise the storage
+    sessionStorage.setItem("location", "");</script>
+            </div>
+          </div>
+          <div class="d-flex justify-content-center m-2" style="font-size: 0.8em">
+            <p>© 2018 - <span id="currentYear"></span> Peter Zegelin | </p>
+            <script>document.getElementById('currentYear').textContent = new Date().getFullYear();</script>
+            <p>Created in Swift with <a href="https://github.com/twostraws/Ignite">Ignite</a></p>
+            <p> | Source Code for this site is at <a href="https://github.com/zegelinfamily/">GitHub </a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/ignite-core.js"></script>
+  </body>
+</html>
