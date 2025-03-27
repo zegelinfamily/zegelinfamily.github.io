@@ -67,8 +67,16 @@
     <div>
       <div>
         <h1 class="text-center">Our Travels</h1>
-        <p>One of Chris's and my great loves is travelling, and over the years we've managed to do quite a bit of it! Keeping track of all our trips using a large paper map of the world would be completely impractical by now, so I came up with the idea of a website where each trip could be shown separately. The result is what you see here. It isn't quite finished yet, with some trips missing, and a list of improvements that could be made, but I had to start somewhere so it is what it is.</p>
-        <p class="text-center"><strong>Click on an image to see the trip map!</strong></p>
+        <div style="margin-top: -42px">
+          <div class="text-end">
+            <button type="button" class="btn" style="color: #aaa" onclick="igniteSwitchTheme('light');">light</button>
+            <button type="button" class="btn" style="color: #aaa" onclick="igniteSwitchTheme('dark');">dark</button>
+            <button type="button" class="btn" style="color: #aaa" onclick="igniteSwitchTheme('auto');">auto</button>
+          </div>
+        </div>
+        <p class="text-start" style="margin-top: -31px"><a href="/" style="text-decoration: none; color: #aaa">zegelin.com</a></p>
+        <p style="margin-top: 20px">One of Chris's and my great loves is travelling, and over the years we've managed to do quite a bit of it! Keeping track of all our trips using a large paper map of the world would be completely impractical by now, so I came up with the idea of a website where each trip could be shown separately. The result is what you see here. It isn't quite finished yet, with some trips missing, and a list of improvements that could be made, but I had to start somewhere so it is what it is.</p>
+        <h5 class="text-center">Click on an image to see the trip map!</h5>
       </div>
       <div class="text-center">
         <div style="color: rgb(105 105 105 / 100%); width: min(304px, 100%); margin: 5px; display: inline-block">
@@ -417,7 +425,7 @@
       <p>© 2018 - <span id="currentYear"></span> Peter Zegelin | </p>
       <script>document.getElementById('currentYear').textContent = new Date().getFullYear();</script>
       <p>Created in Swift with <a href="https://github.com/twostraws/Ignite">Ignite</a></p>
-      <p> | Source Code for this site is at <a href="https://github.com/zegelinfamily/">GitHub </a></p>
+      <p> | Source Code for this site is at <a href="https://github.com/zegelinfamily/our-travels">GitHub </a></p>
     </div>
     <script src="/js/bootstrap.bundle.min.js"></script>
     <script src="/js/ignite-core.js"></script>
