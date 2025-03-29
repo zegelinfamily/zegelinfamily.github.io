@@ -9,10 +9,23 @@ li{
 }
 
 a {
-  color: #aaa;
+  color: red;
   text-decoration: none;
 }
 
 .sidebar{
     width: 180px;
+    
+    a{
+    color: #aaa;
+    }
+}
+
+html, body{
+    font-family: 'Helvetica Neue', arial, sans-serif;
+    font-weight: 300;
+}
+
+em{
+    font-size: 0.9em;
 }

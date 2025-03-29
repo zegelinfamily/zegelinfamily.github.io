@@ -1,0 +1,453 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="Peter" />
+    <meta name="generator" content="Ignite v0.5.0" />
+    <title>Home</title>
+    <link href="/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="/css/bootstrap-icons.min.css" rel="stylesheet" />
+    <link href="/css/ignite-core.min.css" rel="stylesheet" />
+    <link href="https://www.zegelin.com/" rel="canonical" />
+    <script>(function() {
+    function getThemePreference() {
+        return localStorage.getItem('custom-theme') || 'auto';
+    }
+
+    function applyTheme(themeID) {
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        const lightThemeID = document.documentElement.getAttribute('data-light-theme') || 'light';
+        const darkThemeID = document.documentElement.getAttribute('data-dark-theme') || 'dark';
+        const actualThemeID = themeID === 'auto' ? (prefersDark ? darkThemeID : lightThemeID) : themeID;
+
+        document.documentElement.setAttribute('data-bs-theme', actualThemeID);
+        document.documentElement.setAttribute('data-theme-state', themeID);
+    }
+
+    function applySyntaxTheme() {
+        const syntaxTheme = getComputedStyle(document.documentElement)
+            .getPropertyValue('--syntax-highlight-theme').trim().replace(/"/g, '');
+
+        if (!syntaxTheme) return;
+
+        document.querySelectorAll('link[data-highlight-theme]').forEach(link => {
+            link.setAttribute('disabled', 'disabled');
+        });
+
+        const themeLink = document.querySelector(`link[data-highlight-theme="${syntaxTheme}"]`);
+        if (themeLink) {
+            themeLink.removeAttribute('disabled');
+        }
+    }
+
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
+        const currentTheme = getThemePreference();
+        if (currentTheme === 'auto') {
+            applyTheme('auto');
+            applySyntaxTheme();
+        }
+    });
+
+    const savedTheme = getThemePreference();
+    applyTheme(savedTheme);
+    applySyntaxTheme();
+})();
+</script>
+    <meta property="og:site_name" content="Our Trips" />
+    <meta property="og:title" content="Home" />
+    <meta name="twitter:title" content="Home" />
+    <meta property="og:url" content="https://www.zegelin.com/" />
+    <meta name="twitter:domain" content="zegelin.com" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:dnt" content="on" />
+    <link href="/ourtravels/css/trip.css" rel="stylesheet" />
+  </head>
+  <body class="container">
+    <div>
+      <div>
+        <h1 class="text-center">Our Travels</h1>
+        <div style="margin-top: -42px">
+          <div class="text-end">
+            <button type="button" class="btn" style="color: #aaa" onclick="igniteSwitchTheme('light');">light</button>
+            <button type="button" class="btn" style="color: #aaa" onclick="igniteSwitchTheme('dark');">dark</button>
+            <button type="button" class="btn" style="color: #aaa" onclick="igniteSwitchTheme('auto');">auto</button>
+          </div>
+        </div>
+        <p class="text-start" style="margin-top: -31px"><a href="/" style="text-decoration: none; color: #aaa">zegelin.com</a></p>
+        <p style="margin-top: 20px">One of Chris's and my great loves is travelling, and over the years we've managed to do quite a bit of it! Keeping track of all our trips using a large paper map of the world would be completely impractical by now, so I came up with the idea of a website where each trip could be shown separately. The result is what you see here. It isn't quite finished yet, with some trips missing, and a list of improvements that could be made, but I had to start somewhere so it is what it is.</p>
+        <h5 class="text-center">Click on an image to see the trip map!</h5>
+      </div>
+      <div class="text-center">
+        <div style="color: rgb(105 105 105 / 100%); width: min(304px, 100%); margin: 5px; display: inline-block">
+          <div class="color-inherit" style="background-color: rgb(211 211 211 / 100%)">
+            <a href="/trips/2024_Victoria_And_South_Australia" class="link-plain"><img src="/ourtravels/images/2024%20Victoria%20and%20South%20Australia.jpg" alt="" style="width: min(280px, 100%); margin: 12px" /></a>
+            <div style="margin-left: 12px; margin-right: 12px; margin-top: -6px">
+              <h5 class="text-start">2024</h5>
+              <h5 class="text-end" style="margin-top: -36px">13 days</h5>
+              <p class="text-start" style="margin-top: 0px; padding-bottom: 8px; font-size: 0.9em">Victoria and South Australia</p>
+            </div>
+          </div>
+        </div>
+        <div style="color: rgb(105 105 105 / 100%); width: min(304px, 100%); margin: 5px; display: inline-block">
+          <div class="color-inherit" style="background-color: rgb(211 211 211 / 100%)">
+            <a href="/trips/2023_Florida,_Georgia_And_South_Carolina" class="link-plain"><img src="/ourtravels/images/2023%20USA.jpg" alt="" style="width: min(280px, 100%); margin: 12px" /></a>
+            <div style="margin-left: 12px; margin-right: 12px; margin-top: -6px">
+              <h5 class="text-start">2023</h5>
+              <h5 class="text-end" style="margin-top: -36px">40 days</h5>
+              <p class="text-start" style="margin-top: 0px; padding-bottom: 8px; font-size: 0.9em">Florida, Georgia and South Carolina</p>
+            </div>
+          </div>
+        </div>
+        <div style="color: rgb(105 105 105 / 100%); width: min(304px, 100%); margin: 5px; display: inline-block">
+          <div class="color-inherit" style="background-color: rgb(211 211 211 / 100%)">
+            <a href="/trips/2019_Italy" class="link-plain"><img src="/ourtravels/images/2019%20Italy.jpg" alt="" style="width: min(280px, 100%); margin: 12px" /></a>
+            <div style="margin-left: 12px; margin-right: 12px; margin-top: -6px">
+              <h5 class="text-start">2019</h5>
+              <h5 class="text-end" style="margin-top: -36px">35 days</h5>
+              <p class="text-start" style="margin-top: 0px; padding-bottom: 8px; font-size: 0.9em">Northern Italy</p>
+            </div>
+          </div>
+        </div>
+        <div style="color: rgb(105 105 105 / 100%); width: min(304px, 100%); margin: 5px; display: inline-block">
+          <div class="color-inherit" style="background-color: rgb(211 211 211 / 100%)">
+            <a href="/trips/2018_Mount_Rushmore_And_Yellowstone_NP" class="link-plain"><img src="/ourtravels/images/2018%20USA.jpg" alt="" style="width: min(280px, 100%); margin: 12px" /></a>
+            <div style="margin-left: 12px; margin-right: 12px; margin-top: -6px">
+              <h5 class="text-start">2018</h5>
+              <h5 class="text-end" style="margin-top: -36px">36 days</h5>
+              <p class="text-start" style="margin-top: 0px; padding-bottom: 8px; font-size: 0.9em">Mount Rushmore and Yellowstone NP</p>
+            </div>
+          </div>
+        </div>
+        <div style="color: rgb(105 105 105 / 100%); width: min(304px, 100%); margin: 5px; display: inline-block">
+          <div class="color-inherit" style="background-color: rgb(211 211 211 / 100%)">
+            <a href="/trips/2017_Greece" class="link-plain"><img src="/ourtravels/images/2017%20Greece.jpg" alt="" style="width: min(280px, 100%); margin: 12px" /></a>
+            <div style="margin-left: 12px; margin-right: 12px; margin-top: -6px">
+              <h5 class="text-start">2017</h5>
+              <h5 class="text-end" style="margin-top: -36px">43 days</h5>
+              <p class="text-start" style="margin-top: 0px; padding-bottom: 8px; font-size: 0.9em">Greece</p>
+            </div>
+          </div>
+        </div>
+        <div style="color: rgb(105 105 105 / 100%); width: min(304px, 100%); margin: 5px; display: inline-block">
+          <div class="color-inherit" style="background-color: rgb(211 211 211 / 100%)">
+            <a href="/trips/2016_New_Zealand" class="link-plain"><img src="/ourtravels/images/2016%20New%20Zealand.jpg" alt="" style="width: min(280px, 100%); margin: 12px" /></a>
+            <div style="margin-left: 12px; margin-right: 12px; margin-top: -6px">
+              <h5 class="text-start">2016</h5>
+              <h5 class="text-end" style="margin-top: -36px">14 days</h5>
+              <p class="text-start" style="margin-top: 0px; padding-bottom: 8px; font-size: 0.9em">New Zealand</p>
+            </div>
+          </div>
+        </div>
+        <div style="color: rgb(105 105 105 / 100%); width: min(304px, 100%); margin: 5px; display: inline-block">
+          <div class="color-inherit" style="background-color: rgb(211 211 211 / 100%)">
+            <a href="/trips/2016_Scotland" class="link-plain"><img src="/ourtravels/images/2016%20Scotland.jpg" alt="" style="width: min(280px, 100%); margin: 12px" /></a>
+            <div style="margin-left: 12px; margin-right: 12px; margin-top: -6px">
+              <h5 class="text-start">2016</h5>
+              <h5 class="text-end" style="margin-top: -36px">34 days</h5>
+              <p class="text-start" style="margin-top: 0px; padding-bottom: 8px; font-size: 0.9em">Scotland</p>
+            </div>
+          </div>
+        </div>
+        <div style="color: rgb(105 105 105 / 100%); width: min(304px, 100%); margin: 5px; display: inline-block">
+          <div class="color-inherit" style="background-color: rgb(211 211 211 / 100%)">
+            <a href="/trips/2015_Margaret_River" class="link-plain"><img src="/ourtravels/images/2015%20Margaret%20River.jpg" alt="" style="width: min(280px, 100%); margin: 12px" /></a>
+            <div style="margin-left: 12px; margin-right: 12px; margin-top: -6px">
+              <h5 class="text-start">2015</h5>
+              <h5 class="text-end" style="margin-top: -36px">17 days</h5>
+              <p class="text-start" style="margin-top: 0px; padding-bottom: 8px; font-size: 0.9em">WA - Fremantle and Margaret River</p>
+            </div>
+          </div>
+        </div>
+        <div style="color: rgb(105 105 105 / 100%); width: min(304px, 100%); margin: 5px; display: inline-block">
+          <div class="color-inherit" style="background-color: rgb(211 211 211 / 100%)">
+            <a href="/trips/2015_New_York_And_New_England" class="link-plain"><img src="/ourtravels/images/2015%20USA.jpg" alt="" style="width: min(280px, 100%); margin: 12px" /></a>
+            <div style="margin-left: 12px; margin-right: 12px; margin-top: -6px">
+              <h5 class="text-start">2015</h5>
+              <h5 class="text-end" style="margin-top: -36px">40 days</h5>
+              <p class="text-start" style="margin-top: 0px; padding-bottom: 8px; font-size: 0.9em">New York and New England</p>
+            </div>
+          </div>
+        </div>
+        <div style="color: rgb(105 105 105 / 100%); width: min(304px, 100%); margin: 5px; display: inline-block">
+          <div class="color-inherit" style="background-color: rgb(211 211 211 / 100%)">
+            <a href="/trips/2014_Italy" class="link-plain"><img src="/ourtravels/images/2014%20Italy.jpg" alt="" style="width: min(280px, 100%); margin: 12px" /></a>
+            <div style="margin-left: 12px; margin-right: 12px; margin-top: -6px">
+              <h5 class="text-start">2014</h5>
+              <h5 class="text-end" style="margin-top: -36px">46 days</h5>
+              <p class="text-start" style="margin-top: 0px; padding-bottom: 8px; font-size: 0.9em">Central Italy</p>
+            </div>
+          </div>
+        </div>
+        <div style="color: rgb(105 105 105 / 100%); width: min(304px, 100%); margin: 5px; display: inline-block">
+          <div class="color-inherit" style="background-color: rgb(211 211 211 / 100%)">
+            <a href="/trips/2013_Phuket" class="link-plain"><img src="/ourtravels/images/2013%20Phuket.jpg" alt="" style="width: min(280px, 100%); margin: 12px" /></a>
+            <div style="margin-left: 12px; margin-right: 12px; margin-top: -6px">
+              <h5 class="text-start">2013</h5>
+              <h5 class="text-end" style="margin-top: -36px">39 days</h5>
+              <p class="text-start" style="margin-top: 0px; padding-bottom: 8px; font-size: 0.9em">Phuket and Malacca</p>
+            </div>
+          </div>
+        </div>
+        <div style="color: rgb(105 105 105 / 100%); width: min(304px, 100%); margin: 5px; display: inline-block">
+          <div class="color-inherit" style="background-color: rgb(211 211 211 / 100%)">
+            <a href="/trips/2013_New_Mexico_And_Arizona" class="link-plain"><img src="/ourtravels/images/2013%20USA.jpg" alt="" style="width: min(280px, 100%); margin: 12px" /></a>
+            <div style="margin-left: 12px; margin-right: 12px; margin-top: -6px">
+              <h5 class="text-start">2013</h5>
+              <h5 class="text-end" style="margin-top: -36px">32 days</h5>
+              <p class="text-start" style="margin-top: 0px; padding-bottom: 8px; font-size: 0.9em">New Mexico and Arizona</p>
+            </div>
+          </div>
+        </div>
+        <div style="color: rgb(105 105 105 / 100%); width: min(304px, 100%); margin: 5px; display: inline-block">
+          <div class="color-inherit" style="background-color: rgb(211 211 211 / 100%)">
+            <a href="/trips/2012_Phuket" class="link-plain"><img src="/ourtravels/images/2012%20Phuket.jpg" alt="" style="width: min(280px, 100%); margin: 12px" /></a>
+            <div style="margin-left: 12px; margin-right: 12px; margin-top: -6px">
+              <h5 class="text-start">2012</h5>
+              <h5 class="text-end" style="margin-top: -36px">45 days</h5>
+              <p class="text-start" style="margin-top: 0px; padding-bottom: 8px; font-size: 0.9em">Sri Lanka and Phuket</p>
+            </div>
+          </div>
+        </div>
+        <div style="color: rgb(105 105 105 / 100%); width: min(304px, 100%); margin: 5px; display: inline-block">
+          <div class="color-inherit" style="background-color: rgb(211 211 211 / 100%)">
+            <a href="/trips/2012_Ireland" class="link-plain"><img src="/ourtravels/images/2012%20Ireland.jpg" alt="" style="width: min(280px, 100%); margin: 12px" /></a>
+            <div style="margin-left: 12px; margin-right: 12px; margin-top: -6px">
+              <h5 class="text-start">2012</h5>
+              <h5 class="text-end" style="margin-top: -36px">27 days</h5>
+              <p class="text-start" style="margin-top: 0px; padding-bottom: 8px; font-size: 0.9em">Ireland</p>
+            </div>
+          </div>
+        </div>
+        <div style="color: rgb(105 105 105 / 100%); width: min(304px, 100%); margin: 5px; display: inline-block">
+          <div class="color-inherit" style="background-color: rgb(211 211 211 / 100%)">
+            <a href="/trips/2011_West_Coast_USA" class="link-plain"><img src="/ourtravels/images/2011%20USA.jpg" alt="" style="width: min(280px, 100%); margin: 12px" /></a>
+            <div style="margin-left: 12px; margin-right: 12px; margin-top: -6px">
+              <h5 class="text-start">2011</h5>
+              <h5 class="text-end" style="margin-top: -36px">30 days</h5>
+              <p class="text-start" style="margin-top: 0px; padding-bottom: 8px; font-size: 0.9em">West Coast USA</p>
+            </div>
+          </div>
+        </div>
+        <div style="color: rgb(105 105 105 / 100%); width: min(304px, 100%); margin: 5px; display: inline-block">
+          <div class="color-inherit" style="background-color: rgb(211 211 211 / 100%)">
+            <a href="/trips/2010_Vietnam" class="link-plain"><img src="/ourtravels/images/2010%20Vietnam.jpg" alt="" style="width: min(280px, 100%); margin: 12px" /></a>
+            <div style="margin-left: 12px; margin-right: 12px; margin-top: -6px">
+              <h5 class="text-start">2010</h5>
+              <h5 class="text-end" style="margin-top: -36px">24 days</h5>
+              <p class="text-start" style="margin-top: 0px; padding-bottom: 8px; font-size: 0.9em">Darwin and Vietnam</p>
+            </div>
+          </div>
+        </div>
+        <div style="color: rgb(105 105 105 / 100%); width: min(304px, 100%); margin: 5px; display: inline-block">
+          <div class="color-inherit" style="background-color: rgb(211 211 211 / 100%)">
+            <a href="/trips/2010_Tasmania" class="link-plain"><img src="/ourtravels/images/2010%20Tasmania.jpg" alt="" style="width: min(280px, 100%); margin: 12px" /></a>
+            <div style="margin-left: 12px; margin-right: 12px; margin-top: -6px">
+              <h5 class="text-start">2010</h5>
+              <h5 class="text-end" style="margin-top: -36px">8 days</h5>
+              <p class="text-start" style="margin-top: 0px; padding-bottom: 8px; font-size: 0.9em">Tasmania</p>
+            </div>
+          </div>
+        </div>
+        <div style="color: rgb(105 105 105 / 100%); width: min(304px, 100%); margin: 5px; display: inline-block">
+          <div class="color-inherit" style="background-color: rgb(211 211 211 / 100%)">
+            <a href="/trips/2008_Cambodia" class="link-plain"><img src="/ourtravels/images/2008%20Cambodia.jpg" alt="" style="width: min(280px, 100%); margin: 12px" /></a>
+            <div style="margin-left: 12px; margin-right: 12px; margin-top: -6px">
+              <h5 class="text-start">2008</h5>
+              <h5 class="text-end" style="margin-top: -36px">18 days</h5>
+              <p class="text-start" style="margin-top: 0px; padding-bottom: 8px; font-size: 0.9em">Cambodia and Thailand</p>
+            </div>
+          </div>
+        </div>
+        <div style="color: rgb(105 105 105 / 100%); width: min(304px, 100%); margin: 5px; display: inline-block">
+          <div class="color-inherit" style="background-color: rgb(211 211 211 / 100%)">
+            <a href="/trips/2006_Fiji" class="link-plain"><img src="/ourtravels/images/2006%20Fiji.jpg" alt="" style="width: min(280px, 100%); margin: 12px" /></a>
+            <div style="margin-left: 12px; margin-right: 12px; margin-top: -6px">
+              <h5 class="text-start">2006</h5>
+              <h5 class="text-end" style="margin-top: -36px">21 days</h5>
+              <p class="text-start" style="margin-top: 0px; padding-bottom: 8px; font-size: 0.9em">Fiji</p>
+            </div>
+          </div>
+        </div>
+        <div style="color: rgb(105 105 105 / 100%); width: min(304px, 100%); margin: 5px; display: inline-block">
+          <div class="color-inherit" style="background-color: rgb(211 211 211 / 100%)">
+            <a href="/trips/2005_Hawaii" class="link-plain"><img src="/ourtravels/images/2005%20Hawaii.jpg" alt="" style="width: min(280px, 100%); margin: 12px" /></a>
+            <div style="margin-left: 12px; margin-right: 12px; margin-top: -6px">
+              <h5 class="text-start">2005</h5>
+              <h5 class="text-end" style="margin-top: -36px">18 days</h5>
+              <p class="text-start" style="margin-top: 0px; padding-bottom: 8px; font-size: 0.9em">Hawaii</p>
+            </div>
+          </div>
+        </div>
+        <div style="color: rgb(105 105 105 / 100%); width: min(304px, 100%); margin: 5px; display: inline-block">
+          <div class="color-inherit" style="background-color: rgb(211 211 211 / 100%)">
+            <a href="/trips/2004_New_Zealand" class="link-plain"><img src="/ourtravels/images/2004%20New%20Zealand.jpg" alt="" style="width: min(280px, 100%); margin: 12px" /></a>
+            <div style="margin-left: 12px; margin-right: 12px; margin-top: -6px">
+              <h5 class="text-start">2004</h5>
+              <h5 class="text-end" style="margin-top: -36px">10 days</h5>
+              <p class="text-start" style="margin-top: 0px; padding-bottom: 8px; font-size: 0.9em">New Zealand</p>
+            </div>
+          </div>
+        </div>
+        <div style="color: rgb(105 105 105 / 100%); width: min(304px, 100%); margin: 5px; display: inline-block">
+          <div class="color-inherit" style="background-color: rgb(211 211 211 / 100%)">
+            <a href="/trips/2004_Queensland" class="link-plain"><img src="/ourtravels/images/2004%20Queensland.jpg" alt="" style="width: min(280px, 100%); margin: 12px" /></a>
+            <div style="margin-left: 12px; margin-right: 12px; margin-top: -6px">
+              <h5 class="text-start">2004</h5>
+              <h5 class="text-end" style="margin-top: -36px">13 days</h5>
+              <p class="text-start" style="margin-top: 0px; padding-bottom: 8px; font-size: 0.9em">Far North Queensland</p>
+            </div>
+          </div>
+        </div>
+        <div style="color: rgb(105 105 105 / 100%); width: min(304px, 100%); margin: 5px; display: inline-block">
+          <div class="color-inherit" style="background-color: rgb(211 211 211 / 100%)">
+            <a href="/trips/2003_Central_Australia" class="link-plain"><img src="/ourtravels/images/2003%20Central%20Australia.jpg" alt="" style="width: min(280px, 100%); margin: 12px" /></a>
+            <div style="margin-left: 12px; margin-right: 12px; margin-top: -6px">
+              <h5 class="text-start">2003</h5>
+              <h5 class="text-end" style="margin-top: -36px">~12 days</h5>
+              <p class="text-start" style="margin-top: 0px; padding-bottom: 8px; font-size: 0.9em">Central Australia</p>
+            </div>
+          </div>
+        </div>
+        <div style="color: rgb(105 105 105 / 100%); width: min(304px, 100%); margin: 5px; display: inline-block">
+          <div class="color-inherit" style="background-color: rgb(211 211 211 / 100%)">
+            <a href="/trips/2002_Thailand_And_Singapore" class="link-plain"><img src="/ourtravels/images/2002%20Thailand%20and%20Singapore.jpg" alt="" style="width: min(280px, 100%); margin: 12px" /></a>
+            <div style="margin-left: 12px; margin-right: 12px; margin-top: -6px">
+              <h5 class="text-start">2002</h5>
+              <h5 class="text-end" style="margin-top: -36px">19 days</h5>
+              <p class="text-start" style="margin-top: 0px; padding-bottom: 8px; font-size: 0.9em">Thailand and Singapore</p>
+            </div>
+          </div>
+        </div>
+        <div style="color: rgb(105 105 105 / 100%); width: min(304px, 100%); margin: 5px; display: inline-block">
+          <div class="color-inherit" style="background-color: rgb(211 211 211 / 100%)">
+            <a href="/trips/2000_Outback_NSW" class="link-plain"><img src="/ourtravels/images/2000%20Outback%20NSW.jpg" alt="" style="width: min(280px, 100%); margin: 12px" /></a>
+            <div style="margin-left: 12px; margin-right: 12px; margin-top: -6px">
+              <h5 class="text-start">2000</h5>
+              <h5 class="text-end" style="margin-top: -36px">16 days</h5>
+              <p class="text-start" style="margin-top: 0px; padding-bottom: 8px; font-size: 0.9em">Outback NSW</p>
+            </div>
+          </div>
+        </div>
+        <div style="color: rgb(105 105 105 / 100%); width: min(304px, 100%); margin: 5px; display: inline-block">
+          <div class="color-inherit" style="background-color: rgb(211 211 211 / 100%)">
+            <a href="/trips/1999_Tasmania" class="link-plain"><img src="/ourtravels/images/1999%20Tasmania.jpg" alt="" style="width: min(280px, 100%); margin: 12px" /></a>
+            <div style="margin-left: 12px; margin-right: 12px; margin-top: -6px">
+              <h5 class="text-start">1999</h5>
+              <h5 class="text-end" style="margin-top: -36px">~10 days</h5>
+              <p class="text-start" style="margin-top: 0px; padding-bottom: 8px; font-size: 0.9em">Tasmania</p>
+            </div>
+          </div>
+        </div>
+        <div style="color: rgb(105 105 105 / 100%); width: min(304px, 100%); margin: 5px; display: inline-block">
+          <div class="color-inherit" style="background-color: rgb(211 211 211 / 100%)">
+            <a href="/trips/1997_California_And_Utah" class="link-plain"><img src="/ourtravels/images/1997%20USA.jpg" alt="" style="width: min(280px, 100%); margin: 12px" /></a>
+            <div style="margin-left: 12px; margin-right: 12px; margin-top: -6px">
+              <h5 class="text-start">1997</h5>
+              <h5 class="text-end" style="margin-top: -36px">23 days</h5>
+              <p class="text-start" style="margin-top: 0px; padding-bottom: 8px; font-size: 0.9em">California and Utah</p>
+            </div>
+          </div>
+        </div>
+        <div style="color: rgb(105 105 105 / 100%); width: min(304px, 100%); margin: 5px; display: inline-block">
+          <div class="color-inherit" style="background-color: rgb(211 211 211 / 100%)">
+            <a href="/trips/1996_Italy" class="link-plain"><img src="/ourtravels/images/1996%20Italy.jpg" alt="" style="width: min(280px, 100%); margin: 12px" /></a>
+            <div style="margin-left: 12px; margin-right: 12px; margin-top: -6px">
+              <h5 class="text-start">1996</h5>
+              <h5 class="text-end" style="margin-top: -36px">30 days</h5>
+              <p class="text-start" style="margin-top: 0px; padding-bottom: 8px; font-size: 0.9em">Italy</p>
+            </div>
+          </div>
+        </div>
+        <div style="color: rgb(105 105 105 / 100%); width: min(304px, 100%); margin: 5px; display: inline-block">
+          <div class="color-inherit" style="background-color: rgb(211 211 211 / 100%)">
+            <a href="/trips/1995_Bali_And_Lombok" class="link-plain"><img src="/ourtravels/images/1995%20Bali%20and%20Lombok.jpg" alt="" style="width: min(280px, 100%); margin: 12px" /></a>
+            <div style="margin-left: 12px; margin-right: 12px; margin-top: -6px">
+              <h5 class="text-start">1995</h5>
+              <h5 class="text-end" style="margin-top: -36px">23 days</h5>
+              <p class="text-start" style="margin-top: 0px; padding-bottom: 8px; font-size: 0.9em">Bali and Lombok</p>
+            </div>
+          </div>
+        </div>
+        <div style="color: rgb(105 105 105 / 100%); width: min(304px, 100%); margin: 5px; display: inline-block">
+          <div class="color-inherit" style="background-color: rgb(211 211 211 / 100%)">
+            <a href="/trips/1993_Europe_And_Morocco" class="link-plain"><img src="/ourtravels/images/1993%20Europe%20and%20Morocco.jpg" alt="" style="width: min(280px, 100%); margin: 12px" /></a>
+            <div style="margin-left: 12px; margin-right: 12px; margin-top: -6px">
+              <h5 class="text-start">1993</h5>
+              <h5 class="text-end" style="margin-top: -36px">56 days</h5>
+              <p class="text-start" style="margin-top: 0px; padding-bottom: 8px; font-size: 0.9em">Spain, Portugal and Morocco</p>
+            </div>
+          </div>
+        </div>
+        <div style="color: rgb(105 105 105 / 100%); width: min(304px, 100%); margin: 5px; display: inline-block">
+          <div class="color-inherit" style="background-color: rgb(211 211 211 / 100%)">
+            <a href="/trips/1991_England_And_Wales" class="link-plain"><img src="/ourtravels/images/1991%20England%20and%20Wales.jpg" alt="" style="width: min(280px, 100%); margin: 12px" /></a>
+            <div style="margin-left: 12px; margin-right: 12px; margin-top: -6px">
+              <h5 class="text-start">1991</h5>
+              <h5 class="text-end" style="margin-top: -36px">64 days</h5>
+              <p class="text-start" style="margin-top: 0px; padding-bottom: 8px; font-size: 0.9em">England and Wales</p>
+            </div>
+          </div>
+        </div>
+        <div style="color: rgb(105 105 105 / 100%); width: min(304px, 100%); margin: 5px; display: inline-block">
+          <div class="color-inherit" style="background-color: rgb(211 211 211 / 100%)">
+            <a href="/trips/1986_Around_The_World" class="link-plain"><img src="/ourtravels/images/1986%20Around%20The%20World.jpg" alt="" style="width: min(280px, 100%); margin: 12px" /></a>
+            <div style="margin-left: 12px; margin-right: 12px; margin-top: -6px">
+              <h5 class="text-start">1986</h5>
+              <h5 class="text-end" style="margin-top: -36px">180 days</h5>
+              <p class="text-start" style="margin-top: 0px; padding-bottom: 8px; font-size: 0.9em">Around the World</p>
+            </div>
+          </div>
+        </div>
+        <div style="color: rgb(105 105 105 / 100%); width: min(304px, 100%); margin: 5px; display: inline-block">
+          <div class="color-inherit" style="background-color: rgb(211 211 211 / 100%)">
+            <a href="/trips/1983_Asia" class="link-plain"><img src="/ourtravels/images/1983%20Asia.jpg" alt="" style="width: min(280px, 100%); margin: 12px" /></a>
+            <div style="margin-left: 12px; margin-right: 12px; margin-top: -6px">
+              <h5 class="text-start">1983</h5>
+              <h5 class="text-end" style="margin-top: -36px">156 days</h5>
+              <p class="text-start" style="margin-top: 0px; padding-bottom: 8px; font-size: 0.9em">Asia and SE Asia</p>
+            </div>
+          </div>
+        </div>
+        <div style="color: rgb(105 105 105 / 100%); width: min(304px, 100%); margin: 5px; display: inline-block">
+          <div class="color-inherit" style="background-color: rgb(211 211 211 / 100%)">
+            <a href="/trips/1981_Indonesia" class="link-plain"><img src="/ourtravels/images/1981%20Indonesia.jpg" alt="" style="width: min(280px, 100%); margin: 12px" /></a>
+            <div style="margin-left: 12px; margin-right: 12px; margin-top: -6px">
+              <h5 class="text-start">1981</h5>
+              <h5 class="text-end" style="margin-top: -36px">32 days</h5>
+              <p class="text-start" style="margin-top: 0px; padding-bottom: 8px; font-size: 0.9em">Indonesia and Singapore</p>
+            </div>
+          </div>
+        </div>
+        <div style="color: rgb(105 105 105 / 100%); width: min(304px, 100%); margin: 5px; display: inline-block">
+          <div class="color-inherit" style="background-color: rgb(211 211 211 / 100%)">
+            <a href="/trips/1980_Europe_And_Kenya" class="link-plain"><img src="/ourtravels/images/1980%20Europe%20and%20Kenya.jpg" alt="" style="width: min(280px, 100%); margin: 12px" /></a>
+            <div style="margin-left: 12px; margin-right: 12px; margin-top: -6px">
+              <h5 class="text-start">1980</h5>
+              <h5 class="text-end" style="margin-top: -36px">~50 days</h5>
+              <p class="text-start" style="margin-top: 0px; padding-bottom: 8px; font-size: 0.9em">Europe and Kenya</p>
+            </div>
+          </div>
+        </div>
+        <div style="color: rgb(105 105 105 / 100%); width: min(304px, 100%); margin: 5px; display: inline-block">
+          <div class="color-inherit" style="background-color: rgb(211 211 211 / 100%)">
+            <a href="/trips/1978_Bali_And_Java" class="link-plain"><img src="/ourtravels/images/1978%20Bali%20and%20Java.jpg" alt="" style="width: min(280px, 100%); margin: 12px" /></a>
+            <div style="margin-left: 12px; margin-right: 12px; margin-top: -6px">
+              <h5 class="text-start">1978</h5>
+              <h5 class="text-end" style="margin-top: -36px">~35 days</h5>
+              <p class="text-start" style="margin-top: 0px; padding-bottom: 8px; font-size: 0.9em">Bali and Java</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="d-flex justify-content-center m-2" style="font-size: 0.8em">
+      <p>© 2018 - <span id="currentYear"></span> Peter Zegelin | </p>
+      <script>document.getElementById('currentYear').textContent = new Date().getFullYear();</script>
+      <p>Created in Swift with <a href="https://github.com/twostraws/Ignite">Ignite</a></p>
+      <p> | Source Code for this site is at <a href="https://github.com/zegelinfamily/our-travels">GitHub </a></p>
+    </div>
+    <script src="/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/ignite-core.js"></script>
+  </body>
+</html>
