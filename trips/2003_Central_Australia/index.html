@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Another great school holiday trip, this time to visit Alice Springs and surrounds. We took a few day excursions around Alice to some nice scenic spots and the historic telegraph station. The station was built in 1871 and cut communication time between Australia and London from several months to a few hours! After that it was a long drive to Ayers Rock for a 3 day visit. The rock itself and the Olgas nearby were wonderful and well worth the drive. On the way back to Alice we stayed a few nights at Kings Canyon where we took a helicopter tour over the canyon and spent some time admiring the beautiful sandstone cliffs and unusual rock formations. The resort itself was also very nice considering just how isoltated the area is." />
     <meta name="author" content="Peter" />
     <meta name="generator" content="Ignite v0.5.0" />
     <title>Central Australia</title>
@@ -59,6 +60,8 @@
     <meta name="twitter:image" content="2003%20Central%20Australia.jpg" />
     <meta property="og:title" content="Central Australia" />
     <meta name="twitter:title" content="Central Australia" />
+    <meta property="og:description" content="Another great school holiday trip, this time to visit Alice Springs and surrounds. We took a few day excursions around Alice to some nice scenic spots and the historic telegraph station. The station was built in 1871 and cut communication time between Australia and London from several months to a few hours! After that it was a long drive to Ayers Rock for a 3 day visit. The rock itself and the Olgas nearby were wonderful and well worth the drive. On the way back to Alice we stayed a few nights at Kings Canyon where we took a helicopter tour over the canyon and spent some time admiring the beautiful sandstone cliffs and unusual rock formations. The resort itself was also very nice considering just how isoltated the area is." />
+    <meta name="twitter:description" content="Another great school holiday trip, this time to visit Alice Springs and surrounds. We took a few day excursions around Alice to some nice scenic spots and the historic telegraph station. The station was built in 1871 and cut communication time between Australia and London from several months to a few hours! After that it was a long drive to Ayers Rock for a 3 day visit. The rock itself and the Olgas nearby were wonderful and well worth the drive. On the way back to Alice we stayed a few nights at Kings Canyon where we took a helicopter tour over the canyon and spent some time admiring the beautiful sandstone cliffs and unusual rock formations. The resort itself was also very nice considering just how isoltated the area is." />
     <meta property="og:url" content="https://www.zegelin.com/trips/2003_Central_Australia" />
     <meta name="twitter:domain" content="zegelin.com" />
     <meta name="twitter:card" content="summary_large_image" />
@@ -80,7 +83,7 @@
     <div>
       <div>
         <div class="flex-container">
-          <div class="top-content">
+          <div class="top-content" style="padding-top: 10px">
             <div class="d-flex justify-content-left">
               <div class="fs-3" style="margin-left: -33px; margin-right: 5px">
                 <a href="/peter" class="font-inherit"><i class="bi-arrow-left"></i></a>
@@ -88,6 +91,8 @@
               <h2>Central Australia</h2>
             </div>
             <p style="margin-top: -15px"></p>
+            <p>Another great school holiday trip, this time to visit Alice Springs and surrounds. We took a few day excursions around Alice to some nice scenic spots and the historic telegraph station. The station was built in 1871 and cut communication time between Australia and London from several months to a few hours! After that it was a long drive to Ayers Rock for a 3 day visit. The rock itself and the Olgas nearby were wonderful and well worth the drive. On the way back to Alice we stayed a few nights at Kings Canyon where we took a helicopter tour over the canyon and spent some time admiring the beautiful sandstone cliffs and unusual rock formations. The resort itself was also very nice considering just how isoltated the area is.</p>
+            <p></p>
           </div>
           <div class="map-sidebar-container">
             <div class="sidebar">
@@ -95,7 +100,7 @@
                 <li>
                   <div class="m-0" style="display: grid">
                     <div class="mb-0" style="position: relative; display: grid; grid-area: 1/1; z-index: 0; align-self: center; justify-self: center">
-                      <canvas id="excursions" width="250" height="297"></canvas>
+                      <canvas id="excursions" width="250" height="324"></canvas>
                       <script>        function draw() {
         const canvas = document.getElementById("excursions");
         if (canvas.getContext) {
@@ -115,6 +120,14 @@
     ctx.lineTo(20, 164);
     ctx.lineTo(20, 184);
     ctx.lineTo(27, 184);
+    
+    // Draw the Path
+    ctx.stroke();    // Start a new Path
+    ctx.beginPath();
+    ctx.moveTo(27, 191);
+    ctx.lineTo(20, 191);
+    ctx.lineTo(20, 211);
+    ctx.lineTo(27, 211);
     
     // Draw the Path
     ctx.stroke();    }
@@ -138,7 +151,10 @@
                         <p class="listItem" onclick="    stopItemClicked(&quot;Finke Gorge National Park&quot;,-24.18938, 132.823785)">   Finke Gorge National Park</p>
                       </div>
                       <div>
-                        <p class="listItem" onclick="    stopItemClicked(&quot;Uluru&quot;,-25.342261, 131.03649)">Uluru</p>
+                        <p class="listItem" onclick="    stopItemClicked(&quot;Yulara&quot;,-25.241067, 130.984817)">Yulara</p>
+                      </div>
+                      <div>
+                        <p class="listItem" onclick="    stopItemClicked(&quot;Uluru&quot;,-25.342261, 131.03649)">   Uluru</p>
                       </div>
                       <div>
                         <p class="listItem" onclick="    stopItemClicked(&quot;Olgas&quot;,-25.31247, 130.770071)">   Olgas</p>
@@ -228,7 +244,17 @@
     ).addTo(map);    var curve = L.curve(
     [
      'M', [-23.700591,133.879202], 
-     'Q', [-25.374239600000003,132.950347],
+     'Q', [-25.3391445,132.8941523],
+     [-25.241067,130.984817]
+    ],
+    {
+     color: '#000000',
+     weight: 2.0
+    }
+    ).addTo(map);    var curve = L.curve(
+    [
+     'M', [-25.241067,130.984817], 
+     'Q', [-25.276162100000004,131.04101169999998],
      [-25.342261,131.03649]
     ],
     {
@@ -238,7 +264,17 @@
     ).addTo(map);    var curve = L.curve(
     [
      'M', [-25.342261,131.03649], 
-     'Q', [-25.407291199999996,130.89434319999998],
+     'Q', [-25.307165899999998,130.9802953],
+     [-25.241067,130.984817]
+    ],
+    {
+     color: '#000000',
+     weight: 2.0
+    }
+    ).addTo(map);    var curve = L.curve(
+    [
+     'M', [-25.241067,130.984817], 
+     'Q', [-25.3411923,130.8988649],
      [-25.31247,130.770071]
     ],
     {
@@ -248,8 +284,8 @@
     ).addTo(map);    var curve = L.curve(
     [
      'M', [-25.31247,130.770071], 
-     'Q', [-25.247439800000006,130.9122178],
-     [-25.342261,131.03649]
+     'Q', [-25.212344700000003,130.8560231],
+     [-25.241067,130.984817]
     ],
     {
      color: '#000000',
@@ -257,8 +293,8 @@
     }
     ).addTo(map);    var curve = L.curve(
     [
-     'M', [-25.342261,131.03649], 
-     'Q', [-24.95947020000001,131.6191552],
+     'M', [-25.241067,130.984817], 
+     'Q', [-24.581908899999995,130.9774505],
      [-24.265217,131.555594]
     ],
     {
@@ -335,9 +371,17 @@
                opacity: 1,
                fillOpacity: 1,
            });
-     marker.addTo(map);    var marker = new L.CircleMarker([-25.342261, 131.036490], {
+     marker.addTo(map);    var marker = new L.CircleMarker([-25.241067, 130.984817], {
                radius: 8,
                fillColor: "#FF4D00",
+               color: "#000",
+               weight: 1.7,
+               opacity: 1,
+               fillOpacity: 1,
+           });
+     marker.addTo(map);    var marker = new L.CircleMarker([-25.342261, 131.036490], {
+               radius: 5,
+               fillColor: "#CEFA05",
                color: "#000",
                weight: 1.7,
                opacity: 1,
@@ -404,11 +448,11 @@
      interactive: false,
      clickable:   false,
      });
-     collisionLayer.addLayer(label);     var label = L.marker([-25.342261, 131.036490],{
+     collisionLayer.addLayer(label);     var label = L.marker([-25.241067, 130.984817],{
      icon: L.divIcon({
      iconAnchor:[-10,11],
      className: '',
-     html:"<div class = 'city-label city-label-0'>Uluru</div>"
+     html:"<div class = 'city-label city-label-0'>Yulara</div>"
      }),
      interactive: false,
      clickable:   false,
@@ -427,6 +471,15 @@
      iconAnchor:[-10,11],
      className: '',
      html:"<div class = 'city-label city-label-0'>Finke Gorge National Park</div>"
+     }),
+     interactive: false,
+     clickable:   false,
+     });
+     collisionLayer.addLayer(label);     var label = L.marker([-25.342261, 131.036490],{
+     icon: L.divIcon({
+     iconAnchor:[-10,11],
+     className: '',
+     html:"<div class = 'city-label city-label-0'>Uluru</div>"
      }),
      interactive: false,
      clickable:   false,
