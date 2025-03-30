@@ -1,14 +1,23 @@
 
+html, body{
+    font-family: 'Helvetica Neue', arial, sans-serif;
+    font-weight: 300;
+}
+
 .sidebar-list{
-  text-align: end;
-  padding: 0px;
+    text-align: end;
+    padding: 0px;
+}
+
+.sidebar-list-small{
+    font-size: 0.9em;
 }
 
 li{
     list-style: none;
 }
 
-a {
+a{
   color: red;
   text-decoration: none;
 }
@@ -17,15 +26,19 @@ a {
     width: 180px;
     
     a{
-    color: #aaa;
+        color: #aaa;
     }
 }
 
-html, body{
-    font-family: 'Helvetica Neue', arial, sans-serif;
-    font-weight: 300;
-}
 
 em{
     font-size: 0.9em;
+}
+
+
+@media (prefers-color-scheme: light) {
+ 
+  body{
+      background: url(/noise_light-grey.jpg);
+  }
 }
