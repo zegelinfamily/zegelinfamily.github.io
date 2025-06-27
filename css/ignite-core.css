@@ -1,105 +1,3 @@
-
-
-:root {
-    --supports-light-theme: true;
-    --supports-dark-theme: true;
-    --light-theme-id: "light";
-    --dark-theme-id: "dark";
-    --bs-primary: rgb(13 110 253 / 100%);
-    --bs-primary-rgb: 13, 110, 253;
-    --bs-primary-text-emphasis: rgb(5 44 101 / 100%);
-    --bs-primary-bg-subtle: rgb(206 226 254 / 100%);
-    --bs-primary-border-subtle: rgb(109 168 253 / 100%);
-    --bs-secondary: rgb(108 117 125 / 100%);
-    --bs-secondary-rgb: 108, 117, 125;
-    --bs-secondary-text-emphasis: rgb(43 46 50 / 100%);
-    --bs-secondary-bg-subtle: rgb(225 227 229 / 100%);
-    --bs-secondary-border-subtle: rgb(166 172 177 / 100%);
-    --bs-success: rgb(25 135 84 / 100%);
-    --bs-success-rgb: 25, 135, 84;
-    --bs-success-text-emphasis: rgb(10 54 33 / 100%);
-    --bs-success-bg-subtle: rgb(209 231 220 / 100%);
-    --bs-success-border-subtle: rgb(117 183 152 / 100%);
-    --bs-info: rgb(13 202 240 / 100%);
-    --bs-info-rgb: 13, 202, 240;
-    --bs-info-text-emphasis: rgb(5 80 96 / 100%);
-    --bs-info-bg-subtle: rgb(206 244 252 / 100%);
-    --bs-info-border-subtle: rgb(109 223 246 / 100%);
-    --bs-warning: rgb(255 193 7 / 100%);
-    --bs-warning-rgb: 255, 193, 7;
-    --bs-warning-text-emphasis: rgb(102 77 2 / 100%);
-    --bs-warning-bg-subtle: rgb(255 242 205 / 100%);
-    --bs-warning-border-subtle: rgb(255 217 106 / 100%);
-    --bs-danger: rgb(220 53 69 / 100%);
-    --bs-danger-rgb: 220, 53, 69;
-    --bs-danger-text-emphasis: rgb(88 21 27 / 100%);
-    --bs-danger-bg-subtle: rgb(248 214 217 / 100%);
-    --bs-danger-border-subtle: rgb(234 133 143 / 100%);
-    --bs-light: rgb(248 249 250 / 100%);
-    --bs-light-rgb: 248, 249, 250;
-    --bs-light-text-emphasis: rgb(49 49 49 / 100%);
-    --bs-light-bg-subtle: rgb(253 253 254 / 100%);
-    --bs-light-border-subtle: rgb(198 199 200 / 100%);
-    --bs-dark: rgb(33 37 41 / 100%);
-    --bs-dark-rgb: 33, 37, 41;
-    --bs-dark-text-emphasis: rgb(13 14 16 / 100%);
-    --bs-dark-bg-subtle: rgb(210 211 212 / 100%);
-    --bs-dark-border-subtle: rgb(121 124 126 / 100%);
-    --bs-body-color: rgb(33 37 41 / 100%);
-    --bs-body-color-rgb: 33, 37, 41;
-    --bs-body-bg: rgb(255 255 255 / 100%);
-    --bs-body-bg-rgb: 255, 255, 255;
-    --bs-emphasis-color: rgb(0 0 0 / 100%);
-    --bs-emphasis-color-rgb: 0, 0, 0;
-    --bs-secondary-color: rgb(8415 9435 10455 / 191%);
-    --bs-secondary-color-rgb: 8415, 9435, 10455;
-    --bs-tertiary-color: rgb(8415 9435 10455 / 127%);
-    --bs-tertiary-color-rgb: 8415, 9435, 10455;
-    --bs-secondary-bg: rgb(233 236 239 / 100%);
-    --bs-secondary-bg-rgb: 233, 236, 239;
-    --bs-tertiary-bg: rgb(248 249 250 / 100%);
-    --bs-tertiary-bg-rgb: 248, 249, 250;
-    --bs-link-color: rgb(13 110 253 / 100%);
-    --bs-link-color-rgb: 13, 110, 253;
-    --bs-link-hover-color: rgb(10 88 202 / 100%);
-    --bs-link-hover-color-rgb: 10, 88, 202;
-    --bs-border-color: rgb(222 226 230 / 100%);
-    --bs-border-color-rgb: 222, 226, 230;
-    --syntax-highlight-theme: "xcode-light";
-}
-
-@media (min-width: 540px) {
-    .container {
-    max-width: 540px;
-}
-}
-
-@media (min-width: 720px) {
-    .container {
-    max-width: 720px;
-}
-}
-
-@media (min-width: 960px) {
-    .container {
-    max-width: 960px;
-}
-}
-
-@media (min-width: 1140px) {
-    .container {
-    max-width: 1140px;
-}
-}
-
-@media (min-width: 1320px) {
-    .container {
-    max-width: 1320px;
-}
-}
-
-/* Global style rules */
-
 /* Root and body styles */
 html {
     font-size: var(--bs-root-font-size, 16px);
@@ -352,8 +250,8 @@ a:hover {
     border-color: var(--bs-dark) !important;
 }
 
-/* Paragraph margin */
 p {
+    color: var(--bs-body-color);
     margin-top: 0;
     margin-bottom: var(--bs-paragraph-margin-bottom, 1rem);
 }
@@ -428,145 +326,8 @@ code, pre {
 .bg-light { background-color: var(--bs-light) !important; }
 .bg-dark { background-color: var(--bs-dark) !important; }
 
-/* Button rules */
-.btn-primary {
-    background-color: var(--bs-primary);
-    border-color: var(--bs-primary);
-}
-.btn-primary:hover {
-    background-color: rgb(var(--bs-primary-rgb));
-    border-color: rgb(var(--bs-primary-rgb));
-}
 
-.btn-secondary {
-    background-color: var(--bs-secondary);
-    border-color: var(--bs-secondary);
-}
-.btn-secondary:hover {
-    background-color: rgb(var(--bs-secondary-rgb));
-    border-color: rgb(var(--bs-secondary-rgb));
-}
-
-.btn-success {
-    background-color: var(--bs-success);
-    border-color: var(--bs-success);
-}
-.btn-success:hover {
-    background-color: rgb(var(--bs-success-rgb));
-    border-color: rgb(var(--bs-success-rgb));
-}
-
-.btn-info {
-    background-color: var(--bs-info);
-    border-color: var(--bs-info);
-}
-.btn-info:hover {
-    background-color: rgb(var(--bs-info-rgb));
-    border-color: rgb(var(--bs-info-rgb));
-}
-
-.btn-warning {
-    background-color: var(--bs-warning);
-    border-color: var(--bs-warning);
-}
-.btn-warning:hover {
-    background-color: rgb(var(--bs-warning-rgb));
-    border-color: rgb(var(--bs-warning-rgb));
-}
-
-.btn-danger {
-    background-color: var(--bs-danger);
-    border-color: var(--bs-danger);
-}
-.btn-danger:hover {
-    background-color: rgb(var(--bs-danger-rgb));
-    border-color: rgb(var(--bs-danger-rgb));
-}
-
-.btn-light {
-    background-color: var(--bs-light);
-    border-color: var(--bs-light);
-}
-.btn-light:hover {
-    background-color: rgb(var(--bs-light-rgb));
-    border-color: rgb(var(--bs-light-rgb));
-}
-
-.btn-dark {
-    background-color: var(--bs-dark);
-    border-color: var(--bs-dark);
-}
-.btn-dark:hover {
-    background-color: rgb(var(--bs-dark-rgb));
-    border-color: rgb(var(--bs-dark-rgb));
-}
-
-
-[data-bs-theme="light"] {
-    --bs-primary: rgb(13 110 253 / 100%);
-    --bs-primary-rgb: 13, 110, 253;
-    --bs-primary-text-emphasis: rgb(5 44 101 / 100%);
-    --bs-primary-bg-subtle: rgb(206 226 254 / 100%);
-    --bs-primary-border-subtle: rgb(109 168 253 / 100%);
-    --bs-secondary: rgb(108 117 125 / 100%);
-    --bs-secondary-rgb: 108, 117, 125;
-    --bs-secondary-text-emphasis: rgb(43 46 50 / 100%);
-    --bs-secondary-bg-subtle: rgb(225 227 229 / 100%);
-    --bs-secondary-border-subtle: rgb(166 172 177 / 100%);
-    --bs-success: rgb(25 135 84 / 100%);
-    --bs-success-rgb: 25, 135, 84;
-    --bs-success-text-emphasis: rgb(10 54 33 / 100%);
-    --bs-success-bg-subtle: rgb(209 231 220 / 100%);
-    --bs-success-border-subtle: rgb(117 183 152 / 100%);
-    --bs-info: rgb(13 202 240 / 100%);
-    --bs-info-rgb: 13, 202, 240;
-    --bs-info-text-emphasis: rgb(5 80 96 / 100%);
-    --bs-info-bg-subtle: rgb(206 244 252 / 100%);
-    --bs-info-border-subtle: rgb(109 223 246 / 100%);
-    --bs-warning: rgb(255 193 7 / 100%);
-    --bs-warning-rgb: 255, 193, 7;
-    --bs-warning-text-emphasis: rgb(102 77 2 / 100%);
-    --bs-warning-bg-subtle: rgb(255 242 205 / 100%);
-    --bs-warning-border-subtle: rgb(255 217 106 / 100%);
-    --bs-danger: rgb(220 53 69 / 100%);
-    --bs-danger-rgb: 220, 53, 69;
-    --bs-danger-text-emphasis: rgb(88 21 27 / 100%);
-    --bs-danger-bg-subtle: rgb(248 214 217 / 100%);
-    --bs-danger-border-subtle: rgb(234 133 143 / 100%);
-    --bs-light: rgb(248 249 250 / 100%);
-    --bs-light-rgb: 248, 249, 250;
-    --bs-light-text-emphasis: rgb(49 49 49 / 100%);
-    --bs-light-bg-subtle: rgb(253 253 254 / 100%);
-    --bs-light-border-subtle: rgb(198 199 200 / 100%);
-    --bs-dark: rgb(33 37 41 / 100%);
-    --bs-dark-rgb: 33, 37, 41;
-    --bs-dark-text-emphasis: rgb(13 14 16 / 100%);
-    --bs-dark-bg-subtle: rgb(210 211 212 / 100%);
-    --bs-dark-border-subtle: rgb(121 124 126 / 100%);
-    --bs-body-color: rgb(33 37 41 / 100%);
-    --bs-body-color-rgb: 33, 37, 41;
-    --bs-body-bg: rgb(255 255 255 / 100%);
-    --bs-body-bg-rgb: 255, 255, 255;
-    --bs-emphasis-color: rgb(0 0 0 / 100%);
-    --bs-emphasis-color-rgb: 0, 0, 0;
-    --bs-secondary-color: rgb(8415 9435 10455 / 191%);
-    --bs-secondary-color-rgb: 8415, 9435, 10455;
-    --bs-tertiary-color: rgb(8415 9435 10455 / 127%);
-    --bs-tertiary-color-rgb: 8415, 9435, 10455;
-    --bs-secondary-bg: rgb(233 236 239 / 100%);
-    --bs-secondary-bg-rgb: 233, 236, 239;
-    --bs-tertiary-bg: rgb(248 249 250 / 100%);
-    --bs-tertiary-bg-rgb: 248, 249, 250;
-    --bs-link-color: rgb(13 110 253 / 100%);
-    --bs-link-color-rgb: 13, 110, 253;
-    --bs-link-hover-color: rgb(10 88 202 / 100%);
-    --bs-link-hover-color-rgb: 10, 88, 202;
-    --bs-border-color: rgb(222 226 230 / 100%);
-    --bs-border-color-rgb: 222, 226, 230;
-    --syntax-highlight-theme: "xcode-light";
-}
-
-[data-bs-theme="dark"] {
+:root {
     --bs-primary: rgb(13 110 253 / 100%);
     --bs-primary-rgb: 13, 110, 253;
     --bs-primary-text-emphasis: rgb(109 168 253 / 100%);
@@ -613,9 +374,9 @@ code, pre {
     --bs-body-bg-rgb: 33, 37, 41;
     --bs-emphasis-color: rgb(255 255 255 / 100%);
     --bs-emphasis-color-rgb: 255, 255, 255;
-    --bs-secondary-color: rgb(56610 57630 58650 / 191%);
+    --bs-secondary-color: rgb(56610 57630 58650 / 75%);
     --bs-secondary-color-rgb: 56610, 57630, 58650;
-    --bs-tertiary-color: rgb(56610 57630 58650 / 127%);
+    --bs-tertiary-color: rgb(56610 57630 58650 / 50%);
     --bs-tertiary-color-rgb: 56610, 57630, 58650;
     --bs-secondary-bg: rgb(52 58 64 / 100%);
     --bs-secondary-bg-rgb: 52, 58, 64;
@@ -629,6 +390,380 @@ code, pre {
     --bs-border-color-rgb: 73, 80, 87;
     --syntax-highlight-theme: "xcode-dark";
 }
+
+@media (min-width: 540px) {
+    .container {
+    max-width: 540px;
+}
+}
+
+@media (min-width: 720px) {
+    .container {
+    max-width: 720px;
+}
+}
+
+@media (min-width: 960px) {
+    .container {
+    max-width: 960px;
+}
+}
+
+@media (min-width: 1140px) {
+    .container {
+    max-width: 1140px;
+}
+}
+
+@media (min-width: 1320px) {
+    .container {
+    max-width: 1320px;
+}
+}
+
+.btn-primary {
+    --bs-btn-bg: rgb(13 110 253 / 100%);
+    --bs-btn-border-color: rgb(13 110 253 / 100%);
+    --bs-btn-hover-border-color: rgb(10 88 202 / 100%);
+    --bs-btn-hover-bg: rgb(10 88 202 / 100%);
+    --bs-btn-active-bg: rgb(7 66 151 / 100%);
+    --bs-btn-active-border-color: rgb(7 66 151 / 100%);
+}
+
+.btn-secondary {
+    --bs-btn-bg: rgb(108 117 125 / 100%);
+    --bs-btn-border-color: rgb(108 117 125 / 100%);
+    --bs-btn-hover-border-color: rgb(86 93 100 / 100%);
+    --bs-btn-hover-bg: rgb(86 93 100 / 100%);
+    --bs-btn-active-bg: rgb(64 70 75 / 100%);
+    --bs-btn-active-border-color: rgb(64 70 75 / 100%);
+}
+
+.btn-success {
+    --bs-btn-bg: rgb(25 135 84 / 100%);
+    --bs-btn-border-color: rgb(25 135 84 / 100%);
+    --bs-btn-hover-border-color: rgb(20 108 67 / 100%);
+    --bs-btn-hover-bg: rgb(20 108 67 / 100%);
+    --bs-btn-active-bg: rgb(15 81 50 / 100%);
+    --bs-btn-active-border-color: rgb(15 81 50 / 100%);
+}
+
+.btn-info {
+    --bs-btn-bg: rgb(13 202 240 / 100%);
+    --bs-btn-border-color: rgb(13 202 240 / 100%);
+    --bs-btn-hover-border-color: rgb(10 161 192 / 100%);
+    --bs-btn-hover-bg: rgb(10 161 192 / 100%);
+    --bs-btn-active-bg: rgb(7 121 144 / 100%);
+    --bs-btn-active-border-color: rgb(7 121 144 / 100%);
+}
+
+.btn-warning {
+    --bs-btn-bg: rgb(255 193 7 / 100%);
+    --bs-btn-border-color: rgb(255 193 7 / 100%);
+    --bs-btn-hover-border-color: rgb(204 154 5 / 100%);
+    --bs-btn-hover-bg: rgb(204 154 5 / 100%);
+    --bs-btn-active-bg: rgb(153 115 4 / 100%);
+    --bs-btn-active-border-color: rgb(153 115 4 / 100%);
+}
+
+.btn-danger {
+    --bs-btn-bg: rgb(220 53 69 / 100%);
+    --bs-btn-border-color: rgb(220 53 69 / 100%);
+    --bs-btn-hover-border-color: rgb(176 42 55 / 100%);
+    --bs-btn-hover-bg: rgb(176 42 55 / 100%);
+    --bs-btn-active-bg: rgb(132 31 41 / 100%);
+    --bs-btn-active-border-color: rgb(132 31 41 / 100%);
+}
+
+.btn-light {
+    --bs-btn-bg: rgb(248 249 250 / 100%);
+    --bs-btn-border-color: rgb(248 249 250 / 100%);
+    --bs-btn-hover-border-color: rgb(198 199 200 / 100%);
+    --bs-btn-hover-bg: rgb(198 199 200 / 100%);
+    --bs-btn-active-bg: rgb(148 149 150 / 100%);
+    --bs-btn-active-border-color: rgb(148 149 150 / 100%);
+}
+
+.btn-dark {
+    --bs-btn-bg: rgb(33 37 41 / 100%);
+    --bs-btn-border-color: rgb(33 37 41 / 100%);
+    --bs-btn-hover-border-color: rgb(26 29 32 / 100%);
+    --bs-btn-hover-bg: rgb(26 29 32 / 100%);
+    --bs-btn-active-bg: rgb(19 22 24 / 100%);
+    --bs-btn-active-border-color: rgb(19 22 24 / 100%);
+}
+
+:root {
+    /* Light Material Values */
+    --material-light-ultra-thin: rgba(255, 255, 255, 0.5);
+    --material-light-ultra-thin-blur: rgba(255, 255, 255, 0.2);
+    --material-light-thin: rgba(255, 255, 255, 0.6);
+    --material-light-thin-blur: rgba(255, 255, 255, 0.3);
+    --material-light-regular: rgba(255, 255, 255, 0.7);
+    --material-light-regular-blur: rgba(255, 255, 255, 0.4);
+    --material-light-thick: rgba(255, 255, 255, 0.8);
+    --material-light-thick-blur: rgba(255, 255, 255, 0.5);
+    --material-light-ultra-thick: rgba(255, 255, 255, 0.9);
+    --material-light-ultra-thick-blur: rgba(255, 255, 255, 0.6);
+
+    /* Dark Material Values */
+    --material-dark-ultra-thin: rgba(30, 30, 30, 0.5);
+    --material-dark-ultra-thin-blur: rgba(30, 30, 30, 0.2);
+    --material-dark-thin: rgba(30, 30, 30, 0.6);
+    --material-dark-thin-blur: rgba(30, 30, 30, 0.3);
+    --material-dark-regular: rgba(30, 30, 30, 0.7);
+    --material-dark-regular-blur: rgba(30, 30, 30, 0.4);
+    --material-dark-thick: rgba(30, 30, 30, 0.8);
+    --material-dark-thick-blur: rgba(30, 30, 30, 0.5);
+    --material-dark-ultra-thick: rgba(30, 30, 30, 0.9);
+    --material-dark-ultra-thick-blur: rgba(30, 30, 30, 0.6);
+
+    /* HSplitView Values */
+    --splitview-divider-active-color: #007aff;
+    --splitview-divider-color: #cccccc;
+    --splitview-min-width: 100;
+    --splitview-default-width: 250;
+    --splitview-max-width: 400;
+    --splitview-collapse-on-min: false;
+}
+
+/* Auto-switching Material Classes */
+.material-ultra-thin {
+    background: var(--material-light-ultra-thin);
+    @supports ((backdrop-filter: blur(10px)) or (-webkit-backdrop-filter: blur(10px))) {
+        background: var(--material-light-ultra-thin-blur);
+        -webkit-backdrop-filter: blur(10px) saturate(180%);
+        backdrop-filter: blur(10px) saturate(180%);
+    }
+}
+
+.material-thin {
+    background: var(--material-light-thin);
+    @supports ((backdrop-filter: blur(20px)) or (-webkit-backdrop-filter: blur(20px))) {
+        background: var(--material-light-thin-blur);
+        -webkit-backdrop-filter: blur(20px) saturate(180%);
+        backdrop-filter: blur(20px) saturate(180%);
+    }
+}
+
+.material-regular {
+    background: var(--material-light-regular);
+    @supports ((backdrop-filter: blur(30px)) or (-webkit-backdrop-filter: blur(30px))) {
+        background: var(--material-light-regular-blur);
+        -webkit-backdrop-filter: blur(30px) saturate(180%);
+        backdrop-filter: blur(30px) saturate(180%);
+    }
+}
+
+.material-thick {
+    background: var(--material-light-thick);
+    @supports ((backdrop-filter: blur(50px)) or (-webkit-backdrop-filter: blur(50px))) {
+        background: var(--material-light-thick-blur);
+        -webkit-backdrop-filter: blur(50px) saturate(180%);
+        backdrop-filter: blur(50px) saturate(180%);
+    }
+}
+
+.material-ultra-thick {
+    background: var(--material-light-ultra-thick);
+    @supports ((backdrop-filter: blur(70px)) or (-webkit-backdrop-filter: blur(70px))) {
+        background: var(--material-light-ultra-thick-blur);
+        -webkit-backdrop-filter: blur(70px) saturate(180%);
+        backdrop-filter: blur(70px) saturate(180%);
+    }
+}
+
+[data-bs-theme="dark"] .material-ultra-thin, .material-ultra-thin[data-bs-theme="dark"] {
+    background: var(--material-dark-ultra-thin);
+    @supports ((backdrop-filter: blur(10px)) or (-webkit-backdrop-filter: blur(10px))) {
+        background: var(--material-dark-ultra-thin-blur);
+        -webkit-backdrop-filter: blur(10px) saturate(180%);
+        backdrop-filter: blur(10px) saturate(180%);
+    }
+}
+
+[data-bs-theme="dark"] .material-thin, .material-thin[data-bs-theme="dark"] {
+    background: var(--material-dark-thin);
+    @supports ((backdrop-filter: blur(20px)) or (-webkit-backdrop-filter: blur(20px))) {
+        background: var(--material-dark-thin-blur);
+        -webkit-backdrop-filter: blur(20px) saturate(180%);
+        backdrop-filter: blur(20px) saturate(180%);
+    }
+}
+
+[data-bs-theme="dark"] .material-regular, .material-regular[data-bs-theme="dark"] {
+    background: var(--material-dark-regular);
+    @supports ((backdrop-filter: blur(30px)) or (-webkit-backdrop-filter: blur(30px))) {
+        background: var(--material-dark-regular-blur);
+        -webkit-backdrop-filter: blur(30px) saturate(180%);
+        backdrop-filter: blur(30px) saturate(180%);
+    }
+}
+
+[data-bs-theme="dark"] .material-thick, .material-thick[data-bs-theme="dark"] {
+    background: var(--material-dark-thick);
+    @supports ((backdrop-filter: blur(50px)) or (-webkit-backdrop-filter: blur(50px))) {
+        background: var(--material-dark-thick-blur);
+        -webkit-backdrop-filter: blur(50px) saturate(180%);
+        backdrop-filter: blur(50px) saturate(180%);
+    }
+}
+
+[data-bs-theme="dark"] .material-ultra-thick, material-ultra-thick[data-bs-theme="dark"] {
+    background: var(--material-dark-ultra-thick);
+    @supports ((backdrop-filter: blur(70px)) or (-webkit-backdrop-filter: blur(70px))) {
+        background: var(--material-dark-ultra-thick-blur);
+        -webkit-backdrop-filter: blur(70px) saturate(180%);
+        backdrop-filter: blur(70px) saturate(180%);
+    }
+}
+
+.ig-text-small {
+    font-size: 0.9rem;
+}
+
+.ig-text-xSmall {
+    font-size: 0.8rem;
+}
+
+.ig-text-xxSmall {
+    font-size: 0.7rem;
+}
+
+.ig-text-xxxSmall {
+    font-size: 0.6rem;
+}
+
+.ig-line-clamp {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: var(--ig-max-line-length, 1);
+}
+
+.ig-line-clamp-none {
+    overflow: visible;
+    display: block;
+    -webkit-box-orient: horizontal;
+    -webkit-line-clamp: unset;
+}
+
+/* Since positioning the image, we need to help out the caption */
+.carousel-caption {
+  bottom: 3rem;
+  z-index: 10;
+}
+
+/* Declare heights because of positioning of img element */
+.carousel-item {
+  height: 32rem;
+}
+
+/* Removing padding from the last paragraph in an alert. */
+div.alert p:last-child {
+  margin-bottom: 0;
+}
+
+.font-inherit, .font-inherit * {
+  font: inherit;
+}
+
+.color-inherit, .color-inherit * {
+  color: inherit;
+}
+
+.line-height-inherit {
+  line-height: inherit;
+}
+
+.form-control::placeholder {
+    color: gray;
+    opacity: 1;
+}
+
+/* Removing text syling from a link. */
+.link-plain {
+    color: inherit;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Split view component styles */
+.splitview {
+    display: flex;
+    overflow: hidden;
+    position: relative;
+}
+
+.splitview-sidebar {
+    overflow-y: auto;
+    display: flex;
+    flex-shrink: 0;
+}
+
+.splitview-close-button {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.splitview-divider {
+    position: relative;
+    width: 1px;
+    background-color: #cccccc;
+    flex-shrink: 0;
+}
+
+.splitview-divider-hitarea {
+    position: absolute;
+    width: 20px;
+    height: 100%;
+    top: 0;
+    left: -10px;
+    cursor: col-resize;
+    z-index: 100;
+}
+
+.splitview-divider-hitarea:hover + .splitview-divider-line,
+.splitview-divider-hitarea.active + .splitview-divider-line {
+    background-color: var(--splitview-divider-active-color);
+    width: 4px;
+    left: -1.5px;
+}
+
+.splitview-divider-line {
+    position: absolute;
+    width: 1px;
+    height: 100%;
+    background-color: var(--splitview-divider-color);
+    top: 0;
+    left: 0;
+    transition: background-color 0.2s, width 0.2s, left 0.2s;
+}
+
+.splitview-sidebar-content {
+    flex-grow: 1;
+    min-width: var(--splitview-min-width);
+    width: var(--splitview-default-width);
+    max-width: var(--splitview-max-width);
+}
+
+@media (max-width: 767.98px) {
+    .splitview-sidebar-content {
+        max-width: 100vw !important;
+        width: 100vw !important;
+    }
+
+    .splitview-divider-responsive {
+        display: none;
+    }
+}
+
+/* Hide divider when sidebar is collapsed */
+.splitview-sidebar.collapsed + .splitview-divider-responsive {
+    display: none;
+}
+
 
 
 

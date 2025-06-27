@@ -2,8 +2,8 @@
 1 SOUR Gramps
 2 VERS 5.2.3
 2 NAME Gramps
-1 DATE 30 MAR 2025
-2 TIME 11:12:02
+1 DATE 31 MAR 2025
+2 TIME 09:52:33
 1 SUBM @SUBM@
 1 FILE /Users/peter/Desktop/zegelin.ged
 1 COPR Copyright (c) 2025 .
@@ -40,7 +40,7 @@
 1 SEX M
 1 BIRT
 2 DATE 11 JAN 1955
-2 PLAC Brisbane, Queensland, Australia
+2 PLAC Brisbane, Queensland
 1 FAMC @F0001@
 2 PEDI birth
 1 EMAIL peter@@zegelin.com
@@ -75,10 +75,11 @@
 2 SURN Grigg
 1 SEX F
 1 BIRT
-2 DATE 20 JAN 1925
+2 DATE 14 DEC 1925
+2 PLAC Melbourne, Victoria
 1 DEAT
 2 DATE 23 AUG 1982
-2 PLAC Wahroonga
+2 PLAC Wahroonga,  Sydney, NSW
 1 FAMC @F0003@
 2 PEDI birth
 1 FAMS @F0001@
@@ -129,10 +130,10 @@
 1 SEX M
 1 BIRT
 2 DATE 1894
-2 PLAC St. Kilda
+2 PLAC St. Kilda, Melbourne, Victoria
 1 DEAT
 2 DATE 1968
-2 PLAC Melbourne
+2 PLAC East Melbourne, Victoria
 1 FAMS @F0003@
 1 CHAN
 2 DATE 28 MAR 2025
@@ -149,7 +150,7 @@
 2 PLAC Box Hill, Victoria
 1 DEAT
 2 DATE 1971
-2 PLAC San Francisco
+2 PLAC San Francisco, USA
 1 FAMC @F0013@
 2 PEDI birth
 1 FAMS @F0003@
@@ -216,7 +217,7 @@
 1 SEX M
 1 BIRT
 2 DATE 16 JAN 1805
-2 PLAC Schlieben
+2 PLAC Schlieben, Germany
 1 DEAT
 2 DATE 12 OCT 1871
 2 PLAC Finsterwalde
@@ -346,7 +347,7 @@
 2 DATE 30 APR 1897
 1 DEAT
 2 DATE 23 OCT 1990
-2 PLAC Melbourne
+2 PLAC Melbourne, Victoria
 1 FAMC @F0005@
 2 PEDI birth
 1 FAMS @F0021@
@@ -364,7 +365,7 @@
 2 DATE 21 APR 1900
 1 DEAT
 2 DATE 15 JUN 1978
-2 PLAC Freiburg
+2 PLAC Freiburg, Germany
 1 FAMC @F0005@
 2 PEDI birth
 1 CHAN
@@ -433,7 +434,7 @@
 1 SEX F
 1 BIRT
 2 DATE 1923
-2 PLAC Melbourne
+2 PLAC Melbourne, Victoria
 1 FAMC @F0003@
 2 PEDI birth
 1 CHAN
@@ -463,7 +464,7 @@
 2 PLAC Stettin
 1 DEAT
 2 DATE 1983
-2 PLAC Hannover
+2 PLAC Hannover, Germany
 1 FAMC @F0004@
 2 PEDI birth
 1 FAMS @F0020@
@@ -809,7 +810,7 @@
 1 SEX F
 1 BIRT
 2 DATE 11 AUG 1771
-2 PLAC Schlieben
+2 PLAC Schlieben, Germany
 1 FAMS @F0009@
 1 CHAN
 2 DATE 20 MAR 2019
@@ -1064,7 +1065,7 @@
 2 PLAC Nunawading, Victoria
 1 DEAT
 2 DATE 5 MAY 1945
-2 PLAC Camberwell, Victoria
+2 PLAC Camberwell, Melbourne, Victoria
 1 FAMC @F0015@
 2 PEDI birth
 1 FAMS @F0013@
@@ -1082,7 +1083,7 @@
 2 PLAC Casterton, Victoria
 1 DEAT
 2 DATE 1928
-2 PLAC Melbourne
+2 PLAC Melbourne, Victoria
 1 FAMC @F0014@
 2 PEDI birth
 1 FAMS @F0013@
@@ -1120,7 +1121,7 @@
 2 PLAC Johnswell, Killkenny, Ireland
 1 DEAT
 2 DATE 23 DEC 1867
-2 PLAC Richmond, Victoria
+2 PLAC Richmond, Melbourne, Victoria
 1 FAMC @F0016@
 2 PEDI birth
 1 FAMS @F0015@
@@ -1138,7 +1139,7 @@
 2 PLAC Johnswell, Killkenny, Ireland
 1 DEAT
 2 DATE 14 JUN 1900
-2 PLAC Melbourne
+2 PLAC Melbourne, Victoria
 1 FAMS @F0015@
 1 CHAN
 2 DATE 28 MAR 2025
@@ -1273,7 +1274,7 @@
 1 WIFE @I0005@
 1 MARR
 2 DATE 20 OCT 1914
-2 PLAC Melbourne
+2 PLAC Melbourne, Victoria
 1 CHIL @I0014@
 1 CHIL @I0015@
 1 CHIL @I0026@
@@ -1395,7 +1396,7 @@
 1 WIFE @I0071@
 1 MARR
 2 DATE 28 OCT 1891
-2 PLAC Camberwell, Victoria
+2 PLAC Camberwell, Melbourne, Victoria
 1 CHIL @I0007@
 1 CHAN
 2 DATE 28 MAR 2025

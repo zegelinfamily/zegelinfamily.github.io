@@ -4,13 +4,19 @@ html, body{
     font-weight: 300;
 }
 
+.sidebar{
+    width: 180px;
+  
+      top: 0;
+    a{
+        color: #aaa;
+    }
+}
+
 .sidebar-list{
     text-align: end;
     padding: 0px;
-}
-
-.sidebar-list-small{
-    font-size: 0.9em;
+    
 }
 
 li{
@@ -22,23 +28,6 @@ a{
   text-decoration: none;
 }
 
-.sidebar{
-    width: 180px;
-    
-    a{
-        color: #aaa;
-    }
-}
-
-
 em{
     font-size: 0.9em;
-}
-
-
-@media (prefers-color-scheme: light) {
- 
-  body{
-      background: url(/noise_light-grey.jpg);
-  }
 }

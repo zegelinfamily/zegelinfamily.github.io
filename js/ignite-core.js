@@ -25,23 +25,24 @@ function igniteSwitchTheme(themeID) {
 
 function igniteApplyTheme(themeID) {
     if (themeID === 'auto') {
-        localStorage.removeItem('custom-theme');
+        localStorage.removeItem('current-theme');
     } else {
-        localStorage.setItem('custom-theme', themeID);
+        localStorage.setItem('current-theme', themeID);
     }
 
-    const lightThemeID = document.documentElement.getAttribute('data-light-theme') || 'light';
-    const darkThemeID = document.documentElement.getAttribute('data-dark-theme') || 'dark';
+    const lightThemeID = getComputedStyle(document.documentElement)
+        .getPropertyValue('--light-theme-ID')
+        .trim() || 'light';
+    const darkThemeID = getComputedStyle(document.documentElement)
+        .getPropertyValue('--dark-theme-ID')
+        .trim() || 'dark';
 
-    if (themeID === 'auto') {
-        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-        const actualThemeID = prefersDark ? darkThemeID : lightThemeID;
-        document.documentElement.setAttribute('data-bs-theme', actualThemeID);
-        document.documentElement.setAttribute('data-theme-state', themeID);
-    } else {
-        document.documentElement.setAttribute('data-bs-theme', themeID);
-        document.documentElement.setAttribute('data-theme-state', themeID);
-    }
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    const actualThemeID = themeID === 'auto' ? (prefersDark ? darkThemeID : lightThemeID) : themeID;
+
+    document.documentElement.setAttribute('data-ig-theme', actualThemeID);
+    const isDarkTheme = actualThemeID.endsWith('dark');
+    document.documentElement.setAttribute('data-bs-theme', isDarkTheme ? 'dark' : 'light');
 
     igniteApplySyntaxTheme();
 }
@@ -127,6 +128,8 @@ function igniteToggleClickAnimation(element) {
     }
     return false;
 }
+
+// SECTION: Tables ----------------------------------------------------------------------------
 
 // This function removes rows from a table when some filter text is supplied.
 // We need to actually remove the rows to ensure that any zebra striping is

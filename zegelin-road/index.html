@@ -1,59 +1,15 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-bs-theme="dark">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="author" content="Peter Zegelin" />
-    <meta name="generator" content="Ignite v0.5.0" />
+    <meta name="generator" content="Ignite v0.7.0" />
     <title>Zegelin Road</title>
     <link href="/css/bootstrap.min.css" rel="stylesheet" />
     <link href="/css/bootstrap-icons.min.css" rel="stylesheet" />
-    <link href="/css/ignite-core.min.css" rel="stylesheet" />
+    <link href="/css/ignite-core.css" rel="stylesheet" />
     <link href="https://www.zegelin.com/zegelin-road" rel="canonical" />
-    <script>(function() {
-    function getThemePreference() {
-        return localStorage.getItem('custom-theme') || 'auto';
-    }
-
-    function applyTheme(themeID) {
-        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-        const lightThemeID = document.documentElement.getAttribute('data-light-theme') || 'light';
-        const darkThemeID = document.documentElement.getAttribute('data-dark-theme') || 'dark';
-        const actualThemeID = themeID === 'auto' ? (prefersDark ? darkThemeID : lightThemeID) : themeID;
-
-        document.documentElement.setAttribute('data-bs-theme', actualThemeID);
-        document.documentElement.setAttribute('data-theme-state', themeID);
-    }
-
-    function applySyntaxTheme() {
-        const syntaxTheme = getComputedStyle(document.documentElement)
-            .getPropertyValue('--syntax-highlight-theme').trim().replace(/"/g, '');
-
-        if (!syntaxTheme) return;
-
-        document.querySelectorAll('link[data-highlight-theme]').forEach(link => {
-            link.setAttribute('disabled', 'disabled');
-        });
-
-        const themeLink = document.querySelector(`link[data-highlight-theme="${syntaxTheme}"]`);
-        if (themeLink) {
-            themeLink.removeAttribute('disabled');
-        }
-    }
-
-    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
-        const currentTheme = getThemePreference();
-        if (currentTheme === 'auto') {
-            applyTheme('auto');
-            applySyntaxTheme();
-        }
-    });
-
-    const savedTheme = getThemePreference();
-    applyTheme(savedTheme);
-    applySyntaxTheme();
-})();
-</script>
     <meta property="og:site_name" content="Zegelin Family Website" />
     <meta property="og:title" content="Zegelin Road" />
     <meta name="twitter:title" content="Zegelin Road" />
@@ -61,13 +17,88 @@
     <meta name="twitter:domain" content="zegelin.com" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:dnt" content="on" />
-    <link href="/css/site.css" rel="stylesheet" />
+    <link href="/zegelinroad/css/leaflet.css" rel="stylesheet" />
+    <script src="/zegelinroad/leaflet/leaflet.js"></script>
+    <script src="/zegelinroad/leaflet/leaflet.curve.js"></script>
+    <link href="/zegelinroad/zoombar/L.Control.ZoomBar.css" rel="stylesheet" />
+    <script src="/zegelinroad/zoombar/L.Control.ZoomBar.js"></script>
+    <link href="/zegelinroad/navbar/Leaflet.NavBar.css" rel="stylesheet" />
+    <script src="/zegelinroad/navbar/Leaflet.NavBar.js"></script>
+    <link href="/zegelinroad/css/legend.css" rel="stylesheet" />
+    <link href="/zegelinroad/css/trip.css" rel="stylesheet" />
   </head>
   <body class="container">
-    <div class="pb-5">
+    <div class="ig-main-content">
       <div style="padding-top: 20px">
         <h3 class="text-start">Zegelin Road</h3>
         <p class="text-end" style="margin-top: -42px"><a href="/" style="text-decoration: none; color: #aaa; font-size: 1.0em">home</a></p>
+      </div>
+      <p style="margin-top: 40px">The Zegelin family was one of the larger pioneering families in the Rochester area of Northern Victoria and the family eventually had a road named after them. There are currently two Zegelin roads, one at Fairy Dell near Rochester which is 6 km long and the other leading to the Waranga Basin Reservoir that is nearly 9 km long. <br /> <br /> <em>It’s possible that the road was once continuous, which would have made it over 50km long, however I have no evidence of that. If anyone has some info that they would like to share, then you can email me - thanks! Peter</em></p>
+      <div class="flex-container">
+        <div class="map-sidebar-container">
+          <div id="map">
+            <script>    const map = L.map('map',{
+        zoomDelta: 0.25,    // Controls zoom increment (default is 1)
+        zoomSnap: 0.25,     // Snaps zoom to multiples of this value (default is 1)
+        zoomControl: false
+    });
+    
+    
+    // Add OpenStreetMap tiles
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{
+       attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+    }).addTo(map);
+    
+    // Fit the map to the bounds with optional padding
+    map.fitBounds([[-36.303484, 144.656346],[-36.566715, 145.225575]],{
+    });    var curve = L.curve(
+    [
+     'M', [-36.343455,144.711514],
+     'Q', [-36.343472,144.727264],
+     [-36.343489,144.743014]
+    ],
+    {
+     color: 'blue',
+     weight: 6.0,
+    opacity: 0.3
+    }
+    ).addTo(map);    var curve = L.curve(
+    [
+     'M', [-36.343489,144.743014],
+     'Q', [-36.342746,144.743014],
+     [-36.342003,144.743014]
+    ],
+    {
+     color: 'blue',
+     weight: 6.0,
+    opacity: 0.3
+    }
+    ).addTo(map);    var curve = L.curve(
+    [
+     'M', [-36.342003,144.743014],
+     'Q', [-36.342003,144.7602445],
+     [-36.342003,144.777475]
+    ],
+    {
+     color: 'blue',
+     weight: 6.0,
+    opacity: 0.3
+    }
+    ).addTo(map);    var curve = L.curve(
+    [
+     'M', [-36.513651,144.98629],
+     'Q', [-36.513652500000006,145.0343005],
+     [-36.513654,145.082311]
+    ],
+    {
+     color: 'blue',
+     weight: 6.0,
+    opacity: 0.3
+    }
+    ).addTo(map);    var zoom_bar = new L.Control.ZoomBar({position: 'topleft'}).addTo(map);
+    L.control.navbar().addTo(map);</script>
+          </div>
+        </div>
       </div>
     </div>
     <script src="/js/bootstrap.bundle.min.js"></script>

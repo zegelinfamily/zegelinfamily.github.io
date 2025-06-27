@@ -1,59 +1,15 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-bs-theme="dark">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="author" content="Peter Zegelin" />
-    <meta name="generator" content="Ignite v0.5.0" />
+    <meta name="generator" content="Ignite v0.7.0" />
     <title>Family Tree</title>
     <link href="/css/bootstrap.min.css" rel="stylesheet" />
     <link href="/css/bootstrap-icons.min.css" rel="stylesheet" />
-    <link href="/css/ignite-core.min.css" rel="stylesheet" />
+    <link href="/css/ignite-core.css" rel="stylesheet" />
     <link href="https://www.zegelin.com/family-tree" rel="canonical" />
-    <script>(function() {
-    function getThemePreference() {
-        return localStorage.getItem('custom-theme') || 'auto';
-    }
-
-    function applyTheme(themeID) {
-        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-        const lightThemeID = document.documentElement.getAttribute('data-light-theme') || 'light';
-        const darkThemeID = document.documentElement.getAttribute('data-dark-theme') || 'dark';
-        const actualThemeID = themeID === 'auto' ? (prefersDark ? darkThemeID : lightThemeID) : themeID;
-
-        document.documentElement.setAttribute('data-bs-theme', actualThemeID);
-        document.documentElement.setAttribute('data-theme-state', themeID);
-    }
-
-    function applySyntaxTheme() {
-        const syntaxTheme = getComputedStyle(document.documentElement)
-            .getPropertyValue('--syntax-highlight-theme').trim().replace(/"/g, '');
-
-        if (!syntaxTheme) return;
-
-        document.querySelectorAll('link[data-highlight-theme]').forEach(link => {
-            link.setAttribute('disabled', 'disabled');
-        });
-
-        const themeLink = document.querySelector(`link[data-highlight-theme="${syntaxTheme}"]`);
-        if (themeLink) {
-            themeLink.removeAttribute('disabled');
-        }
-    }
-
-    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
-        const currentTheme = getThemePreference();
-        if (currentTheme === 'auto') {
-            applyTheme('auto');
-            applySyntaxTheme();
-        }
-    });
-
-    const savedTheme = getThemePreference();
-    applyTheme(savedTheme);
-    applySyntaxTheme();
-})();
-</script>
     <meta property="og:site_name" content="Zegelin Family Website" />
     <meta property="og:title" content="Family Tree" />
     <meta name="twitter:title" content="Family Tree" />
@@ -64,12 +20,12 @@
     <link href="/css/site.css" rel="stylesheet" />
   </head>
   <body class="container">
-    <div class="pb-5">
+    <div class="ig-main-content pb-5">
       <div style="padding-top: 20px">
         <h3 class="text-start">Family Tree</h3>
         <p class="text-end" style="margin-top: -42px"><a href="/" style="text-decoration: none; color: #aaa; font-size: 1.0em">home</a></p>
       </div>
-      <p style="margin-top: 40px">The family tree shown below was taken from the manuscript ‘Some Early History of the Zegelin and Lortz Families’ and ends with myself - Peter. A much better way to view this family tree is to click <a href="https://pewu.github.io/topola-viewer/#/view?url=Zegelin.com%2Fzegelin.ged&amp;view=relatives">here</a>, which loads the tree into an interactive online viewer. This viewer is pretty neat and will reconfigure the tree whenever you click on another person. For instance if you click on my mom - Patricia Grigg, her side of the family is revealed. <br /> <br /> You can download this family tree <a href="/zegelin-tree.zip">here</a>. The downloaded .zip file includes a .ged file for the interactive viewer and a .gramps file for editing. <br /> <br /> I use the free, cross platform app called <a href="https://gramps-project.org">Gramps</a> to edit the data. Gramps is OK to use once you get used to it, though the included tree viewer isn’t great and it isn’t that intuitive. Gramps has a pretty wide following, including a <a href="https://www.reddit.com/r/gramps/">Reddit sub-reddit</a>. It can also export <a href="https://gramps-project.org/wiki/index.php/GEDCOM">GEDCOM</a> .ged files which is supposedly a standard. <br /> <br /> If you would like to extend this tree with your own family, download the Gramps application and start it up. Under the ‘Family Trees’ menu, select ‘Manage Family Trees’ which opens another window. Drag the downloaded .gramps file onto this window and press the ‘Load Family Tree’ button. Now you can easily add your own family and prune off unwanted parts of the tree once you become familiar with the application. <br /> <br /> <em>NOTE: I always make a backup (Family Trees: Make backup…) after each session as it is fairly easy to mess the tree up while learning to use the program. The program also has several menu items to check that the tree doesn’t have loops or unconnected persons in it, which I used often.</em> <br /> <br /> To use the interactive online viewer that I mentioned above, export the tree in .ged format. This file format can also be used to load the tree into another application if you prefer.</p>
+      <p style="margin-top: 40px">The family tree shown below was mainly taken from the manuscript ‘Some Early History of the Zegelin and Lortz Families’ and extended a bit. A much better way to view this family tree is to click <a href="https://pewu.github.io/topola-viewer/#/view?url=Zegelin.com%2Fzegelin.ged&amp;view=relatives">here</a>, which loads the tree into an interactive online viewer. This viewer is pretty neat and will reconfigure the tree whenever you click on another person. For instance if you click on my mom - Patricia Grigg, her side of the family is revealed. <br /> <br /> You can download this family tree <a href="/zegelin-tree-2025-03-31.zip">here</a>. The downloaded .zip file includes a .ged file for the interactive viewer and a .gramps file for editing. <em>NOTE: File updated 2025-03-31</em> <br /> <br /> The free, cross platform app called <a href="https://gramps-project.org">Gramps</a> was used to edit the data. Gramps is OK to use once you get used to it, though the included tree viewer isn’t great and the program isn’t that intuitive. Gramps has a pretty wide following, including a <a href="https://www.reddit.com/r/gramps/">Reddit sub-reddit</a>. It can also export <a href="https://gramps-project.org/wiki/index.php/GEDCOM">GEDCOM</a> .ged files which is supposedly a standard. <br /> <br /> If you would like to extend this tree with your own family, download the Gramps application and start it up. Under the ‘Family Trees’ menu, select ‘Manage Family Trees’ which opens another window. Drag the downloaded .gramps file onto this window and press the ‘Load Family Tree’ button. Now you can easily add your own family and prune off unwanted parts of the tree once you become familiar with the application. <br /> <br /> <em>NOTE: It is a good idea to always make a backup (Family Trees: Make backup…) after each session as it is fairly easy to mess the tree up while learning to use the program. The program also has several menu items to check that the tree doesn’t have loops or unconnected persons in it, which I used often.</em> <br /> <br /> To use the interactive online viewer mentioned above, export the tree in .ged format. This file format can also be used to load the tree into another application if you prefer.</p>
       <h4 class="text-center">Open the image in a new tab or window for a better view</h4>
       <img src="/images/zegelin-tree.png" alt="Zegelin Family Tree" class="img-fluid" />
     </div>

@@ -1,59 +1,15 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-bs-theme="dark">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="author" content="Peter Zegelin" />
-    <meta name="generator" content="Ignite v0.5.0" />
+    <meta name="generator" content="Ignite v0.7.0" />
     <title>Some Old Pictures</title>
     <link href="/css/bootstrap.min.css" rel="stylesheet" />
     <link href="/css/bootstrap-icons.min.css" rel="stylesheet" />
-    <link href="/css/ignite-core.min.css" rel="stylesheet" />
+    <link href="/css/ignite-core.css" rel="stylesheet" />
     <link href="https://www.zegelin.com/pictures" rel="canonical" />
-    <script>(function() {
-    function getThemePreference() {
-        return localStorage.getItem('custom-theme') || 'auto';
-    }
-
-    function applyTheme(themeID) {
-        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-        const lightThemeID = document.documentElement.getAttribute('data-light-theme') || 'light';
-        const darkThemeID = document.documentElement.getAttribute('data-dark-theme') || 'dark';
-        const actualThemeID = themeID === 'auto' ? (prefersDark ? darkThemeID : lightThemeID) : themeID;
-
-        document.documentElement.setAttribute('data-bs-theme', actualThemeID);
-        document.documentElement.setAttribute('data-theme-state', themeID);
-    }
-
-    function applySyntaxTheme() {
-        const syntaxTheme = getComputedStyle(document.documentElement)
-            .getPropertyValue('--syntax-highlight-theme').trim().replace(/"/g, '');
-
-        if (!syntaxTheme) return;
-
-        document.querySelectorAll('link[data-highlight-theme]').forEach(link => {
-            link.setAttribute('disabled', 'disabled');
-        });
-
-        const themeLink = document.querySelector(`link[data-highlight-theme="${syntaxTheme}"]`);
-        if (themeLink) {
-            themeLink.removeAttribute('disabled');
-        }
-    }
-
-    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
-        const currentTheme = getThemePreference();
-        if (currentTheme === 'auto') {
-            applyTheme('auto');
-            applySyntaxTheme();
-        }
-    });
-
-    const savedTheme = getThemePreference();
-    applyTheme(savedTheme);
-    applySyntaxTheme();
-})();
-</script>
     <meta property="og:site_name" content="Zegelin Family Website" />
     <meta property="og:title" content="Some Old Pictures" />
     <meta name="twitter:title" content="Some Old Pictures" />
@@ -64,15 +20,15 @@
     <link href="/css/site.css" rel="stylesheet" />
   </head>
   <body class="container">
-    <div class="pb-5">
+    <div class="ig-main-content pb-5">
       <div style="padding-top: 20px">
         <h3 class="text-start">Some Old Pictures</h3>
         <p class="text-end" style="margin-top: -42px"><a href="/" style="text-decoration: none; color: #aaa; font-size: 1.0em">home</a></p>
       </div>
       <p>Images taken from the manuscript 'Some Early History of the Zegelin and Lortz Families'</p>
       <p>More pictures coming!</p>
-      <div class="row row-cols-1 row-cols-md-4">
-        <div class="col">
+      <div class="row justify-content-center row-cols-1 row-cols-md-4 g-3">
+        <div class="col align-self-center">
           <div class="card">
             <img src="/images/Gustav%20+%20Ida%20Zegelin%201920.jpg" alt="" class="card-img-top" />
             <div class="card-body">
@@ -80,7 +36,7 @@
             </div>
           </div>
         </div>
-        <div class="col">
+        <div class="col align-self-center">
           <div class="card">
             <img src="/images/Karl%20Zegelin%20aged%2016%20c.%201905.jpg" alt="" class="card-img-top" />
             <div class="card-body">
@@ -88,7 +44,7 @@
             </div>
           </div>
         </div>
-        <div class="col">
+        <div class="col align-self-center">
           <div class="card">
             <img src="/images/Gustav%20Zegelin%20+%20Family,%20Ahlbeck,%20c.1904.jpg" alt="" class="card-img-top" />
             <div class="card-body">
@@ -96,7 +52,7 @@
             </div>
           </div>
         </div>
-        <div class="col">
+        <div class="col align-self-center">
           <div class="card">
             <img src="/images/Zegelin%20Residence%20(Stettin)%20c.%201918.jpg" alt="" class="card-img-top" />
             <div class="card-body">
@@ -104,7 +60,7 @@
             </div>
           </div>
         </div>
-        <div class="col">
+        <div class="col align-self-center">
           <div class="card">
             <img src="/images/First%20Grenadier%20Guard%20Regiment,%20Berlin.jpg" alt="" class="card-img-top" />
             <div class="card-body">
@@ -112,7 +68,7 @@
             </div>
           </div>
         </div>
-        <div class="col">
+        <div class="col align-self-center">
           <div class="card">
             <img src="/images/Karl%20Zegelin%20c.%201909.jpg" alt="" class="card-img-top" />
             <div class="card-body">
@@ -120,7 +76,7 @@
             </div>
           </div>
         </div>
-        <div class="col">
+        <div class="col align-self-center">
           <div class="card">
             <img src="/images/Wittstock-am-Dosse%20c.%201906.jpg" alt="" class="card-img-top" />
             <div class="card-body">
