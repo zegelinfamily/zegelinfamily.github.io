@@ -2974,16 +2974,16 @@
                fillOpacity: 1,
            });
      marker.addTo(map);    var marker = new L.CircleMarker([36.396160, 25.458431], {
-               radius: 5,
-               fillColor: "#CEFA05",
+               radius: 8,
+               fillColor: "#FF4D00",
                color: "#000",
                weight: 1.7,
                opacity: 1,
                fillOpacity: 1,
            });
      marker.addTo(map);    var marker = new L.CircleMarker([37.992666, 23.723965], {
-               radius: 5,
-               fillColor: "#CEFA05",
+               radius: 8,
+               fillColor: "#FF4D00",
                color: "#000",
                weight: 1.7,
                opacity: 1,
@@ -3206,6 +3206,24 @@
      iconAnchor:[-10,11],
      className: '',
      html:"<div class = 'city-label city-label-0'>Ios</div>"
+     }),
+     interactive: false,
+     clickable:   false,
+     });
+     collisionLayer.addLayer(label);     var label = L.marker([36.396160, 25.458431],{
+     icon: L.divIcon({
+     iconAnchor:[-10,11],
+     className: '',
+     html:"<div class = 'city-label city-label-0'>Santorini</div>"
+     }),
+     interactive: false,
+     clickable:   false,
+     });
+     collisionLayer.addLayer(label);     var label = L.marker([37.992666, 23.723965],{
+     icon: L.divIcon({
+     iconAnchor:[-10,11],
+     className: '',
+     html:"<div class = 'city-label city-label-0'>Athens</div>"
      }),
      interactive: false,
      clickable:   false,
@@ -4088,24 +4106,6 @@
      iconAnchor:[-10,11],
      className: '',
      html:"<div class = 'city-label city-label-0'>Phaistos</div>"
-     }),
-     interactive: false,
-     clickable:   false,
-     });
-     collisionLayer.addLayer(label);     var label = L.marker([36.396160, 25.458431],{
-     icon: L.divIcon({
-     iconAnchor:[-10,11],
-     className: '',
-     html:"<div class = 'city-label city-label-0'>Santorini</div>"
-     }),
-     interactive: false,
-     clickable:   false,
-     });
-     collisionLayer.addLayer(label);     var label = L.marker([37.992666, 23.723965],{
-     icon: L.divIcon({
-     iconAnchor:[-10,11],
-     className: '',
-     html:"<div class = 'city-label city-label-0'>Athens</div>"
      }),
      interactive: false,
      clickable:   false,
