@@ -69,6 +69,14 @@
     ctx.lineTo(27, 188);
     
     // Draw the Path
+    ctx.stroke();    // Start a new Path
+    ctx.beginPath();
+    ctx.moveTo(27, 760);
+    ctx.lineTo(20, 760);
+    ctx.lineTo(20, 836);
+    ctx.lineTo(27, 836);
+    
+    // Draw the Path
     ctx.stroke();    }
     }
     draw();</script>
@@ -159,16 +167,16 @@
                         <p class="listItem" onclick="    stopItemClicked(&quot;Batalha&quot;,39.658365, -8.823425)">Batalha</p>
                       </div>
                       <div>
-                        <p class="listItem" onclick="    stopItemClicked(&quot;Nazare&quot;,39.602985, -9.066911)">Nazare</p>
+                        <p class="listItem" onclick="    stopItemClicked(&quot;Nazare&quot;,39.602985, -9.066911)">   Nazare</p>
                       </div>
                       <div>
-                        <p class="listItem" onclick="    stopItemClicked(&quot;Alcobaça&quot;,39.549074, -8.972657)">Alcobaça</p>
+                        <p class="listItem" onclick="    stopItemClicked(&quot;Alcobaça&quot;,39.549074, -8.972657)">   Alcobaça</p>
                       </div>
                       <div>
-                        <p class="listItem" onclick="    stopItemClicked(&quot;Cruz da Légua&quot;,39.597253, -8.875153)">Cruz da Légua</p>
+                        <p class="listItem" onclick="    stopItemClicked(&quot;Cruz da Légua&quot;,39.597253, -8.875153)">   Cruz da Légua</p>
                       </div>
                       <div>
-                        <p class="listItem" onclick="    stopItemClicked(&quot;Batalha&quot;,39.658365, -8.823425)">Batalha</p>
+                        <p class="listItem" onclick="    stopItemClicked(&quot;Fátima&quot;,39.637918, -8.674068)">Fátima</p>
                       </div>
                       <div>
                         <p class="listItem" onclick="    stopItemClicked(&quot;Mira de Aire&quot;,39.540269, -8.710358)">Mira de Aire</p>
@@ -663,7 +671,17 @@
     ).addTo(map);    var curve = L.curve(
     [
      'M', [39.658365,-8.823425], 
-     'Q', [39.6332371,-8.7314627],
+     'Q', [39.6929486,-8.742612399999999],
+     [39.637918,-8.674068]
+    ],
+    {
+     color: '#F032E6',
+     weight: 2.0
+    }
+    ).addTo(map);    var curve = L.curve(
+    [
+     'M', [39.637918,-8.674068], 
+     'Q', [39.5782065,-8.662918300000001],
      [39.540269,-8.710358]
     ],
     {
@@ -1328,7 +1346,7 @@
                opacity: 1,
                fillOpacity: 1,
            });
-     marker.addTo(map);    var marker = new L.CircleMarker([39.658365, -8.823425], {
+     marker.addTo(map);    var marker = new L.CircleMarker([39.637918, -8.674068], {
                radius: 5,
                fillColor: "#CEFA05",
                color: "#000",
@@ -1943,6 +1961,15 @@
      iconAnchor:[-10,11],
      className: '',
      html:"<div class = 'city-label city-label-0'>Cruz da Légua</div>"
+     }),
+     interactive: false,
+     clickable:   false,
+     });
+     collisionLayer.addLayer(label);     var label = L.marker([39.637918, -8.674068],{
+     icon: L.divIcon({
+     iconAnchor:[-10,11],
+     className: '',
+     html:"<div class = 'city-label city-label-0'>Fátima</div>"
      }),
      interactive: false,
      clickable:   false,

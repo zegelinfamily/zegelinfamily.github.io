@@ -55,7 +55,7 @@
                 <li>
                   <div class="m-0" style="display: grid">
                     <div class="mb-0" style="position: relative; grid-area: 1/1; z-index: 0; align-self: center; justify-self: center">
-                      <canvas id="excursions" width="250" height="3429"></canvas>
+                      <canvas id="excursions" width="250" height="3483"></canvas>
                       <script>        function draw() {
         const canvas = document.getElementById("excursions");
         if (canvas.getContext) {
@@ -558,6 +558,12 @@
                       </div>
                       <div>
                         <p class="listItem" onclick="    stopItemClicked(&quot;Legian Beach&quot;,-8.690428, 115.165539)">Legian Beach</p>
+                      </div>
+                      <div>
+                        <p class="listItem" onclick="    stopItemClicked(&quot;Sydney&quot;,-33.939914, 151.175287)">Sydney</p>
+                      </div>
+                      <div>
+                        <p class="listItem" onclick="    stopItemClicked(&quot;Canberra&quot;,-35.355434, 149.06605)">Canberra</p>
                       </div>
                     </div>
                   </div></li>
@@ -3040,6 +3046,22 @@
      marker.addTo(map);    var marker = new L.CircleMarker([-8.690428, 115.165539], {
                radius: 8,
                fillColor: "#FF4D00",
+               color: "#000",
+               weight: 1.7,
+               opacity: 1,
+               fillOpacity: 1,
+           });
+     marker.addTo(map);    var marker = new L.CircleMarker([-33.939914, 151.175287], {
+               radius: 4,
+               fillColor: "#000000",
+               color: "#000",
+               weight: 1.7,
+               opacity: 1,
+               fillOpacity: 1,
+           });
+     marker.addTo(map);    var marker = new L.CircleMarker([-35.355434, 149.066050], {
+               radius: 4,
+               fillColor: "#000000",
                color: "#000",
                weight: 1.7,
                opacity: 1,

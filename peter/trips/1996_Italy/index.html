@@ -55,7 +55,7 @@
                 <li>
                   <div class="m-0" style="display: grid">
                     <div class="mb-0" style="position: relative; grid-area: 1/1; z-index: 0; align-self: center; justify-self: center">
-                      <canvas id="excursions" width="250" height="675"></canvas>
+                      <canvas id="excursions" width="250" height="702"></canvas>
                       <script>        function draw() {
         const canvas = document.getElementById("excursions");
         if (canvas.getContext) {
@@ -131,6 +131,9 @@
                       </div>
                       <div>
                         <p class="listItem" onclick="    stopItemClicked(&quot;Pisa&quot;,43.722857, 10.396036)">Pisa</p>
+                      </div>
+                      <div>
+                        <p class="listItem" onclick="    stopItemClicked(&quot;Paris&quot;,48.848366, 2.350157)">Paris</p>
                       </div>
                       <div>
                         <p class="listItem" onclick="    stopItemClicked(&quot;Singapore&quot;,1.354541, 103.854563)">Singapore</p>
@@ -582,6 +585,14 @@
      marker.addTo(map);    var marker = new L.CircleMarker([43.722857, 10.396036], {
                radius: 5,
                fillColor: "#CEFA05",
+               color: "#000",
+               weight: 1.7,
+               opacity: 1,
+               fillOpacity: 1,
+           });
+     marker.addTo(map);    var marker = new L.CircleMarker([48.848366, 2.350157], {
+               radius: 4,
+               fillColor: "#000000",
                color: "#000",
                weight: 1.7,
                opacity: 1,
