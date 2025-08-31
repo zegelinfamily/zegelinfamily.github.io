@@ -17,6 +17,7 @@
     <meta name="twitter:domain" content="zegelin.com" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:dnt" content="on" />
+    <link href="/css/peter.css" rel="stylesheet" />
     <link href="/map/css/leaflet.css" rel="stylesheet" />
     <script src="/map/leaflet/leaflet.js"></script>
     <script src="/map/leaflet/leaflet.curve.js"></script>
@@ -24,17 +25,16 @@
     <script src="/map/zoombar/L.Control.ZoomBar.js"></script>
     <link href="/map/navbar/Leaflet.NavBar.css" rel="stylesheet" />
     <script src="/map/navbar/Leaflet.NavBar.js"></script>
-    <link href="/map/css/legend.css" rel="stylesheet" />
-    <link href="/map/css/trip.css" rel="stylesheet" />
+    <link href="/map/css/zegelinroad.css" rel="stylesheet" />
   </head>
   <body class="container">
-    <div class="ig-main-content">
-      <div style="padding-top: 20px">
-        <h3 class="text-start">Zegelin Road</h3>
-        <p class="text-end" style="margin-top: -42px"><a href="/" style="text-decoration: none; color: #aaa; font-size: 1.0em">home</a></p>
-      </div>
-      <p style="margin-top: 40px">The Zegelin family was one of the larger pioneering families in the Rochester area of Northern Victoria and the family eventually had a road named after them. There are currently two Zegelin roads, one at Fairy Dell near Rochester which is 6 km long and the other leading to the Waranga Basin Reservoir that is nearly 9 km long. <br /> <br /> <em>It’s possible that the road was once continuous, which would have made it over 50km long, however I have no evidence of that. If anyone has some info that they would like to share, then you can email me - thanks! Peter</em></p>
-      <div class="flex-container">
+    <div>
+      <div class="ig-main-content">
+        <div style="padding-top: 20px">
+          <h3 class="text-start">Zegelin Road</h3>
+          <p class="text-end" style="margin-top: -42px"><a href="/" style="text-decoration: none; color: #aaa; font-size: 1.0em">home</a></p>
+        </div>
+        <p style="margin-top: 40px">The Zegelin family was one of the larger pioneering families in the Rochester area of Northern Victoria and the family eventually had a road named after them. There are currently two Zegelin roads, one at Fairy Dell near Rochester which is 6 km long and the other leading to the Waranga Basin Reservoir that is nearly 9 km long. <br /> <br /> <em>It’s possible that the road was once continuous, which would have made it over 50km long, however I have no evidence of that. If anyone has some info that they would like to share, then you can email me - thanks! Peter</em></p>
         <div id="map">
           <script>    const map = L.map('map',{
         zoomDelta: 0.25,    // Controls zoom increment (default is 1)
@@ -50,7 +50,52 @@
     
     // Fit the map to the bounds with optional padding
     map.fitBounds([[-36.303484, 144.656346],[-36.566715, 145.225575]],{
-    });</script>
+    });    var curve = L.curve(
+    [
+     'M', [-36.343455,144.711514],
+     'Q', [-36.343472,144.727264],
+     [-36.343489,144.743014]
+    ],
+    {
+     color: 'blue',
+     weight: 6.0,
+     opacity: 0.4
+    }
+    ).addTo(map);    var curve = L.curve(
+    [
+     'M', [-36.343489,144.743014],
+     'Q', [-36.342746,144.743014],
+     [-36.342003,144.743014]
+    ],
+    {
+     color: 'blue',
+     weight: 6.0,
+     opacity: 0.4
+    }
+    ).addTo(map);    var curve = L.curve(
+    [
+     'M', [-36.342003,144.743014],
+     'Q', [-36.342003,144.7602445],
+     [-36.342003,144.777475]
+    ],
+    {
+     color: 'blue',
+     weight: 6.0,
+     opacity: 0.4
+    }
+    ).addTo(map);    var curve = L.curve(
+    [
+     'M', [-36.513651,144.98629],
+     'Q', [-36.513652500000006,145.0343005],
+     [-36.513654,145.082311]
+    ],
+    {
+     color: 'blue',
+     weight: 6.0,
+     opacity: 0.4
+    }
+    ).addTo(map);    var zoom_bar = new L.Control.ZoomBar({position: 'topleft'}).addTo(map);
+    L.control.navbar().addTo(map);</script>
         </div>
       </div>
     </div>

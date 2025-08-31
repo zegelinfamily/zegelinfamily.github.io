@@ -6,8 +6,7 @@ html, body{
 
 .sidebar{
     width: 180px;
-  
-      top: 0;
+    top: 0;
     a{
         color: #aaa;
     }
@@ -16,7 +15,6 @@ html, body{
 .sidebar-list{
     text-align: end;
     padding: 0px;
-    
 }
 
 li{
@@ -31,3 +29,5 @@ a{
 em{
     font-size: 0.9em;
 }
+
+

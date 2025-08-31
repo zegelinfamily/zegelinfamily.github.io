@@ -1,0 +1,26 @@
+
+/* Container for map and sidebar */
+
+
+/* Container for whole page */
+
+html, body{
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    
+    font-family: 'Helvetica Neue', arial, sans-serif;
+    font-weight: 300;
+}
+
+
+.top-content{
+    flex: 0 1 auto;
+}
+
+/* map fills whole div */
+#map {
+    flex-grow: 1;
+    display: flex;
+    height: calc(100vh - 250px);
+}
