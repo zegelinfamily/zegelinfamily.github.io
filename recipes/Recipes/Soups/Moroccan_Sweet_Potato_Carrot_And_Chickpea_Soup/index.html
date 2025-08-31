@@ -1,149 +1,92 @@
 <!doctype html>
-<html data-bs-theme="auto" lang="en">
+<html lang="en" data-bs-theme="dark">
   <head>
     <meta charset="utf-8" />
-    <meta content="width=device-width, initial-scale=1" name="viewport" />
-    <meta content="notes: Serves: 4 Preparation: 20 minutes Cooking: 45 minutes" name="description" />
-    <meta content="Peter Zegelin" name="author" />
-    <meta content="Ignite v0.2.1" name="generator" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="notes: Serves: 4 Preparation: 20 minutes Cooking: 45 minutes" />
+    <meta name="author" content="Peter Zegelin" />
+    <meta name="generator" content="Ignite v0.7.0" />
     <title>Moroccan Sweet Potato, Carrot and Chickpea Soup</title>
-    <link href="/recipes/css/bootstrap.min.css" rel="stylesheet" />
-    <link href="/recipes/css/bootstrap-icons.min.css" rel="stylesheet" />
-    <link href="/recipes/css/themes.min.css" rel="stylesheet" />
-    <link href="https://www.zegelin.com/recipes//Recipes/Soups/Moroccan_Sweet_Potato_Carrot_And_Chickpea_Soup" rel="canonical" />
-    <script>/*
- Automatic Theme Switching Implementation
- Used in HTMLHead.swift.
- For user-driven theme switching implementation, see ignite-core.js.
- */
-
-(function() {
-    function getThemePreference() {
-        return localStorage.getItem('custom-theme') || 'auto';
-    }
-
-    function applyTheme(themeID) {
-        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-        const lightThemeID = document.documentElement.getAttribute('data-light-theme') || 'light';
-        const darkThemeID = document.documentElement.getAttribute('data-dark-theme') || 'dark';
-        const actualThemeID = themeID === 'auto' ? (prefersDark ? darkThemeID : lightThemeID) : themeID;
-
-        document.documentElement.setAttribute('data-bs-theme', actualThemeID);
-        document.documentElement.setAttribute('data-theme-state', themeID);
-    }
-
-    function applySyntaxTheme() {
-        const syntaxTheme = getComputedStyle(document.documentElement)
-            .getPropertyValue('--syntax-highlight-theme').trim().replace(/"/g, '');
-
-        if (!syntaxTheme) return;
-
-        document.querySelectorAll('link[data-highlight-theme]').forEach(link => {
-            link.setAttribute('disabled', 'disabled');
-        });
-
-        const themeLink = document.querySelector(`link[data-highlight-theme="${syntaxTheme}"]`);
-        if (themeLink) {
-            themeLink.removeAttribute('disabled');
-        }
-    }
-
-    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
-        const currentTheme = getThemePreference();
-        if (currentTheme === 'auto') {
-            applyTheme('auto');
-            applySyntaxTheme();
-        }
-    });
-
-    const savedTheme = getThemePreference();
-    applyTheme(savedTheme);
-    applySyntaxTheme();
-})();
-</script>
-    <meta content="Our Recipes" property="og:site_name" />
-    <meta content="/images/Moroccan%20Sweet%20Potato%20Carrot%20And%20Chickpea%20Soup.jpg" property="og:image" />
-    <meta content="/images/Moroccan%20Sweet%20Potato%20Carrot%20And%20Chickpea%20Soup.jpg" name="twitter:image" />
-    <meta content="Moroccan Sweet Potato, Carrot and Chickpea Soup" property="og:title" />
-    <meta content="Moroccan Sweet Potato, Carrot and Chickpea Soup" name="twitter:title" />
-    <meta content="notes: Serves: 4 Preparation: 20 minutes Cooking: 45 minutes" property="og:description" />
-    <meta content="notes: Serves: 4 Preparation: 20 minutes Cooking: 45 minutes" name="twitter:description" />
-    <meta content="https://www.zegelin.com/recipes//Recipes/Soups/Moroccan_Sweet_Potato_Carrot_And_Chickpea_Soup" property="og:url" />
-    <meta content="zegelin.com" name="twitter:domain" />
-    <meta content="summary_large_image" name="twitter:card" />
-    <meta content="on" name="twitter:dnt" />
+    <link href="/peter/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="/peter/css/bootstrap-icons.min.css" rel="stylesheet" />
+    <link href="/peter/css/ignite-core.css" rel="stylesheet" />
+    <link href="https://www.zegelin.com/peter/Recipes/Soups/Moroccan_Sweet_Potato_Carrot_And_Chickpea_Soup" rel="canonical" />
+    <meta property="og:site_name" content="Our Recipes" />
+    <meta property="og:image" content="/images/Moroccan%20Sweet%20Potato%20Carrot%20And%20Chickpea%20Soup.jpg" />
+    <meta name="twitter:image" content="/images/Moroccan%20Sweet%20Potato%20Carrot%20And%20Chickpea%20Soup.jpg" />
+    <meta property="og:title" content="Moroccan Sweet Potato, Carrot and Chickpea Soup" />
+    <meta name="twitter:title" content="Moroccan Sweet Potato, Carrot and Chickpea Soup" />
+    <meta property="og:description" content="notes: Serves: 4 Preparation: 20 minutes Cooking: 45 minutes" />
+    <meta name="twitter:description" content="notes: Serves: 4 Preparation: 20 minutes Cooking: 45 minutes" />
+    <meta property="og:url" content="https://www.zegelin.com/peter/Recipes/Soups/Moroccan_Sweet_Potato_Carrot_And_Chickpea_Soup" />
+    <meta name="twitter:domain" content="zegelin.com" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:dnt" content="on" />
   </head>
   <body class="container">
-    <div>
+    <div class="ig-main-content">
       <div style="padding-top: 20px">
         <h2 class="text-start">Moroccan Sweet Potato, Carrot and Chickpea Soup</h2>
-        <p class="text-end" style="margin-top: -42px"><a href="/recipes/" class="link-underline link-underline-opacity-100 link-underline-opacity-100-hover" style="color: #aaa; font-size: 1.5em; text-decoration: none">home</a></p>
+        <p class="text-end" style="margin-top: -42px"><a href="/" style="text-decoration: none; color: #aaa; font-size: 1.5em">home</a></p>
       </div>
-      <div class="row">
-        <div class=" col-md-5">
+      <div class="row justify-content-start row-cols-1 row-cols-md-2" style="padding-top: 20px; row-gap: 30px">
+        <div class="col align-self-start">
           <p> Serves: 4<br /> Preparation: 20 minutes<br /> Cooking: 45 minutes</p>
           <p>Can be frozen for later use</p>
           <p></p>
         </div>
-        <div class=" col-md-1">
-          <div class="justify-content-center align-items-center" style="height: 20px"></div>
+        <div class="col align-self-start">
+          <img src="/images/Moroccan%20Sweet%20Potato%20Carrot%20And%20Chickpea%20Soup.jpg" alt="" style="border-radius: 20px; max-height: 300px" />
         </div>
-        <div class=" col-md-6">
-          <img alt="" src="/recipes/images/Moroccan Sweet Potato Carrot And Chickpea Soup.jpg" class="justify-content-center align-items-center" style="border-radius: 20px; height: 300px" />
+        <div class="col align-self-start">
+          <h3>Ingredients:</h3>
+          <p></p>
+          <ul>
+            <li>2 tablespoons olive oil</li>
+            <li>1 large brown onion, roughly chopped</li>
+            <li>2 garlic cloves, crushed</li>
+            <li>1 teaspoon ground coriander</li>
+            <li>2 teaspoons ground cumin</li>
+            <li>¼ teaspoon chilli powder</li>
+            <li>600g orange sweet potato, peeled, diced</li>
+            <li>500g carrots, peeled, sliced</li>
+            <li>4 cups chicken stock</li>
+            <li>300g can chickpeas, drained, rinsed</li>
+            <li>½ small lemon, juiced</li>
+            <li>Turkish bread croutons, to serve</li>
+          </ul>
+          <p></p>
         </div>
-        <div class=" col" style="padding-top: 20px">
-          <div style="padding-top: 20px">
-            <h3>Ingredients:</h3>
-            <p></p>
-            <ul>
-              <li>2 tablespoons olive oil</li>
-              <li>1 large brown onion, roughly chopped</li>
-              <li>2 garlic cloves, crushed</li>
-              <li>1 teaspoon ground coriander</li>
-              <li>2 teaspoons ground cumin</li>
-              <li>¼ teaspoon chilli powder</li>
-              <li>600g orange sweet potato, peeled, diced</li>
-              <li>500g carrots, peeled, sliced</li>
-              <li>4 cups chicken stock</li>
-              <li>300g can chickpeas, drained, rinsed</li>
-              <li>½ small lemon, juiced</li>
-              <li>Turkish bread croutons, to serve</li>
-            </ul>
-            <p></p>
-          </div>
-        </div>
-        <div class=" col" style="padding-top: 20px">
-          <div style="padding-top: 20px">
-            <h3>Preparation:</h3>
-            <p></p>
-            <ol>
-              <li>Heat oil in a large saucepan over medium-high heat</li>
-              <li>Add onion and garlic and cook, stirring often, for 3 minutes</li>
-              <li>Stir in coriander, cumin and chilli powder and cook, stirring, for 1 minute</li>
-              <li>Add sweet potato and carrot and cook, stirring often, for 5 minutes</li>
-              <li>Add stock, cover and bring to the boil</li>
-              <li>Reduce heat to medium-low and simmer, stirring occasionally, for 20 minutes</li>
-              <li>Add chickpeas to soup, cover and simmer for 10 minutes or until chickpeas are tender</li>
-              <li>Blend soup, in batches, until smooth</li>
-              <li>Return to saucepan over medium-low heat</li>
-              <li>Season with salt and pepper</li>
-              <li>Stir in 1 tablespoon lemon juice</li>
-              <li>Heat, stirring, until hot (do not boil)</li>
-              <li>Ladle into bowls</li>
-              <li>Serve topped with Turkish bread croutons and sprinkled with pepper</li>
-              <li><strong>TURKISH BREAD CROUTONS</strong>
-                <ol>
-                  <li>Cut Turkish bread loaf in half lengthways and chop into 2cm cubes</li>
-                  <li>Spray lightly all over with olive oil cooking spray</li>
-                  <li>Place on a tray and bake in a 200°C oven for 10 minutes or until golden</li>
-                </ol></li>
-            </ol>
-            <p></p>
-          </div>
+        <div class="col align-self-start">
+          <h3>Preparation:</h3>
+          <p></p>
+          <ol>
+            <li>Heat oil in a large saucepan over medium-high heat</li>
+            <li>Add onion and garlic and cook, stirring often, for 3 minutes</li>
+            <li>Stir in coriander, cumin and chilli powder and cook, stirring, for 1 minute</li>
+            <li>Add sweet potato and carrot and cook, stirring often, for 5 minutes</li>
+            <li>Add stock, cover and bring to the boil</li>
+            <li>Reduce heat to medium-low and simmer, stirring occasionally, for 20 minutes</li>
+            <li>Add chickpeas to soup, cover and simmer for 10 minutes or until chickpeas are tender</li>
+            <li>Blend soup, in batches, until smooth</li>
+            <li>Return to saucepan over medium-low heat</li>
+            <li>Season with salt and pepper</li>
+            <li>Stir in 1 tablespoon lemon juice</li>
+            <li>Heat, stirring, until hot (do not boil)</li>
+            <li>Ladle into bowls</li>
+            <li>Serve topped with Turkish bread croutons and sprinkled with pepper</li>
+            <li><strong>TURKISH BREAD CROUTONS</strong>
+              <ol>
+                <li>Cut Turkish bread loaf in half lengthways and chop into 2cm cubes</li>
+                <li>Spray lightly all over with olive oil cooking spray</li>
+                <li>Place on a tray and bake in a 200°C oven for 10 minutes or until golden</li>
+              </ol></li>
+          </ol>
+          <p></p>
         </div>
       </div>
     </div>
-    <script src="/recipes/js/bootstrap.bundle.min.js"></script>
-    <script src="/recipes/js/ignite-core.js"></script>
+    <script src="/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/ignite-core.js"></script>
   </body>
 </html>

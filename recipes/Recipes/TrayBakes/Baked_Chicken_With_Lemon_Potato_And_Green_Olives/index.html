@@ -1,135 +1,78 @@
 <!doctype html>
-<html data-bs-theme="auto" lang="en">
+<html lang="en" data-bs-theme="dark">
   <head>
     <meta charset="utf-8" />
-    <meta content="width=device-width, initial-scale=1" name="viewport" />
-    <meta content="notes: Serves: 2 Source: Bill Granger" name="description" />
-    <meta content="Peter Zegelin" name="author" />
-    <meta content="Ignite v0.2.1" name="generator" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="notes: Serves: 2 Source: Bill Granger" />
+    <meta name="author" content="Peter Zegelin" />
+    <meta name="generator" content="Ignite v0.7.0" />
     <title>Baked Chicken with Lemon, Potato and Green Olives</title>
-    <link href="/recipes/css/bootstrap.min.css" rel="stylesheet" />
-    <link href="/recipes/css/bootstrap-icons.min.css" rel="stylesheet" />
-    <link href="/recipes/css/themes.min.css" rel="stylesheet" />
-    <link href="https://www.zegelin.com/recipes//Recipes/TrayBakes/Baked_Chicken_With_Lemon_Potato_And_Green_Olives" rel="canonical" />
-    <script>/*
- Automatic Theme Switching Implementation
- Used in HTMLHead.swift.
- For user-driven theme switching implementation, see ignite-core.js.
- */
-
-(function() {
-    function getThemePreference() {
-        return localStorage.getItem('custom-theme') || 'auto';
-    }
-
-    function applyTheme(themeID) {
-        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-        const lightThemeID = document.documentElement.getAttribute('data-light-theme') || 'light';
-        const darkThemeID = document.documentElement.getAttribute('data-dark-theme') || 'dark';
-        const actualThemeID = themeID === 'auto' ? (prefersDark ? darkThemeID : lightThemeID) : themeID;
-
-        document.documentElement.setAttribute('data-bs-theme', actualThemeID);
-        document.documentElement.setAttribute('data-theme-state', themeID);
-    }
-
-    function applySyntaxTheme() {
-        const syntaxTheme = getComputedStyle(document.documentElement)
-            .getPropertyValue('--syntax-highlight-theme').trim().replace(/"/g, '');
-
-        if (!syntaxTheme) return;
-
-        document.querySelectorAll('link[data-highlight-theme]').forEach(link => {
-            link.setAttribute('disabled', 'disabled');
-        });
-
-        const themeLink = document.querySelector(`link[data-highlight-theme="${syntaxTheme}"]`);
-        if (themeLink) {
-            themeLink.removeAttribute('disabled');
-        }
-    }
-
-    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
-        const currentTheme = getThemePreference();
-        if (currentTheme === 'auto') {
-            applyTheme('auto');
-            applySyntaxTheme();
-        }
-    });
-
-    const savedTheme = getThemePreference();
-    applyTheme(savedTheme);
-    applySyntaxTheme();
-})();
-</script>
-    <meta content="Our Recipes" property="og:site_name" />
-    <meta content="/images/Baked%20Chicken%20With%20Lemon%20Potato%20And%20Green%20Olives.png" property="og:image" />
-    <meta content="/images/Baked%20Chicken%20With%20Lemon%20Potato%20And%20Green%20Olives.png" name="twitter:image" />
-    <meta content="Baked Chicken with Lemon, Potato and Green Olives" property="og:title" />
-    <meta content="Baked Chicken with Lemon, Potato and Green Olives" name="twitter:title" />
-    <meta content="notes: Serves: 2 Source: Bill Granger" property="og:description" />
-    <meta content="notes: Serves: 2 Source: Bill Granger" name="twitter:description" />
-    <meta content="https://www.zegelin.com/recipes//Recipes/TrayBakes/Baked_Chicken_With_Lemon_Potato_And_Green_Olives" property="og:url" />
-    <meta content="zegelin.com" name="twitter:domain" />
-    <meta content="summary_large_image" name="twitter:card" />
-    <meta content="on" name="twitter:dnt" />
+    <link href="/peter/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="/peter/css/bootstrap-icons.min.css" rel="stylesheet" />
+    <link href="/peter/css/ignite-core.css" rel="stylesheet" />
+    <link href="https://www.zegelin.com/peter/Recipes/TrayBakes/Baked_Chicken_With_Lemon_Potato_And_Green_Olives" rel="canonical" />
+    <meta property="og:site_name" content="Our Recipes" />
+    <meta property="og:image" content="/images/Baked%20Chicken%20With%20Lemon%20Potato%20And%20Green%20Olives.png" />
+    <meta name="twitter:image" content="/images/Baked%20Chicken%20With%20Lemon%20Potato%20And%20Green%20Olives.png" />
+    <meta property="og:title" content="Baked Chicken with Lemon, Potato and Green Olives" />
+    <meta name="twitter:title" content="Baked Chicken with Lemon, Potato and Green Olives" />
+    <meta property="og:description" content="notes: Serves: 2 Source: Bill Granger" />
+    <meta name="twitter:description" content="notes: Serves: 2 Source: Bill Granger" />
+    <meta property="og:url" content="https://www.zegelin.com/peter/Recipes/TrayBakes/Baked_Chicken_With_Lemon_Potato_And_Green_Olives" />
+    <meta name="twitter:domain" content="zegelin.com" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:dnt" content="on" />
   </head>
   <body class="container">
-    <div>
+    <div class="ig-main-content">
       <div style="padding-top: 20px">
         <h2 class="text-start">Baked Chicken with Lemon, Potato and Green Olives</h2>
-        <p class="text-end" style="margin-top: -42px"><a href="/recipes/" class="link-underline link-underline-opacity-100 link-underline-opacity-100-hover" style="color: #aaa; font-size: 1.5em; text-decoration: none">home</a></p>
+        <p class="text-end" style="margin-top: -42px"><a href="/" style="text-decoration: none; color: #aaa; font-size: 1.5em">home</a></p>
       </div>
-      <div class="row">
-        <div class=" col-md-5">
+      <div class="row justify-content-start row-cols-1 row-cols-md-2" style="padding-top: 20px; row-gap: 30px">
+        <div class="col align-self-start">
           <p> Serves: 2<br /> Source: Bill Granger</p>
           <p></p>
         </div>
-        <div class=" col-md-1">
-          <div class="justify-content-center align-items-center" style="height: 20px"></div>
+        <div class="col align-self-start">
+          <img src="/images/Baked%20Chicken%20With%20Lemon%20Potato%20And%20Green%20Olives.png" alt="" style="border-radius: 20px; max-height: 300px" />
         </div>
-        <div class=" col-md-6">
-          <img alt="" src="/recipes/images/Baked Chicken With Lemon Potato And Green Olives.png" class="justify-content-center align-items-center" style="border-radius: 20px; height: 300px" />
+        <div class="col align-self-start">
+          <h3>Ingredients:</h3>
+          <p></p>
+          <ul>
+            <li>2 large potatoes, cut into large pieces</li>
+            <li>1 red onion, cut into segments</li>
+            <li>¾ cup green olives</li>
+            <li>1 lemon, sliced</li>
+            <li>50g pancetta, cut into strips</li>
+            <li>1 cup chicken stock</li>
+            <li>2 medium chicken breasts, cut into large pieces</li>
+            <li>1 tablespoon olive oil</li>
+            <li>freshly ground black pepper</li>
+            <li>cornflour</li>
+            <li>flat-leaf parsley, to garnish</li>
+          </ul>
+          <p></p>
         </div>
-        <div class=" col" style="padding-top: 20px">
-          <div style="padding-top: 20px">
-            <h3>Ingredients:</h3>
-            <p></p>
-            <ul>
-              <li>2 large potatoes, cut into large pieces</li>
-              <li>1 red onion, cut into segments</li>
-              <li>¾ cup green olives</li>
-              <li>1 lemon, sliced</li>
-              <li>50g pancetta, cut into strips</li>
-              <li>1 cup chicken stock</li>
-              <li>2 medium chicken breasts, cut into large pieces</li>
-              <li>1 tablespoon olive oil</li>
-              <li>freshly ground black pepper</li>
-              <li>cornflour</li>
-              <li>flat-leaf parsley, to garnish</li>
-            </ul>
-            <p></p>
-          </div>
-        </div>
-        <div class=" col" style="padding-top: 20px">
-          <div style="padding-top: 20px">
-            <h3>Preparation:</h3>
-            <p></p>
-            <ol>
-              <li>Preheat the oven to 180°C</li>
-              <li>Half cook the potatoes in the microwave</li>
-              <li>Place the potatoes, onion, olives and lemon in a baking dish and pour over the stock</li>
-              <li>Place the chicken pieces on top, cover with pancetta strips, drizzle with olive oil and season with ground black pepper</li>
-              <li>Roast for 45 minutes or until the chicken is cooked through</li>
-              <li>Turn on the griller for a few minutes to brown the potatoes and onion. If the chicken looks like it is ready it can be removed first</li>
-              <li>Before serving, thicken the sauce with a little cornflour mixed with water</li>
-              <li>Serve garnished with parsley</li>
-            </ol>
-            <p></p>
-          </div>
+        <div class="col align-self-start">
+          <h3>Preparation:</h3>
+          <p></p>
+          <ol>
+            <li>Preheat the oven to 180°C</li>
+            <li>Half cook the potatoes in the microwave</li>
+            <li>Place the potatoes, onion, olives and lemon in a baking dish and pour over the stock</li>
+            <li>Place the chicken pieces on top, cover with pancetta strips, drizzle with olive oil and season with ground black pepper</li>
+            <li>Roast for 45 minutes or until the chicken is cooked through</li>
+            <li>Turn on the griller for a few minutes to brown the potatoes and onion. If the chicken looks like it is ready it can be removed first</li>
+            <li>Before serving, thicken the sauce with a little cornflour mixed with water</li>
+            <li>Serve garnished with parsley</li>
+          </ol>
+          <p></p>
         </div>
       </div>
     </div>
-    <script src="/recipes/js/bootstrap.bundle.min.js"></script>
-    <script src="/recipes/js/ignite-core.js"></script>
+    <script src="/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/ignite-core.js"></script>
   </body>
 </html>

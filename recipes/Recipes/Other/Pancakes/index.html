@@ -1,126 +1,69 @@
 <!doctype html>
-<html data-bs-theme="auto" lang="en">
+<html lang="en" data-bs-theme="dark">
   <head>
     <meta charset="utf-8" />
-    <meta content="width=device-width, initial-scale=1" name="viewport" />
-    <meta content="notes: Source: Dad Schepers Leave mixture to stand for 10 minutes before cooking" name="description" />
-    <meta content="Peter Zegelin" name="author" />
-    <meta content="Ignite v0.2.1" name="generator" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="notes: Leave mixture to stand for 10 minutes before cooking Source: Dad Schepers" />
+    <meta name="author" content="Peter Zegelin" />
+    <meta name="generator" content="Ignite v0.7.0" />
     <title>Pancakes</title>
-    <link href="/recipes/css/bootstrap.min.css" rel="stylesheet" />
-    <link href="/recipes/css/bootstrap-icons.min.css" rel="stylesheet" />
-    <link href="/recipes/css/themes.min.css" rel="stylesheet" />
-    <link href="https://www.zegelin.com/recipes//Recipes/Other/Pancakes" rel="canonical" />
-    <script>/*
- Automatic Theme Switching Implementation
- Used in HTMLHead.swift.
- For user-driven theme switching implementation, see ignite-core.js.
- */
-
-(function() {
-    function getThemePreference() {
-        return localStorage.getItem('custom-theme') || 'auto';
-    }
-
-    function applyTheme(themeID) {
-        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-        const lightThemeID = document.documentElement.getAttribute('data-light-theme') || 'light';
-        const darkThemeID = document.documentElement.getAttribute('data-dark-theme') || 'dark';
-        const actualThemeID = themeID === 'auto' ? (prefersDark ? darkThemeID : lightThemeID) : themeID;
-
-        document.documentElement.setAttribute('data-bs-theme', actualThemeID);
-        document.documentElement.setAttribute('data-theme-state', themeID);
-    }
-
-    function applySyntaxTheme() {
-        const syntaxTheme = getComputedStyle(document.documentElement)
-            .getPropertyValue('--syntax-highlight-theme').trim().replace(/"/g, '');
-
-        if (!syntaxTheme) return;
-
-        document.querySelectorAll('link[data-highlight-theme]').forEach(link => {
-            link.setAttribute('disabled', 'disabled');
-        });
-
-        const themeLink = document.querySelector(`link[data-highlight-theme="${syntaxTheme}"]`);
-        if (themeLink) {
-            themeLink.removeAttribute('disabled');
-        }
-    }
-
-    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
-        const currentTheme = getThemePreference();
-        if (currentTheme === 'auto') {
-            applyTheme('auto');
-            applySyntaxTheme();
-        }
-    });
-
-    const savedTheme = getThemePreference();
-    applyTheme(savedTheme);
-    applySyntaxTheme();
-})();
-</script>
-    <meta content="Our Recipes" property="og:site_name" />
-    <meta content="/images/Pancakes.jpg" property="og:image" />
-    <meta content="/images/Pancakes.jpg" name="twitter:image" />
-    <meta content="Pancakes" property="og:title" />
-    <meta content="Pancakes" name="twitter:title" />
-    <meta content="notes: Source: Dad Schepers Leave mixture to stand for 10 minutes before cooking" property="og:description" />
-    <meta content="notes: Source: Dad Schepers Leave mixture to stand for 10 minutes before cooking" name="twitter:description" />
-    <meta content="https://www.zegelin.com/recipes//Recipes/Other/Pancakes" property="og:url" />
-    <meta content="zegelin.com" name="twitter:domain" />
-    <meta content="summary_large_image" name="twitter:card" />
-    <meta content="on" name="twitter:dnt" />
+    <link href="/peter/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="/peter/css/bootstrap-icons.min.css" rel="stylesheet" />
+    <link href="/peter/css/ignite-core.css" rel="stylesheet" />
+    <link href="https://www.zegelin.com/peter/Recipes/Other/Pancakes" rel="canonical" />
+    <meta property="og:site_name" content="Our Recipes" />
+    <meta property="og:image" content="/images/Pancakes.jpg" />
+    <meta name="twitter:image" content="/images/Pancakes.jpg" />
+    <meta property="og:title" content="Pancakes" />
+    <meta name="twitter:title" content="Pancakes" />
+    <meta property="og:description" content="notes: Leave mixture to stand for 10 minutes before cooking Source: Dad Schepers" />
+    <meta name="twitter:description" content="notes: Leave mixture to stand for 10 minutes before cooking Source: Dad Schepers" />
+    <meta property="og:url" content="https://www.zegelin.com/peter/Recipes/Other/Pancakes" />
+    <meta name="twitter:domain" content="zegelin.com" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:dnt" content="on" />
   </head>
   <body class="container">
-    <div>
+    <div class="ig-main-content">
       <div style="padding-top: 20px">
         <h2 class="text-start">Pancakes</h2>
-        <p class="text-end" style="margin-top: -42px"><a href="/recipes/" class="link-underline link-underline-opacity-100 link-underline-opacity-100-hover" style="color: #aaa; font-size: 1.5em; text-decoration: none">home</a></p>
+        <p class="text-end" style="margin-top: -42px"><a href="/" style="text-decoration: none; color: #aaa; font-size: 1.5em">home</a></p>
       </div>
-      <div class="row">
-        <div class=" col-md-5">
-          <p> Source: Dad Schepers Leave mixture to stand for 10 minutes before cooking</p>
+      <div class="row justify-content-start row-cols-1 row-cols-md-2" style="padding-top: 20px; row-gap: 30px">
+        <div class="col align-self-start">
+          <p> Leave mixture to stand for 10 minutes before cooking<br /> Source: Dad Schepers</p>
           <p></p>
         </div>
-        <div class=" col-md-1">
-          <div class="justify-content-center align-items-center" style="height: 20px"></div>
+        <div class="col align-self-start">
+          <img src="/images/Pancakes.jpg" alt="" style="border-radius: 20px; max-height: 300px" />
         </div>
-        <div class=" col-md-6">
-          <img alt="" src="/recipes/images/Pancakes.jpg" class="justify-content-center align-items-center" style="border-radius: 20px; height: 300px" />
+        <div class="col align-self-start">
+          <h3>Ingredients:</h3>
+          <p></p>
+          <ul>
+            <li>2 cups self raising flour</li>
+            <li>pinch of salt</li>
+            <li>1 dessertspoon sugar</li>
+            <li>2 eggs</li>
+            <li>milk, enough to make a thin consistency</li>
+            <li>2 dessertspoons butter</li>
+          </ul>
+          <p></p>
         </div>
-        <div class=" col" style="padding-top: 20px">
-          <div style="padding-top: 20px">
-            <h3>Ingredients:</h3>
-            <p></p>
-            <ul>
-              <li>2 cups self raising flour</li>
-              <li>pinch of salt</li>
-              <li>1 dessertspoon sugar</li>
-              <li>2 eggs</li>
-              <li>milk, enough to make a thin consistency</li>
-              <li>2 dessertspoons butter</li>
-            </ul>
-            <p></p>
-          </div>
-        </div>
-        <div class=" col" style="padding-top: 20px">
-          <div style="padding-top: 20px">
-            <h3>Preparation:</h3>
-            <p></p>
-            <ol>
-              <li>Beat all the ingredients, except for the butter, together</li>
-              <li>Melt the butter in a crepe pan and pour into the mixture</li>
-              <li>Beat the mixture again and let it stand for 10 minutes</li>
-              <li>Cook pancakes in a dry crepe pan on medium heat</li>
-            </ol>
-            <p></p>
-          </div>
+        <div class="col align-self-start">
+          <h3>Preparation:</h3>
+          <p></p>
+          <ol>
+            <li>Beat all the ingredients, except for the butter, together</li>
+            <li>Melt the butter in a crepe pan and pour into the mixture</li>
+            <li>Beat the mixture again and let it stand for 10 minutes</li>
+            <li>Cook pancakes in a dry crepe pan on medium heat</li>
+          </ol>
+          <p></p>
         </div>
       </div>
     </div>
-    <script src="/recipes/js/bootstrap.bundle.min.js"></script>
-    <script src="/recipes/js/ignite-core.js"></script>
+    <script src="/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/ignite-core.js"></script>
   </body>
 </html>

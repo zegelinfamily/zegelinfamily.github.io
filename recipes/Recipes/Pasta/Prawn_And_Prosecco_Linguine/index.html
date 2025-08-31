@@ -1,138 +1,81 @@
 <!doctype html>
-<html data-bs-theme="auto" lang="en">
+<html lang="en" data-bs-theme="dark">
   <head>
     <meta charset="utf-8" />
-    <meta content="width=device-width, initial-scale=1" name="viewport" />
-    <meta content="notes: Serves 2 This recipe originally used crab meat but prawn is just as good Source: Gino’s Italian Adriatic Escape" name="description" />
-    <meta content="Peter Zegelin" name="author" />
-    <meta content="Ignite v0.2.1" name="generator" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="notes: Serves 2 This recipe originally used crab meat but prawn is just as good Source: Gino’s Italian Adriatic Escape" />
+    <meta name="author" content="Peter Zegelin" />
+    <meta name="generator" content="Ignite v0.7.0" />
     <title>Prawn And Prosecco Linguine</title>
-    <link href="/recipes/css/bootstrap.min.css" rel="stylesheet" />
-    <link href="/recipes/css/bootstrap-icons.min.css" rel="stylesheet" />
-    <link href="/recipes/css/themes.min.css" rel="stylesheet" />
-    <link href="https://www.zegelin.com/recipes//Recipes/Pasta/Prawn_And_Prosecco_Linguine" rel="canonical" />
-    <script>/*
- Automatic Theme Switching Implementation
- Used in HTMLHead.swift.
- For user-driven theme switching implementation, see ignite-core.js.
- */
-
-(function() {
-    function getThemePreference() {
-        return localStorage.getItem('custom-theme') || 'auto';
-    }
-
-    function applyTheme(themeID) {
-        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-        const lightThemeID = document.documentElement.getAttribute('data-light-theme') || 'light';
-        const darkThemeID = document.documentElement.getAttribute('data-dark-theme') || 'dark';
-        const actualThemeID = themeID === 'auto' ? (prefersDark ? darkThemeID : lightThemeID) : themeID;
-
-        document.documentElement.setAttribute('data-bs-theme', actualThemeID);
-        document.documentElement.setAttribute('data-theme-state', themeID);
-    }
-
-    function applySyntaxTheme() {
-        const syntaxTheme = getComputedStyle(document.documentElement)
-            .getPropertyValue('--syntax-highlight-theme').trim().replace(/"/g, '');
-
-        if (!syntaxTheme) return;
-
-        document.querySelectorAll('link[data-highlight-theme]').forEach(link => {
-            link.setAttribute('disabled', 'disabled');
-        });
-
-        const themeLink = document.querySelector(`link[data-highlight-theme="${syntaxTheme}"]`);
-        if (themeLink) {
-            themeLink.removeAttribute('disabled');
-        }
-    }
-
-    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
-        const currentTheme = getThemePreference();
-        if (currentTheme === 'auto') {
-            applyTheme('auto');
-            applySyntaxTheme();
-        }
-    });
-
-    const savedTheme = getThemePreference();
-    applyTheme(savedTheme);
-    applySyntaxTheme();
-})();
-</script>
-    <meta content="Our Recipes" property="og:site_name" />
-    <meta content="/images/Prawn%20And%20Prosecco%20Linguine.jpg" property="og:image" />
-    <meta content="/images/Prawn%20And%20Prosecco%20Linguine.jpg" name="twitter:image" />
-    <meta content="Prawn And Prosecco Linguine" property="og:title" />
-    <meta content="Prawn And Prosecco Linguine" name="twitter:title" />
-    <meta content="notes: Serves 2 This recipe originally used crab meat but prawn is just as good Source: Gino’s Italian Adriatic Escape" property="og:description" />
-    <meta content="notes: Serves 2 This recipe originally used crab meat but prawn is just as good Source: Gino’s Italian Adriatic Escape" name="twitter:description" />
-    <meta content="https://www.zegelin.com/recipes//Recipes/Pasta/Prawn_And_Prosecco_Linguine" property="og:url" />
-    <meta content="zegelin.com" name="twitter:domain" />
-    <meta content="summary_large_image" name="twitter:card" />
-    <meta content="on" name="twitter:dnt" />
+    <link href="/peter/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="/peter/css/bootstrap-icons.min.css" rel="stylesheet" />
+    <link href="/peter/css/ignite-core.css" rel="stylesheet" />
+    <link href="https://www.zegelin.com/peter/Recipes/Pasta/Prawn_And_Prosecco_Linguine" rel="canonical" />
+    <meta property="og:site_name" content="Our Recipes" />
+    <meta property="og:image" content="/images/Prawn%20And%20Prosecco%20Linguine.jpg" />
+    <meta name="twitter:image" content="/images/Prawn%20And%20Prosecco%20Linguine.jpg" />
+    <meta property="og:title" content="Prawn And Prosecco Linguine" />
+    <meta name="twitter:title" content="Prawn And Prosecco Linguine" />
+    <meta property="og:description" content="notes: Serves 2 This recipe originally used crab meat but prawn is just as good Source: Gino’s Italian Adriatic Escape" />
+    <meta name="twitter:description" content="notes: Serves 2 This recipe originally used crab meat but prawn is just as good Source: Gino’s Italian Adriatic Escape" />
+    <meta property="og:url" content="https://www.zegelin.com/peter/Recipes/Pasta/Prawn_And_Prosecco_Linguine" />
+    <meta name="twitter:domain" content="zegelin.com" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:dnt" content="on" />
   </head>
   <body class="container">
-    <div>
+    <div class="ig-main-content">
       <div style="padding-top: 20px">
         <h2 class="text-start">Prawn And Prosecco Linguine</h2>
-        <p class="text-end" style="margin-top: -42px"><a href="/recipes/" class="link-underline link-underline-opacity-100 link-underline-opacity-100-hover" style="color: #aaa; font-size: 1.5em; text-decoration: none">home</a></p>
+        <p class="text-end" style="margin-top: -42px"><a href="/" style="text-decoration: none; color: #aaa; font-size: 1.5em">home</a></p>
       </div>
-      <div class="row">
-        <div class=" col-md-5">
+      <div class="row justify-content-start row-cols-1 row-cols-md-2" style="padding-top: 20px; row-gap: 30px">
+        <div class="col align-self-start">
           <p> Serves 2<br /> This recipe originally used crab meat but prawn is just as good<br /> Source: Gino’s Italian Adriatic Escape</p>
           <p>Timing is important. Linguine and prawn mixture need to be ready at the same time</p>
           <p></p>
         </div>
-        <div class=" col-md-1">
-          <div class="justify-content-center align-items-center" style="height: 20px"></div>
+        <div class="col align-self-start">
+          <img src="/images/Prawn%20And%20Prosecco%20Linguine.jpg" alt="" style="border-radius: 20px; max-height: 300px" />
         </div>
-        <div class=" col-md-6">
-          <img alt="" src="/recipes/images/Prawn And Prosecco Linguine.jpg" class="justify-content-center align-items-center" style="border-radius: 20px; height: 300px" />
+        <div class="col align-self-start">
+          <h3>Ingredients:</h3>
+          <p></p>
+          <ul>
+            <li>250g dried linguine</li>
+            <li>3 tablespoons olive oil</li>
+            <li>2 garlic cloves, peeled and finely chopped</li>
+            <li>1 fresh, medium-hot red chilli, deseeded and finely chopped</li>
+            <li>100g fresh red cherry tomatoes, halved</li>
+            <li>zest of 1 unwaxed lemon</li>
+            <li>150ml prosecco</li>
+            <li>200g fresh prawns or white crab meat</li>
+            <li>60g pitted green olives, drained and halved</li>
+            <li>3 tablespoons chopped parsley</li>
+            <li>salt</li>
+          </ul>
+          <p></p>
         </div>
-        <div class=" col" style="padding-top: 20px">
-          <div style="padding-top: 20px">
-            <h3>Ingredients:</h3>
-            <p></p>
-            <ul>
-              <li>250g dried linguine</li>
-              <li>3 tablespoons olive oil</li>
-              <li>2 garlic cloves, peeled and finely chopped</li>
-              <li>1 fresh, medium-hot red chilli, deseeded and finely chopped</li>
-              <li>100g fresh red cherry tomatoes, halved</li>
-              <li>zest of 1 unwaxed lemon</li>
-              <li>150ml prosecco</li>
-              <li>200g fresh prawns or white crab meat</li>
-              <li>60g pitted green olives, drained and halved</li>
-              <li>3 tablespoons chopped parsley</li>
-              <li>salt</li>
-            </ul>
-            <p></p>
-          </div>
-        </div>
-        <div class=" col" style="padding-top: 20px">
-          <div style="padding-top: 20px">
-            <h3>Preparation:</h3>
-            <p></p>
-            <ol>
-              <li>Cook the linguine in a pan of boiling, salted water until al dente</li>
-              <li>Put the oil, garlic and chilli in a large, high-sided frying pan on medium heat</li>
-              <li>Fry gently for 1 minute, stirring constantly</li>
-              <li>Add the tomatoes and cook for 2 minutes until slightly soft</li>
-              <li>Stir in the lemon zest and season with salt</li>
-              <li>Increase the heat and pour in the prosecco</li>
-              <li>Bring to the boil and let it bubble for 1-2 minutes</li>
-              <li>Add the prawns, olives and parsley and turn off the heat</li>
-              <li>When the linguine is cooked, drain slightly, leaving some water</li>
-              <li>Add the prawn mixture to the linguine and toss the pan to ensure the linguine is evenly coated and serve immediately</li>
-            </ol>
-            <p></p>
-          </div>
+        <div class="col align-self-start">
+          <h3>Preparation:</h3>
+          <p></p>
+          <ol>
+            <li>Cook the linguine in a pan of boiling, salted water until al dente</li>
+            <li>Put the oil, garlic and chilli in a large, high-sided frying pan on medium heat</li>
+            <li>Fry gently for 1 minute, stirring constantly</li>
+            <li>Add the tomatoes and cook for 2 minutes until slightly soft</li>
+            <li>Stir in the lemon zest and season with salt</li>
+            <li>Increase the heat and pour in the prosecco</li>
+            <li>Bring to the boil and let it bubble for 1-2 minutes</li>
+            <li>Add the prawns, olives and parsley and turn off the heat</li>
+            <li>When the linguine is cooked, drain slightly, leaving some water</li>
+            <li>Add the prawn mixture to the linguine and toss the pan to ensure the linguine is evenly coated and serve immediately</li>
+          </ol>
+          <p></p>
         </div>
       </div>
     </div>
-    <script src="/recipes/js/bootstrap.bundle.min.js"></script>
-    <script src="/recipes/js/ignite-core.js"></script>
+    <script src="/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/ignite-core.js"></script>
   </body>
 </html>
