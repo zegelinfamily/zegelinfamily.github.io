@@ -25,24 +25,23 @@ function igniteSwitchTheme(themeID) {
 
 function igniteApplyTheme(themeID) {
     if (themeID === 'auto') {
-        localStorage.removeItem('current-theme');
+        localStorage.removeItem('custom-theme');
     } else {
-        localStorage.setItem('current-theme', themeID);
+        localStorage.setItem('custom-theme', themeID);
     }
 
-    const lightThemeID = getComputedStyle(document.documentElement)
-        .getPropertyValue('--light-theme-ID')
-        .trim() || 'light';
-    const darkThemeID = getComputedStyle(document.documentElement)
-        .getPropertyValue('--dark-theme-ID')
-        .trim() || 'dark';
+    const lightThemeID = document.documentElement.getAttribute('data-light-theme') || 'light';
+    const darkThemeID = document.documentElement.getAttribute('data-dark-theme') || 'dark';
 
-    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    const actualThemeID = themeID === 'auto' ? (prefersDark ? darkThemeID : lightThemeID) : themeID;
-
-    document.documentElement.setAttribute('data-ig-theme', actualThemeID);
-    const isDarkTheme = actualThemeID.endsWith('dark');
-    document.documentElement.setAttribute('data-bs-theme', isDarkTheme ? 'dark' : 'light');
+    if (themeID === 'auto') {
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        const actualThemeID = prefersDark ? darkThemeID : lightThemeID;
+        document.documentElement.setAttribute('data-bs-theme', actualThemeID);
+        document.documentElement.setAttribute('data-theme-state', themeID);
+    } else {
+        document.documentElement.setAttribute('data-bs-theme', themeID);
+        document.documentElement.setAttribute('data-theme-state', themeID);
+    }
 
     igniteApplySyntaxTheme();
 }
@@ -127,32 +126,4 @@ function igniteToggleClickAnimation(element) {
         element.classList.add('clicked');
     }
     return false;
-}
-
-// SECTION: Tables ----------------------------------------------------------------------------
-
-// This function removes rows from a table when some filter text is supplied.
-// We need to actually remove the rows to ensure that any zebra striping is
-// maintained correctly, but we need to a way to reinsert rows later on if
-// the search text changes.
-function igniteFilterTable(searchText, tableId) {
-    let input = searchText.toLowerCase();
-    let table = document.getElementById(tableId);
-    let tbody = table.querySelector("tbody");
-
-    // The very first time we filter this table, take a back-up copy of the
-    // original rows. This uses Array.from() to make a deep copy of the rows.
-    if (!("igniteFilterOriginalRows" in tbody)) {
-        tbody.igniteFilterOriginalRows = Array.from(tbody.rows);
-    }
-
-    // Filter based on our original backup row data.
-    let rows = tbody.igniteFilterOriginalRows;
-
-    // Filter rows and detach them to force reflow, to ensure zebra striping is correct.
-    let matchingRows = rows.filter(row => row.textContent.toLowerCase().includes(input));
-
-    // Clear tbody and reappend only matching rows; Bootstrap will auto re-stripe.
-    tbody.innerHTML = "";
-    matchingRows.forEach(row => tbody.appendChild(row));
 }

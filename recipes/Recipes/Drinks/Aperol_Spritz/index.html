@@ -1,69 +1,126 @@
 <!doctype html>
-<html lang="en" data-bs-theme="dark">
+<html data-bs-theme="auto" lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="notes: Source: Aperol website" />
-    <meta name="author" content="Peter Zegelin" />
-    <meta name="generator" content="Ignite v0.7.0" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <meta content="notes: Source: Aperol website" name="description" />
+    <meta content="Peter Zegelin" name="author" />
+    <meta content="Ignite v0.2.1" name="generator" />
     <title>Aperol Spritz</title>
     <link href="/recipes/css/bootstrap.min.css" rel="stylesheet" />
     <link href="/recipes/css/bootstrap-icons.min.css" rel="stylesheet" />
-    <link href="/recipes/css/ignite-core.css" rel="stylesheet" />
-    <link href="https://www.zegelin.com/recipes/Recipes/Drinks/Aperol_Spritz" rel="canonical" />
-    <meta property="og:site_name" content="Our Recipes" />
-    <meta property="og:image" content="/images/Aperol%20Spritz.jpg" />
-    <meta name="twitter:image" content="/images/Aperol%20Spritz.jpg" />
-    <meta property="og:title" content="Aperol Spritz" />
-    <meta name="twitter:title" content="Aperol Spritz" />
-    <meta property="og:description" content="notes: Source: Aperol website" />
-    <meta name="twitter:description" content="notes: Source: Aperol website" />
-    <meta property="og:url" content="https://www.zegelin.com/recipes/Recipes/Drinks/Aperol_Spritz" />
-    <meta name="twitter:domain" content="zegelin.com" />
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:dnt" content="on" />
+    <link href="/recipes/css/themes.min.css" rel="stylesheet" />
+    <link href="https://www.zegelin.com/recipes//Recipes/Drinks/Aperol_Spritz" rel="canonical" />
+    <script>/*
+ Automatic Theme Switching Implementation
+ Used in HTMLHead.swift.
+ For user-driven theme switching implementation, see ignite-core.js.
+ */
+
+(function() {
+    function getThemePreference() {
+        return localStorage.getItem('custom-theme') || 'auto';
+    }
+
+    function applyTheme(themeID) {
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        const lightThemeID = document.documentElement.getAttribute('data-light-theme') || 'light';
+        const darkThemeID = document.documentElement.getAttribute('data-dark-theme') || 'dark';
+        const actualThemeID = themeID === 'auto' ? (prefersDark ? darkThemeID : lightThemeID) : themeID;
+
+        document.documentElement.setAttribute('data-bs-theme', actualThemeID);
+        document.documentElement.setAttribute('data-theme-state', themeID);
+    }
+
+    function applySyntaxTheme() {
+        const syntaxTheme = getComputedStyle(document.documentElement)
+            .getPropertyValue('--syntax-highlight-theme').trim().replace(/"/g, '');
+
+        if (!syntaxTheme) return;
+
+        document.querySelectorAll('link[data-highlight-theme]').forEach(link => {
+            link.setAttribute('disabled', 'disabled');
+        });
+
+        const themeLink = document.querySelector(`link[data-highlight-theme="${syntaxTheme}"]`);
+        if (themeLink) {
+            themeLink.removeAttribute('disabled');
+        }
+    }
+
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
+        const currentTheme = getThemePreference();
+        if (currentTheme === 'auto') {
+            applyTheme('auto');
+            applySyntaxTheme();
+        }
+    });
+
+    const savedTheme = getThemePreference();
+    applyTheme(savedTheme);
+    applySyntaxTheme();
+})();
+</script>
+    <meta content="Our Recipes" property="og:site_name" />
+    <meta content="/images/Aperol%20Spritz.jpg" property="og:image" />
+    <meta content="/images/Aperol%20Spritz.jpg" name="twitter:image" />
+    <meta content="Aperol Spritz" property="og:title" />
+    <meta content="Aperol Spritz" name="twitter:title" />
+    <meta content="notes: Source: Aperol website" property="og:description" />
+    <meta content="notes: Source: Aperol website" name="twitter:description" />
+    <meta content="https://www.zegelin.com/recipes//Recipes/Drinks/Aperol_Spritz" property="og:url" />
+    <meta content="zegelin.com" name="twitter:domain" />
+    <meta content="summary_large_image" name="twitter:card" />
+    <meta content="on" name="twitter:dnt" />
   </head>
   <body class="container">
-    <div class="ig-main-content">
+    <div>
       <div style="padding-top: 20px">
         <h2 class="text-start">Aperol Spritz</h2>
-        <p class="text-end" style="margin-top: -42px"><a href="/" style="text-decoration: none; color: #aaa; font-size: 1.5em">home</a></p>
+        <p class="text-end" style="margin-top: -42px"><a href="/recipes/" class="link-underline link-underline-opacity-100 link-underline-opacity-100-hover" style="color: #aaa; font-size: 1.5em; text-decoration: none">home</a></p>
       </div>
-      <div class="row justify-content-start row-cols-1 row-cols-md-2" style="padding-top: 20px; row-gap: 30px">
-        <div class="col align-self-start">
+      <div class="row">
+        <div class=" col-md-5">
           <p> Source: Aperol website</p>
           <p></p>
         </div>
-        <div class="col align-self-start">
-          <img src="/images/Aperol%20Spritz.jpg" alt="" style="border-radius: 20px; max-height: 300px" />
+        <div class=" col-md-1">
+          <div class="justify-content-center align-items-center" style="height: 20px"></div>
         </div>
-        <div class="col align-self-start">
-          <h3>Ingredients:</h3>
-          <p></p>
-          <ul>
-            <li>90ml Prosecco</li>
-            <li>60ml Aperol</li>
-            <li>30ml soda</li>
-            <li>orange slice</li>
-            <li>ice</li>
-          </ul>
-          <p></p>
+        <div class=" col-md-6">
+          <img alt="" src="/recipes/images/Aperol Spritz.jpg" class="justify-content-center align-items-center" style="border-radius: 20px; height: 300px" />
         </div>
-        <div class="col align-self-start">
-          <h3>Preparation:</h3>
-          <p></p>
-          <ol>
-            <li>Fill a white wine glass with ice</li>
-            <li>Pour in Prosecco</li>
-            <li>Add Aperol</li>
-            <li>Add soda</li>
-            <li>Garnish with an orange slice</li>
-          </ol>
-          <p></p>
+        <div class=" col" style="padding-top: 20px">
+          <div style="padding-top: 20px">
+            <h3>Ingredients:</h3>
+            <p></p>
+            <ul>
+              <li>90ml Prosecco</li>
+              <li>60ml Aperol</li>
+              <li>30ml soda</li>
+              <li>orange slice</li>
+              <li>ice</li>
+            </ul>
+            <p></p>
+          </div>
+        </div>
+        <div class=" col" style="padding-top: 20px">
+          <div style="padding-top: 20px">
+            <h3>Preparation:</h3>
+            <p></p>
+            <ol>
+              <li>Fill a white wine glass with ice</li>
+              <li>Pour in Prosecco</li>
+              <li>Add Aperol</li>
+              <li>Add soda</li>
+              <li>Garnish with an orange slice</li>
+            </ol>
+            <p></p>
+          </div>
         </div>
       </div>
     </div>
-    <script src="/js/bootstrap.bundle.min.js"></script>
-    <script src="/js/ignite-core.js"></script>
+    <script src="/recipes/js/bootstrap.bundle.min.js"></script>
+    <script src="/recipes/js/ignite-core.js"></script>
   </body>
 </html>

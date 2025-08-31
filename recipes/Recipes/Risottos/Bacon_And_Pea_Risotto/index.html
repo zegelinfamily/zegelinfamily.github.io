@@ -1,74 +1,131 @@
 <!doctype html>
-<html lang="en" data-bs-theme="dark">
+<html data-bs-theme="auto" lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="notes:" />
-    <meta name="author" content="Peter Zegelin" />
-    <meta name="generator" content="Ignite v0.7.0" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <meta content="notes:" name="description" />
+    <meta content="Peter Zegelin" name="author" />
+    <meta content="Ignite v0.2.1" name="generator" />
     <title>Bacon and Pea Risotto</title>
     <link href="/recipes/css/bootstrap.min.css" rel="stylesheet" />
     <link href="/recipes/css/bootstrap-icons.min.css" rel="stylesheet" />
-    <link href="/recipes/css/ignite-core.css" rel="stylesheet" />
-    <link href="https://www.zegelin.com/recipes/Recipes/Risottos/Bacon_And_Pea_Risotto" rel="canonical" />
-    <meta property="og:site_name" content="Our Recipes" />
-    <meta property="og:image" content="/images/Bacon%20And%20Pea%20Risotto.jpg" />
-    <meta name="twitter:image" content="/images/Bacon%20And%20Pea%20Risotto.jpg" />
-    <meta property="og:title" content="Bacon and Pea Risotto" />
-    <meta name="twitter:title" content="Bacon and Pea Risotto" />
-    <meta property="og:description" content="notes:" />
-    <meta name="twitter:description" content="notes:" />
-    <meta property="og:url" content="https://www.zegelin.com/recipes/Recipes/Risottos/Bacon_And_Pea_Risotto" />
-    <meta name="twitter:domain" content="zegelin.com" />
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:dnt" content="on" />
+    <link href="/recipes/css/themes.min.css" rel="stylesheet" />
+    <link href="https://www.zegelin.com/recipes//Recipes/Risottos/Bacon_And_Pea_Risotto" rel="canonical" />
+    <script>/*
+ Automatic Theme Switching Implementation
+ Used in HTMLHead.swift.
+ For user-driven theme switching implementation, see ignite-core.js.
+ */
+
+(function() {
+    function getThemePreference() {
+        return localStorage.getItem('custom-theme') || 'auto';
+    }
+
+    function applyTheme(themeID) {
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        const lightThemeID = document.documentElement.getAttribute('data-light-theme') || 'light';
+        const darkThemeID = document.documentElement.getAttribute('data-dark-theme') || 'dark';
+        const actualThemeID = themeID === 'auto' ? (prefersDark ? darkThemeID : lightThemeID) : themeID;
+
+        document.documentElement.setAttribute('data-bs-theme', actualThemeID);
+        document.documentElement.setAttribute('data-theme-state', themeID);
+    }
+
+    function applySyntaxTheme() {
+        const syntaxTheme = getComputedStyle(document.documentElement)
+            .getPropertyValue('--syntax-highlight-theme').trim().replace(/"/g, '');
+
+        if (!syntaxTheme) return;
+
+        document.querySelectorAll('link[data-highlight-theme]').forEach(link => {
+            link.setAttribute('disabled', 'disabled');
+        });
+
+        const themeLink = document.querySelector(`link[data-highlight-theme="${syntaxTheme}"]`);
+        if (themeLink) {
+            themeLink.removeAttribute('disabled');
+        }
+    }
+
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
+        const currentTheme = getThemePreference();
+        if (currentTheme === 'auto') {
+            applyTheme('auto');
+            applySyntaxTheme();
+        }
+    });
+
+    const savedTheme = getThemePreference();
+    applyTheme(savedTheme);
+    applySyntaxTheme();
+})();
+</script>
+    <meta content="Our Recipes" property="og:site_name" />
+    <meta content="/images/Bacon%20And%20Pea%20Risotto.jpg" property="og:image" />
+    <meta content="/images/Bacon%20And%20Pea%20Risotto.jpg" name="twitter:image" />
+    <meta content="Bacon and Pea Risotto" property="og:title" />
+    <meta content="Bacon and Pea Risotto" name="twitter:title" />
+    <meta content="notes:" property="og:description" />
+    <meta content="notes:" name="twitter:description" />
+    <meta content="https://www.zegelin.com/recipes//Recipes/Risottos/Bacon_And_Pea_Risotto" property="og:url" />
+    <meta content="zegelin.com" name="twitter:domain" />
+    <meta content="summary_large_image" name="twitter:card" />
+    <meta content="on" name="twitter:dnt" />
   </head>
   <body class="container">
-    <div class="ig-main-content">
+    <div>
       <div style="padding-top: 20px">
         <h2 class="text-start">Bacon and Pea Risotto</h2>
-        <p class="text-end" style="margin-top: -42px"><a href="/" style="text-decoration: none; color: #aaa; font-size: 1.5em">home</a></p>
+        <p class="text-end" style="margin-top: -42px"><a href="/recipes/" class="link-underline link-underline-opacity-100 link-underline-opacity-100-hover" style="color: #aaa; font-size: 1.5em; text-decoration: none">home</a></p>
       </div>
-      <div class="row justify-content-start row-cols-1 row-cols-md-2" style="padding-top: 20px; row-gap: 30px">
-        <div class="col align-self-start">
+      <div class="row">
+        <div class=" col-md-5">
           <p></p>
           <p></p>
         </div>
-        <div class="col align-self-start">
-          <img src="/images/Bacon%20And%20Pea%20Risotto.jpg" alt="" style="border-radius: 20px; max-height: 300px" />
+        <div class=" col-md-1">
+          <div class="justify-content-center align-items-center" style="height: 20px"></div>
         </div>
-        <div class="col align-self-start">
-          <h3>Ingredients:</h3>
-          <p></p>
-          <ul>
-            <li>2 tablespoons olive oil</li>
-            <li>knob of butter</li>
-            <li>1 onion, finely chopped</li>
-            <li>6 rashers bacon, roughly chopped into small pieces</li>
-            <li>300g arborio rice</li>
-            <li>1 litre vegetable stock, hot</li>
-            <li>100g frozen peas</li>
-            <li>freshly grated parmesan, to serve</li>
-            <li>freshly ground black pepper, to serve</li>
-          </ul>
-          <p></p>
+        <div class=" col-md-6">
+          <img alt="" src="/recipes/images/Bacon And Pea Risotto.jpg" class="justify-content-center align-items-center" style="border-radius: 20px; height: 300px" />
         </div>
-        <div class="col align-self-start">
-          <h3>Preparation:</h3>
-          <p></p>
-          <ol>
-            <li>Heat the olive oil and knob of butter in a large pot, add the onion and saute until lightly browned</li>
-            <li>Add the bacon and saute until it starts to crisp</li>
-            <li>Add the rice and stock and bring to the boil</li>
-            <li>Stir well, then reduce the heat and cook for 15-20 minutes until the rice is almost tender</li>
-            <li>Stir in the peas, add a little salt and pepper and cook for a further 3 minutes until the peas are cooked</li>
-            <li>Serve sprinkled with grated parmesan and freshly ground black pepper</li>
-          </ol>
-          <p></p>
+        <div class=" col" style="padding-top: 20px">
+          <div style="padding-top: 20px">
+            <h3>Ingredients:</h3>
+            <p></p>
+            <ul>
+              <li>2 tablespoons olive oil</li>
+              <li>knob of butter</li>
+              <li>1 onion, finely chopped</li>
+              <li>6 rashers bacon, roughly chopped into small pieces</li>
+              <li>300g arborio rice</li>
+              <li>1 litre vegetable stock, hot</li>
+              <li>100g frozen peas</li>
+              <li>freshly grated parmesan, to serve</li>
+              <li>freshly ground black pepper, to serve</li>
+            </ul>
+            <p></p>
+          </div>
+        </div>
+        <div class=" col" style="padding-top: 20px">
+          <div style="padding-top: 20px">
+            <h3>Preparation:</h3>
+            <p></p>
+            <ol>
+              <li>Heat the olive oil and knob of butter in a large pot, add the onion and saute until lightly browned</li>
+              <li>Add the bacon and saute until it starts to crisp</li>
+              <li>Add the rice and stock and bring to the boil</li>
+              <li>Stir well, then reduce the heat and cook for 15-20 minutes until the rice is almost tender</li>
+              <li>Stir in the peas, add a little salt and pepper and cook for a further 3 minutes until the peas are cooked</li>
+              <li>Serve sprinkled with grated parmesan and freshly ground black pepper</li>
+            </ol>
+            <p></p>
+          </div>
         </div>
       </div>
     </div>
-    <script src="/js/bootstrap.bundle.min.js"></script>
-    <script src="/js/ignite-core.js"></script>
+    <script src="/recipes/js/bootstrap.bundle.min.js"></script>
+    <script src="/recipes/js/ignite-core.js"></script>
   </body>
 </html>
